@@ -5,7 +5,8 @@ Crie funções recursivas que façam:
 1) Impressão de um número natural em base binária
 
 2) Multiplicação de dois números naturais, através de somas sucessivas (Ex.: 6 ∗ 4 = 4+4+4+4+4+4)
-3) Soma de dois números naturais, através de incrementos sucessivos (Ex.: 3 + 2 = ++(++3)).
+
+3) Soma de dois números naturais, através de incrementos sucessivos (Ex.: 3 + 2 = ++(++3)).
 
 Resolva as questões abaixo usando recursividade
 
@@ -18,7 +19,10 @@ Resolva as questões abaixo usando recursividade
 7) Escreva uma função recursiva que determine quantas vezes um dígito K ocorre em um número natural N. Por exemplo, o dígito 2 ocorre 3 vezes em 762021192.
 
 
-8) Uma sequência de Fibonacci generalizada, de f0 a f1 é definida como fibg(f0, f1, 0), fibg(f0, f1, 1), fibg(f0, f1, 2), ..., onde:fibg(f0, f1, 0) = f0fibg(f0, f1, 1) = f1fibg(f0, f1, n) = fibg(f0, f1, n-1) + fibg(f0, f1, n-2), se n > 1. Escreva uma função recursiva em C para calcular fibg(f0, f1, n).
+8) Uma sequência de Fibonacci generalizada, de f0 a f1 é definida como fibg(f0, f1, 0), fibg(f0, f1, 1), fibg(f0, f1, 2), ..., onde:
+fibg(f0, f1, 0) = f0
+fibg(f0, f1, 1) = f1
+fibg(f0, f1, n) = fibg(f0, f1, n-1) + fibg(f0, f1, n-2), se n > 1. Escreva uma função recursiva em C para calcular fibg(f0, f1, n).
 
 9) A multiplicação de dois números inteiros pode ser feita através de somas sucessivas. Proponha um algoritmo recursivo Multip_Rec(n1,n2) que calcule a multiplicação de dois inteiros.
 
