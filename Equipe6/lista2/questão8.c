@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  questão3.c
+ *       Filename:  questão8.c
  *
  *    Description:  Fibonacci
  *
@@ -37,7 +37,8 @@ int fibo(int x)
 	}
 }
 
-int main (int argc,const char argv[]){
+int main (int argc,const char argv[])
+{
 
 	int x, f;
 	scanf("%d",&x);
