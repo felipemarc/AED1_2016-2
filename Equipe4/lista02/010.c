@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Utilizando essa biblioteca para não ser necessária a criação
+   de variáveis globais ou algo parecido */
+#include <stdbool.h>
+
 #define tam 10
 
-int acha_saida(int matrz[tam][tam], int x, int y);
+/* Chamando as funções que serão usadas */
+bool valido(int matriz[tam][tam], int x, int y);
+bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam]);
+bool if_acha_saida(int matriz[tam][tam]);
 void imprime(int matriz[tam][tam]);
 
 int main()
@@ -27,10 +34,10 @@ int main()
         }
     }
 
-  printf("\n");
+  printf("Matriz de entrada\n");
   imprime(matriz);
   printf("\n\n");
-  printf("\n%d\n", acha_saida(matriz, tam, tam)); 
+  if_acha_saida(matriz);
 
   fclose(arquivo);
   
@@ -39,121 +46,94 @@ int main()
     
 }
 
+
+// Verifica se há alguma saída no labirinto usando recursividade
+bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
+{
+
+  // Se achar a saída retorna 'TRUE'
+  if (x == tam-1 && y == tam-1)
+    {
+      result[x][y] = 1;
+      return true;
+    }
+
+  // Verifica se a posição é válida
+  if (valido(matriz,x,y) == true)
+    {
+
+      // Adiciona a posição a matriz resultado
+      result[x][y] = 1;
+
+      // Move uma posição na direção de 'x'
+      if (acha_saida(matriz, x+1, y, result) == true)
+        {
+          return true;
+        }
+
+      // Se movendo na direção de 'x' não retornar alguma solução então volta e move na direção de 'y'
+      if (acha_saida(matriz, x, y+1, result))
+        {
+          return true;
+        }
+
+      result[x][y] = 0;
+      return false;
+    }
+  return false;
+}
+
+
+/* Função para verificar se x,y é uma posição válida na matriz */
+bool valido(int matriz[tam][tam], int x, int y)
+{
+  if (x >= 0 && x < tam && y >= 0 && y < tam && matriz[x][y] == 1)
+    {
+      return true;
+    }
+
+  return false;
+}
+
+/* Confirma usando a função 'acha-saida', e se realmente há 
+uma solução no labirinto ele imprime o caminho encontrado */
+bool if_acha_saida(int matriz[tam][tam])
+{
+	// Matriz usada para impressão do resultado
+  int result[tam][tam] = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
+
+  /* Vai retornar 'TRUE' e o caminho se for possível encontrar uma saída para o labirinto
+     ou 'FALSE' e alguma mensagem se não for possível */ 
+  if(acha_saida(matriz, 0, 0, result) == false)
+    {
+      printf("Solução inexistente!!\n");
+      return false;
+    }
+
+  printf("Caminho encontrado!!\n");
+  imprime(result);
+  return true;
+}
+
+/* Função usada para imprimir as matrizes de entrada e a resultado */
 void imprime(int matriz[tam][tam])
 {
-// Imprime a matriz
-for (int i = 0; i < tam; i++)
-  {
-    for (int j = 0; j < tam; j++)
-      {
-        printf("%d ", matriz[i][j]);
-      }
+
+  for (int i = 0; i < tam; i++)
+    {
+      for (int j = 0; j < tam; j++)
+        {
+          printf("%d ", matriz[i][j]);
+        }
     printf("\n");
-  }
+    }
 }
-
-
-
-int acha_saida(int matriz[tam][tam], int x, int y)
-{
-     
-  if (x == 9 && y == 9)
-    {
-      return 1;
-    }
-  
-  else if (x == 0 && y == 0)
-    {
-      // Quando estiverem na posição[0][0] só pode ir para a direita ou para a esquerda
-      if (matriz[x][y+1] == 0)
-        {
-          return acha_saida(matriz, x, y+1);
-        }
-      else if (matriz[x+1][y] == 0)
-        {
-          return acha_saida(matriz, x+1, y);
-        }
-      else
-        {
-          // Se não retorna '0'
-          return 0;
-        }
-
-      // Pode ir para baixo, direita ou voltar p/ a posição anterior
-  	}
-  	
-  else if (x > 0 && y == 0)
-    {
-      if (matriz[x][y+1] == 0 && y < tam)
-        {
-          return acha_saida(matriz, x, y+1);
-        }
-      else if (matriz[x+1][y] == 0 && x < tam)
-        {
-          return acha_saida(matriz, x+1, y);
-        }
-      else if (matriz[x-1][y] && x > 1)
-        {
-          matriz[x][y] = 2;
-          return acha_saida(matriz, x-1, y);
-        }
-      else
-        {
-          return 0;
-        }
-    }
-
-  else if (x == 0 && y > 0)
-    {
-      if (matriz[x][y+1] == 0 && y < tam)
-        {
-          return acha_saida(matriz, x, y+1);
-        }
-      else if (matriz[x+1][y] == 0 && x < tam)
-        {
-          return acha_saida(matriz, x+1, y);
-        }
-      else if (matriz[x][y-1] && y > 1)
-        {
-          matriz[x][y] = 2;
-          return acha_saida(matriz, x, y-1);
-        }
-      else
-        {
-          return 0;
-        }
-    }
-
-	
-  else if (x > 0 && y > 0)
-    {
-      if (matriz[x][y+1] && y < (tam-1))
-        {
-          return acha_saida(matriz, x, y+1);
-        }
-      else if (matriz[x+1][y] == 0 && x < (tam-1))
-        {
-          return acha_saida(matriz, x+1, y);
-        }
-      else if (matriz[x][y-1] == 0 && y > 0)
-        {
-          matriz[x][y] = 2;
-          return acha_saida(matriz, x, y-1);
-        }
-      else if (matriz[x-1][y] == 0 && x > 0)
-        {
-          matriz[x][y] = 2;
-          return acha_saida(matriz, x-1, y);
-        }
-      else
-        {
-          return 0;
-        }
-    }
-    
-	else
-		{
-		  return 0;
-		}
-}
- 
