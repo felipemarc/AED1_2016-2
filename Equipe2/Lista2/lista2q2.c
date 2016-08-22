@@ -1,3 +1,10 @@
+/*
+Equipe2
+Hermann Hernani
+Lucas Botinelly
+Stephanny Barreto
+*/
+
 #include<stdio.h>
 
 int multiplica(int n1, int n2,int acm)
