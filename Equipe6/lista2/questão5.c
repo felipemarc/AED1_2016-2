@@ -1,23 +1,23 @@
 /*
  * =====================================================================================
  *
- *       Filename:  questão4.c
+ *       Filename:  questão5.c
  *
- *    Description:  modelo de cabeçalho
+ *    Description:  questão5.c
  *
  *        Version:  1.0
- *        Created:  21-08-2016 11:07:12
+ *        Created:  22-08-2016 16:08:16
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  Hélio Paulo
+ *   Author:  Hélio Paulo
  *         			Jailson Pereira
- *         			Tiago Cauassa
+ *         			Thiago Cauassa
  *         			Rebeca Assunção
  *   Organization:  
  *
  * =====================================================================================
- */
+ */ 5) Gere todas as possíveis combinações para um jogo da MegaSena com 6 dezenas.
  
 int main(){
 
