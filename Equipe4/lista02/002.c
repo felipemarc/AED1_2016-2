@@ -34,6 +34,7 @@ int main()
   return 0;
 }
 
+/* Multiplicacao atraves de somas sucessivas usando recursividade */
 int mult_recursiva(int x, int y)
 {
 

@@ -38,6 +38,7 @@ int main()
   return 0;
 }
 
+/* Converte decimal para binário */
 int bin(int n)
 {
   if (n < 2)
