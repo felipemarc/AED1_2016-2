@@ -5,6 +5,7 @@
    de variáveis globais ou algo parecido */
 #include <stdbool.h>
 
+/* Tamanho da matriz quadrada */
 #define tam 10
 
 /* Chamando as funções que serão usadas */
@@ -15,10 +16,11 @@ void imprime(int matriz[tam][tam]);
 
 int main()
 {
+  
   FILE *arquivo = fopen("matriz.txt", "r");
   int matriz[tam][tam];
 
-  // Verifica arquivo
+  // Verifica se o arquivo "existe"
   if (arquivo == NULL)
     {
       printf("\n\nErro na leitura\n\n");
@@ -36,21 +38,17 @@ int main()
 
   printf("Matriz de entrada\n");
   imprime(matriz);
-  printf("\n\n");
+  printf("\n");
   if_acha_saida(matriz);
 
   fclose(arquivo);
   
-  return 0;
-
-    
+  return 0;  
 }
-
 
 // Verifica se há alguma saída no labirinto usando recursividade
 bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
 {
-
   // Se achar a saída retorna 'TRUE'
   if (x == tam-1 && y == tam-1)
     {
@@ -61,7 +59,6 @@ bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
   // Verifica se a posição é válida
   if (valido(matriz,x,y) == true)
     {
-
       // Adiciona a posição a matriz resultado
       result[x][y] = 1;
 
@@ -77,16 +74,18 @@ bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
           return true;
         }
 
+      /* Se a posição nao for válida adiciona 0 na matriz resutlado */
       result[x][y] = 0;
       return false;
     }
   return false;
 }
 
-
 /* Função para verificar se x,y é uma posição válida na matriz */
 bool valido(int matriz[tam][tam], int x, int y)
 {
+
+  /* Se a coordenada fizer parte da matriz */
   if (x >= 0 && x < tam && y >= 0 && y < tam && matriz[x][y] == 1)
     {
       return true;
@@ -99,7 +98,7 @@ bool valido(int matriz[tam][tam], int x, int y)
 uma solução no labirinto ele imprime o caminho encontrado */
 bool if_acha_saida(int matriz[tam][tam])
 {
-	// Matriz usada para impressão do resultado
+	// Matriz usada para impressão do resultado, matriz 'result' 
   int result[tam][tam] = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
