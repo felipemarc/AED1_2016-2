@@ -29,7 +29,7 @@ int qnt (int x,int y)
 		if (y == (x%10)){
 			cont++;
 		}
-		n = n/10;
+		x = x/10;
 		return qnt(x);
 	}
 	return 0;
