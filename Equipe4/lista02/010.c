@@ -1,3 +1,20 @@
+/*Equipe 4:
+
+  Fabiola Maciel
+  Jefferson Avilar
+  Matheus Obando
+  Kaue Fontes
+
+10) Uma matriz maze de 0s e 1s, de 10X10, representa um labirinto no qual
+um viajante precisa encontrar um caminho de maze[0][0] a maze[9][9].
+O viajante pode passar de um quadrado para qualquer outro adjacente na mesma
+fileira ou coluna, mas não pode saltar quadrados nem se movimentar na diagonal.
+Além disso, o viajante não pode entrar num quadrado contendo um 1. maze[0][0]
+e maze[9][9] contêm 0s. Escreva uma rotina recursiva que aceite este labirinto maze
+ e imprima uma mensagem informando a inexistência de um caminho através do labirinto,
+ ou que imprima uma lista de posições representando um caminho de [0][0] a [9][9].
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -16,7 +33,7 @@ void imprime(int matriz[tam][tam]);
 
 int main()
 {
-  
+
   FILE *arquivo = fopen("matriz.txt", "r");
   int matriz[tam][tam];
 
@@ -27,7 +44,7 @@ int main()
       return 1;
     }
 
-  // Adiciona os elementos na matriz
+  // Adiciona os elementos do arquivo na matriz
   for (int i = 0; i < tam; i++)
     {
       for (int j = 0; j < tam; j++)
@@ -41,9 +58,10 @@ int main()
   printf("\n");
   if_acha_saida(matriz);
 
+  // Encerra o arquivo
   fclose(arquivo);
-  
-  return 0;  
+
+  return 0;
 }
 
 // Verifica se há alguma saída no labirinto usando recursividade
@@ -94,11 +112,11 @@ bool valido(int matriz[tam][tam], int x, int y)
   return false;
 }
 
-/* Confirma usando a função 'acha-saida', e se realmente há 
+/* Confirma usando a função 'acha-saida', e se realmente há
 uma solução no labirinto ele imprime o caminho encontrado */
 bool if_acha_saida(int matriz[tam][tam])
 {
-	// Matriz usada para impressão do resultado, matriz 'result' 
+	// Matriz usada para impressão do resultado, matriz 'result'
   int result[tam][tam] = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -111,7 +129,7 @@ bool if_acha_saida(int matriz[tam][tam])
                            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
 
   /* Vai retornar 'TRUE' e o caminho se for possível encontrar uma saída para o labirinto
-     ou 'FALSE' e alguma mensagem se não for possível */ 
+     ou 'FALSE' e alguma mensagem se não for possível */
   if(acha_saida(matriz, 0, 0, result) == false)
     {
       printf("Solução inexistente!!\n");
@@ -126,7 +144,6 @@ bool if_acha_saida(int matriz[tam][tam])
 /* Função usada para imprimir as matrizes de entrada e a resultado */
 void imprime(int matriz[tam][tam])
 {
-
   for (int i = 0; i < tam; i++)
     {
       for (int j = 0; j < tam; j++)

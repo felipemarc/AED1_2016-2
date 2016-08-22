@@ -1,4 +1,4 @@
-/*Equipe:
+/*Equipe 4:
 
   Fabiola Maciel
   Jefferson Avilar
@@ -20,13 +20,13 @@ int main()
   char vector[] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 
   int size;
-  
+
   printf("Insira o valor: ");
   scanf("%d", &size);
 
-  permuta(vector, 0, size); 
+  permuta(vector, 0, size);
 
-  return 0; 
+  return 0;
 }
 
 void permuta(char vetor[], int start, int end)
@@ -41,7 +41,7 @@ void permuta(char vetor[], int start, int end)
     {
       for (int x = start; x < end; x++)
         {
-          //Um quase Bubble Sorte para gerar ordenação lexicográfica 
+          //Um quase Bubble Sorte para gerar ordenação lexicográfica
           int aux = vetor[x];
 
           vetor[x] = vetor[start];
@@ -65,7 +65,7 @@ void troca(char vetor[], int i, int j)
 }
 */
 
-// Função usada para imprimir as permutações 
+// Função usada para imprimir as permutações
 void imprime(char vetor[], int end)
 {
   for (int i = 0; i < end; i++)
