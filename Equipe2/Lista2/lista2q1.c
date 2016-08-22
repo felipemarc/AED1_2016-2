@@ -1,30 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-
-int function(int n, int pot, int bin)
-{
-	bin += (n % 2)* pot;
-	n = n/2;
-	pot = pot *10;
-	if (n <= 0)
-	{
-		return bin;
-	}
-	bin = function(n, pot, bin);
+ 
+int main() {
+ int n;
+ int r;
+ 
+ printf("Digite o numero: ");
+ scanf("%d", &n);
+ 
+ if(n == 1) {
+  printf("%d\n", n);
+ }
+ else {
+        printf("Forma binaria: ");
+  do {
+   r = n % 2;
+   printf("%d", r);
+   n = n / 2;
+  } while(n >= 1);
+  printf("\n");
+ }
+ system("pause");
 }
 
 
-int main()
-{
-	int n, pot, bin;
-
-	printf("Digite um numero: ");
-	scanf("%d", n);
-	pot = 1;
-	bin = 0;
-	bin = function(n, pot, bin);
-
-	printf("Resultado: %d ", bin);
-	return 0;
-}
