@@ -19,13 +19,30 @@
 #include<stdio.h>
 #include<string.h>
 
-int qnt (char *x,char y){
-	
+int qnt (int x,int y)
+{
+	cont = 0; 
+	if(x == 0){
+		return 0;
+	}
+	else {
+		if (y == (x%10)){
+			cont++;
+		}
+		n = n/10;
+		return qnt(x);
+	}
+	return 0;
 
 }
 
-int main (int argc ,const char argv[]){
-	
+int main ()
+{
+		int x,y,q;
+		scanf("%d\n",&x);
+		scanf("%d\n",&y);
+		q = qnt(x,y);
+		printf("o número aparece %d vezes",q);
 
 	return 0;
 }
