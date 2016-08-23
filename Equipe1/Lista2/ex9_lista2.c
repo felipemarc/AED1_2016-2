@@ -1,4 +1,4 @@
-/* 	equipe 01:
+/* 	Equipe 01:
 
 	Diogo Abreu
 	Fernando Calderaro
