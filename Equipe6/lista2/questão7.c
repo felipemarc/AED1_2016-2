@@ -10,7 +10,10 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
+ *         Author	 Hélio Paula
+ 			Jailson Pereira
+ 			Thiago Cauassa
+ 			Rebeca Assunção
  *   Organization:  
  *
  * =====================================================================================
@@ -26,7 +29,8 @@ int qnt (int x,int y)
 		return 0;
 	}
 	else {
-		if (y == (x%10)){
+		if (y == (x%10))
+		{
 			cont++;
 		}
 		x = x/10;
