@@ -18,7 +18,10 @@
  *
  * =====================================================================================
  */ 5) Gere todas as possíveis combinações para um jogo da MegaSena com 6 dezenas.
- 
+#include <stdio.h>
+#include <stdlib.h>
+void perm(int[]);
+
 int main(int argc,const char *argv[]){
 
   return 0; 
