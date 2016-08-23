@@ -14,7 +14,7 @@
  *         			Jailson Pereira
  *         			Thiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  
+ *   Organization: AED 1 
  *
  * =====================================================================================
  */
@@ -37,7 +37,7 @@ int fibo(int x)
 	}
 }
 
-int main (int argc,const char argv[])
+int main (int argc,const char *argv[])
 {
 
 	int x, f;
