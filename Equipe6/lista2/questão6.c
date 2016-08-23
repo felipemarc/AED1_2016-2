@@ -11,9 +11,9 @@
  *       Compiler:  gcc
  *
  *         Author:  Hélio Paulo
- *         			      Jailson Pereira
- *				         	    Rebeca Assunção         			
- *			 		            Tiago Cauassa
+ *         Jailson Pereira
+ *				     Rebeca Assunção         			
+ *			 		   Tiago Cauassa
  *         			
  *   Organization:  
  *
