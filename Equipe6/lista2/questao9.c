@@ -35,7 +35,7 @@ int main (){
 	scanf("%d",&y);
 
 	z = soma(x,y);
-	printf("a soma sucessiva é %d",z);
+	printf("multiplicação é %d",z);
 	return 0;
 
 }
