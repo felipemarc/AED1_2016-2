@@ -14,7 +14,7 @@
  			Jailson Pereira
  			Thiago Cauassa
  			Rebeca Assunção
- *   Organization:  
+ *   Organization:  AED 1
  *
  * =====================================================================================
  */
@@ -40,7 +40,7 @@ int qnt (int x,int y)
 
 }
 
-int main ()
+int main (int argc,const char *argv[])
 {
 		int x,y,q;
 		scanf("%d\n",&x);
