@@ -1,3 +1,14 @@
+/*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+
+1) Impressão de um número natural em base binária
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
  
