@@ -12,8 +12,8 @@
  *
  *         Author:  Hélio Paulo
  *         Jailson Pereira
- *				 Rebeca Assunção         			
- *			 	Tiago Cauassa
+ *	Rebeca Assunção         			
+ * Tiago Cauassa
  *         			
  *   Organization:  
  *
