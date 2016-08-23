@@ -3,7 +3,7 @@
  *
  *       Filename:  questão7.c
  *
- *    Description:  
+ *    Description: Lista 2 
  *
  *        Version:  1.0
  *        Created:  19-08-2016 18:14:52
