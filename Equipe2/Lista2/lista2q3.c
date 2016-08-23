@@ -1,8 +1,12 @@
 /*
 Equipe2
 Hermann Hernani
+Jessica Tavares
 Lucas Botinelly
+Paulo Marinho
 Stephanny Barreto
+
+3) Soma de dois números naturais, através de incrementos sucessivos (Ex.: 3 + 2 = ++(++3)).
 */
 
 #include<stdio.h>
