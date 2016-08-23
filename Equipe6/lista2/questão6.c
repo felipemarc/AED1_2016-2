@@ -12,8 +12,8 @@
  *
  *         Author:  Hélio Paulo
  *         Jailson Pereira
- *				     Rebeca Assunção         			
- *			 		   Tiago Cauassa
+ *				 Rebeca Assunção         			
+ *			 	Tiago Cauassa
  *         			
  *   Organization:  
  *
@@ -25,15 +25,18 @@
 
 #include <stdio.h>
 
-int mdc(int a,int b) 
+int mdc(int x,int y) //Algoritmo de Euclides
 {  
- if(b == 0)  
-  return a;  
+ if(y == 0)  
+  return x;  
  else  
-  return mdc(b,a%b); 
+  return mdc(y,x%y); 
 } 
 
 int main()
 {
- printf("%d",mdc(25,20)); 
+ int x, y;
+ printf("Digite x e y:\n");
+ scanf("%d""%d", &x, &y);
+ printf("O MDC dos valores eh: %d",mdc(x,y)); 
 }
