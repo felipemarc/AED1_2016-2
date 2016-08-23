@@ -14,12 +14,12 @@
  *         			Jailson Pereira
  *         			Thiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  
+ *   Organization:  AED 1
  *
  * =====================================================================================
  */ 5) Gere todas as possíveis combinações para um jogo da MegaSena com 6 dezenas.
  
-int main(){
+int main(int argc,const char *argv[]){
 
 
 }
