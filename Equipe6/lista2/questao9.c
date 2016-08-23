@@ -39,11 +39,13 @@ int soma(int x, int y)
 int main ()
 {
 	int x,y,z;
+	printf("Digite numero: ")
 	scanf("%d",&x);
+	printf("Digite outro numero: ")
 	scanf("%d",&y);
 
 	z = soma(x,y);
-	printf("multiplicação é %d",z);
+	printf("multiplicação é %d\n",z);
 	return 0;
 
 }
