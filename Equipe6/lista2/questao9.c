@@ -20,14 +20,13 @@
 
 int soma(int x, int y){
 	int i;
-	if(x && y == 0 ){
+	if(x == 0 ){
 		return 0;
 	}
-	if(x && y >= 1){
-		for(i=0;i<=x;i++){
-			return  ;
-		}
+	if(x == 1){
+		return y;
 	}
+	return y+soma(x-1,y);
 }
 
 int main (){
