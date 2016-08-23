@@ -8,28 +8,50 @@
 
 #include <stdio.h>
 #include <conio.h>
+#define MAX 100
 
-int main (){
+int main ()
 
-	int n,bin,aux;
+{
+	int n, aux, i, cont, vbin[MAX];
 
-	printf ("Este programa traduz o numero da base decimal para a base binaria.");
-	bin=aux=0;
-
-	printf ("Digite um numero na base decimal : ");
+	printf ("\nEste programa traduz o numero da base decimal para a base binaria. \n");
+	printf ("\nDigite um numero na base decimal : ");
 	scanf ("%d",&n);
+	
+	aux=0;
+	cont = 0;
+	
+	for (i = 0; n > 1; i++)
+	
+  		{
+			aux = n / 2;
+			vbin[i] = n%2;
+			n = aux;
+			cont++;
 
-	while (n > 0){
+  			if(n == 1)
+  			
+			   {
+  					vbin[i+1] = 1;
+  					cont++;
+  					break;
+			 	}
+  		
+  	}
+  	
+//printf("\nImprimindo o Vetor em ordem inversa:\n\n");
+	printf ("\nO numero decimal digitado na base binaria : \n\n");
+	
+  	for (i = cont - 1; i >= 0; i--)
+  	
+  		{
+    		printf("%d ", vbin[i]);
+    	
+    }
+    	
+	printf("\n");
 
-		aux = n / 2;
-		bin = n%2;
-		printf ("%d",bin);
-
-
-		n = n / 2;
-		getch();
-	}
-	return 0;
 }
 
 
