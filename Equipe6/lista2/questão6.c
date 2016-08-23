@@ -1,31 +1,39 @@
 /*
  * =====================================================================================
  *
- *       Filename:  quest„o6.c
+ *       Filename:  quest√£o6.c
  *
- *    Description:  modelo de cabeÁalho
+ *    Description:  modelo de cabe√ßalho
  *
  *        Version:  1.0
  *        Created:  21-08-2016 12:01:12
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  HÈlio Paulo
+ *         Author:  H√©lio Paulo
  *         			Jailson Pereira
- *					Rebeca AssunÁ„o         			
+ *					Rebeca Assun√ß√£o         			
  *			 		Tiago Cauassa
  *         			
  *   Organization:  
  *
  * =====================================================================================
  */
- // O m·ximo divisor comum dos inteiros x e y È o maior inteiro que È divisÌvel por x e y. 
- // Escreva uma funÁ„o recursiva mdc em C, que retorna o m·ximo divisor comum de x e y. 
- // O mdc de x e y È definido como segue: se y È igual a 0, ent„o mdc(x,y) È x; caso contr·rio, mdc(x,y) È mdc (y, x%y), onde % È o operador resto.
+ // O m√°ximo divisor comum dos inteiros x e y √© o maior inteiro que √© divis√≠vel por x e y. 
+ // Escreva uma fun√ß√£o recursiva mdc em C, que retorna o m√°ximo divisor comum de x e y. 
+ // O mdc de x e y √© definido como segue: se y √© igual a 0, ent√£o mdc(x,y) √© x; caso contr√°rio, mdc(x,y) √© mdc (y, x%y), onde % √© o operador resto.
+
 #include <stdio.h>
 
-int main {
+int mdc(int a,int b) 
+{  
+ if(b == 0)  
+  return a;  
+ else  
+  return mdc(b,a%b); 
+} 
 
-
-
+int main()
+{
+ printf("%d",mdc(25,20)); 
 }
