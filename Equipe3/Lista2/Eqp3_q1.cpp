@@ -1,5 +1,4 @@
 //*** Equipe 3 ***
-//Caique Martins
 //Elisandra Oliveira
 //Frank Nápolis
 
