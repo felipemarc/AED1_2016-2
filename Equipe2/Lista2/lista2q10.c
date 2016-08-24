@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-void printMaze(int maze[10][10])
+void printMaze(char maze[10][10])
 {
 	int i, j,k;
 	printf("   ");
@@ -38,7 +38,7 @@ void printMaze(int maze[10][10])
 	}
 }
 
-void loadMaze(int maze[10][10])
+void loadMaze(char maze[10][10])
 {
 	char ch;
 	int i=0,j=0;
@@ -64,39 +64,44 @@ void loadMaze(int maze[10][10])
     fclose(fp);
 }
 
-int anda(int maze[10][10], int i, int j)
+int anda(char maze[10][10], int i, int j)
 {
-	maze[0][0] = 2;
-	if(maze[i][j+1] == 0)
+	if(i==9 && j==8)
+	{
+		printf("Fim de jogo, tu ganhou mizera !!!! \n");
+		return 0;
+	}
+	maze[0][0] = '2';
+	if(maze[i][j+1] == '0')
 	{	
-		printf("Ai, papai1\n");
-		maze[i][j+1] = 2;
+		//printf("Ai, papai1\n");
+		maze[i][j+1] = '2';
 		anda(maze, i, j+1);
 	}
 	else
 	{
-		if(maze[i+1][j] == 0)
+		if(maze[i+1][j] == '0')
 		{		
-			printf("Ai, papai2\n");
-			maze[i+1][j] = 2;
+			//printf("Ai, papai2\n");
+			maze[i+1][j] = '2';
 			anda(maze, i+1, j);
 		}	
 		
 		else
 		{
-			if(maze[i-1][j] == 0)
+			if(maze[i-1][j] == '0')
 			{
-				printf("Ai, papai3\n");
-				maze[i-1][j] == 2;
+				//printf("Ai, papai3\n");
+				maze[i-1][j] == '2';
 				anda(maze, i-1, j);
 			}
 			
 			else
 			{
-				if(maze[i][j-1] == 0)
+				if(maze[i][j-1] == '0')
 				{
-					printf("Ai, papai4\n");
-					maze[i][j-1] = 2;
+					//printf("Ai, papai4\n");
+					maze[i][j-1] = '2';
 					anda(maze, i, j-1);
 				}
 				else
@@ -110,12 +115,22 @@ int anda(int maze[10][10], int i, int j)
 
 int main()
 {
-	int matriz[10][10], i=0, j=0;
+	char matriz[10][10];
+	int i=0, j=0;
 	loadMaze(matriz);
+	/*for(i=0; i<10;i++)
+	{
+		for(j = 0; j<10;j++)
+		{
+			printf("%c", matriz[i][j]);
+		}
+	}
+	*/
 	printf("Tabuleiro Inicial: \n");
 	printMaze(matriz);
 	anda(matriz, i, j);
 	printf("Tabuleiro Final: \n");
 	printMaze(matriz);
+	
 	return 0;
 }
