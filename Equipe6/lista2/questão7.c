@@ -34,7 +34,7 @@ int qnt (int x,int y)
 			cont++;
 		}
 		x = x/10;
-		return qnt(x);
+		return qnt(x,y);
 	}
 	return 0;
 
@@ -43,7 +43,9 @@ int qnt (int x,int y)
 int main (int argc,const char *argv[])
 {
 		int x,y,q;
+		printf("Digite número: ");
 		scanf("%d\n",&x);
+		printf("Digite número: ");
 		scanf("%d\n",&y);
 		q = qnt(x,y);
 		printf("o número aparece %d vezes",q);
