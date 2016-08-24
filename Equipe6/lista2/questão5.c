@@ -10,7 +10,7 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *   Author:  Hélio Paulo
+ *   Author:  			Hélio Paulo
  *         			Jailson Pereira
  *         			Thiago Cauassa
  *         			Rebeca Assunção
