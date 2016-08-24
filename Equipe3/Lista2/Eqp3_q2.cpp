@@ -11,28 +11,33 @@
 #include <math.h>
  
 int soma (int a, int b, int soma){
-	int i;
-	for(i = 1; i <= a; i++){
-  		soma = soma + b;
-	}
-	printf("\nResultado: \n");
-	printf(" %d X %d = %d", a, b, soma);
-	printf("\n");
+	int i=0;
+	if (a == 0)
+		return 0;
+	if (a >= 1)
+		while(i < a){
+  			soma = soma + b;
+  			i++;
+		}
+		return (soma);
 }
- 
- 
+  
 int main()
  
 {
 	int n1, n2, s, result;
 	
-	printf("Digite o segundo numero que sera somado: ");
-  	scanf(" %d", &n2);
+	printf("Digite um numero a ser somado: ");
+  	scanf(" %d", &n1);
  
   	printf("Digite a quantidade de somas: ");
-  	scanf(" %d", &n1);
+  	scanf(" %d", &n2);
   
-	s = soma(n1, n2, result);
+	result = soma(n1, n2, s);
+	
+	printf("\nResultado: \n");
+	printf(" %d X %d = %d", n2, n1, result);
+	printf("\n");
 	
 }
 
