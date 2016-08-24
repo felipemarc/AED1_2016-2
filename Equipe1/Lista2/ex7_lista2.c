@@ -37,27 +37,27 @@ int quantidade_k(int n)
 
 int main()
 {
-    int n;
+    int numero;
 
     printf("-Programa que verifica a ocorrencia de um digito em um determinado numero-\n\n");
     //o valor maximo que o tipo int recebe e 2147483647 que tem 10 digitos
     printf("Digite um numero de ate 9 digitos:\n");
-    scanf("%d",&n);
+    scanf("%d",&numero);
 
     printf("Digite o digito a ser verificado:\n");
     scanf("%d",&k);
 
     //chama a funcao
-    quantidade_k(n);
+    quantidade_k(numero);
 
     //mostra o resultado da verificacao
     if (vezes==0)
-        printf("O digito %d nao ocorre em %d", k, n);
+        printf("O digito %d nao ocorre em %d", k, numero);
     else
         if (vezes==1)
-            printf("O digito %d ocorre %d vez em %d", k, vezes, n);
+            printf("O digito %d ocorre %d vez em %d", k, vezes, numero);
         else
-            printf("O digito %d ocorre %d vezes em %d", k, vezes, n);
+            printf("O digito %d ocorre %d vezes em %d", k, vezes, numero);
 
     return 0;
 }
