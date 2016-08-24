@@ -2,9 +2,11 @@
 	Aline Lima
 	Amanda Leticia
 	Eduardo Azevedo
+	Elisandra Oliveira
+	Frank Nápolis
 	Lucas Almeida
 
-4) Dado um numero n, gere todas as possiveis combinacoes com as n primeiras letras do alfabeto.
+Questão 4 - Dado um numero n, gere todas as possiveis combinacoes com as n primeiras letras do alfabeto.
 0   Ex.: n = 3. Resposta: ABC, ACB, BAC, BCA, CAB, CBA*/
 
 #include<stdio.h>
