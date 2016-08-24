@@ -1,3 +1,24 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:  modelo.c
+ *
+ *    Description:  questão10
+ *
+ *        Version:  1.0
+ *        Created:  19-08-2016 14:07:12
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:              Hélio Paulo
+ *         			Jailson Pereira
+ *         			Thiago Cauassa
+ *         			Rebeca Assunção
+ *   Organization:  AED 1
+ *
+ * =====================================================================================
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 #define TAM 10
