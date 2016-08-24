@@ -1,5 +1,14 @@
-//9) A multiplicação de dois números inteiros pode ser feita através de somas sucessivas. Proponha um algoritmo recursivo Multip_Rec(n1,n2) que calcule a multiplicação de dois inteiros.
+/*
+Equipe 2
 
+Lucas Botinelly
+Stephanny Barreto
+Hermann Hernani
+Paulo Marinho
+Jésssica Tavares
+
+//9) A multiplicação de dois números inteiros pode ser feita através de somas sucessivas. Proponha um algoritmo recursivo Multip_Rec(n1,n2) que calcule a multiplicação de dois inteiros.
+*/
 #include<stdio.h>
 
 int Multip_Rec(int n1,int n2, int acm)
