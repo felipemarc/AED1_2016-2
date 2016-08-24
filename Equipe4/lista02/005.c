@@ -1,57 +1,40 @@
-/*Equipe 4:
-
-  Fabiola Maciel
-  Jefferson Avilar
-  Matheus Obando
-  Kaue Fontes
-*/
-
-void imprime(int vetor[], int end);
-void combina(int vetor[], int start, int end);
-
 #include <stdio.h>
+#include <stdbool.h>
+
+void combinacoes(int v[], bool v_bool[], int i, int tam_v);
 
 int main()
 {
-  int vetor[] = {1,2,3,4,5,6}, tam;
+	int v[] = {1,2,3,4,5,6};
+	int tam_v = sizeof(v) / sizeof(int);
+	bool v_bool[tam_v];
 
-  tam = sizeof(vetor)/sizeof(int);
+	for(int i = 0; i < tam_v; i++)
+	{
+		v_bool[i] = false;
+	}
 
-  combina(vetor, 0, tam);
+	combinacoes(v, v_bool, 0, tam_v);
 
-  return 0;
+	return 0;
 }
 
-// Gera combinações com repetição
-void combina(int vetor[], int start, int end)
+void combinacoes(int vetor[], bool v_bool[], int start, int tam)
 {
-  if (start == end-1)
-    {
-      imprime(vetor, end);
-    }
-  else
-    {
-      for (int x = start; x < end; x++)
-        {
-          // Ordena o vetor lexograficamente
-          int aux = vetor[x];
-
-          vetor[x] = vetor[start];
-          vetor[start] = aux;
-
-          combina(vetor, start + 1, end);
-
-          vetor[start] = vetor[x];
-          vetor[x] = aux;
-        }
-    }
-}
-
-void imprime(int vetor[], int end)
-{
-  for (int i = 0; i < end; i++)
-  {
-    printf("%d ", vetor[i]);
-  }
-  printf("\n");
+	if(start == tam)
+	{
+		for(int j = 0; j < tam; j++)
+		{
+			if(v_bool[j] == 1)
+				printf("%d ", vetor[j]);
+		}
+		printf("\n");
+	}
+	else
+	{
+		v_bool[start] = true;
+		combinacoes(vetor, v_bool, start + 1, tam);
+		v_bool[start] = false;
+		combinacoes(vetor, v_bool, start + 1, tam);
+	}
 }
