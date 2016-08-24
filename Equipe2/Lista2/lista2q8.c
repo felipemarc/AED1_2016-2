@@ -1,4 +1,12 @@
 /*
+Equipe 2
+
+Hermann Hernani
+Lucas Botinelly
+Stephanny Barreto
+Paulo Marinho
+Jéssica Tavares
+
 8) Uma sequência de Fibonacci generalizada, de f0 a f1 é definida como fibg(f0, f1, 0), fibg(f0, f1, 1), fibg(f0, f1, 2), ..., onde:
 fibg(f0, f1, 0) = f0
 fibg(f0, f1, 1) = f1
