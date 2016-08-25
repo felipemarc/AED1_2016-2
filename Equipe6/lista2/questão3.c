@@ -5,7 +5,7 @@
 int soma( int a, int b)
 
 {
-
+/*ERROR
 int i,soma ;
 
  for (i=0;i<b;i++)
@@ -13,7 +13,12 @@ int i,soma ;
 
 	soma = ++ a;
 }  
-	return (soma);
+	return (soma); ERROR*/
+ if(b==1){
+  return a+1;
+ }else{
+  return 1 + soma(a,b-1);
+ }
 }
 
 
