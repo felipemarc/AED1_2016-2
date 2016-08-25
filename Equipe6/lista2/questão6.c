@@ -36,10 +36,10 @@ int mdc(int x,int y) //função mdc e seus dois parâmetros
   return mdc(y,x%y); //Daí você se pergunta, tá mas o que acontece depois? A função se repete como um loop, ou seja:
 } // dados os novos valores aos parâmetros, a função recursiva se chama novamente e os novos valores passam pelas mesmas condições:
 // y=0? se sim, MDC será x, se não... x<=y e y<-resto de x por y: x%y (sendo % o operador resto)
-int main()
+int main()//início do programa
 {
- int x, y;
- printf("Digite x e y:\n");
- scanf("%d""%d", &x, &y);
- printf("O MDC dos valores eh: %d",mdc(x,y)); 
+ int x, y; //declarando variáveis inteiras
+ printf("Digite x e y:\n");//Solicitando entrada de dados
+ scanf("%d""%d", &x, &y);//Lendo e agregando valores as variáveis
+ printf("O MDC dos valores eh: %d",mdc(x,y)); //Imprimindo o resultado da função mdc(x,y)
 }
