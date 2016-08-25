@@ -40,7 +40,6 @@ void perm(int dezenas[]){
 		if(i==0){
 			imprime(dezenas);//ERROR return 0;
 		}else{
-			imprime(dezenas);//[]);
 			troca(i,dezenas);//[]);
 			perm(dezenas);//ERRORreturn perm();
 		}
