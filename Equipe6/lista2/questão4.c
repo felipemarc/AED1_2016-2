@@ -15,7 +15,6 @@
  *         			Tiago Cauassa
  *         			Rebeca Assunção
  *   Organization:  
- *
  * =====================================================================================
  */
  // Dado um número n, gere todas as possíveis combinações com as n primeiras letras do alfabeto. Ex.: n = 3. Resposta: ABC, ACB, BAC, BCA, CAB, CBA
@@ -64,12 +63,12 @@ int main() {
 	int * s;//Foi usado locação de memório dinâmica MALLOC, que armazena os dados e devolve o valor para o ponteiro, no caso: *s
 	int N, i;
 	
-	printf("\nEntre com n: ");//Pedido de entrada e leitura normail...
+	printf("\nEntre com n: ");//Pedido de entrada e leitura normal...
 	scanf("%d",&N);
 	
 	s = (int*)malloc((N+1)*sizeof(int)); 
 	//variável recebendo valor do resultado da locação de memória sendo int*:
 	// sizeof é um operador usado quando o real tamanho d eum objeto deve ser conhecido.
 	for (i=1; i<=N; i++) s[i] = i;
-	Permuta (s, 1, N);//chanando a função
+	Permuta (s, 1, N);//chamando a função
 }
