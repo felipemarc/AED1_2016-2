@@ -96,18 +96,8 @@ int main(){
 	
 	int matriz[tam][tam];
 	int i=0,j=0;
-
-	if (arquivo == NULL){
-		printf("ERRO\n");
-		return 1;
-	}
-	
-	for(i=0;i<9;i++){
-		for(j=0;j<9;j++){
-			fscanf(arquivo,"%d",&matriz[i][j]);
-		}
-	}
 	printf("\n Tabuleiro Inicial\n");
+	loadMaze(matriz);
 	imprime(matriz);
 	
 	return 0;
