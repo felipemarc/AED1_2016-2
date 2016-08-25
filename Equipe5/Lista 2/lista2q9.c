@@ -14,7 +14,7 @@ que calcule a multiplicaçãoo de dois inteiros.*/
 
 int mult(int x, int y)
 {
-	if(y==0)
+	if(y==0 || x==0 )
 	{
 		return 0;
 	}
