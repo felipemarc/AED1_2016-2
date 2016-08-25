@@ -25,8 +25,9 @@
 
 #include <stdio.h>
 //Algoritmo de Euclides, este algoritmo existe há mais de 3 mil anos e é usado para encontrar o MDC de dois número
-                     //Se explica simplesmente por: dado dos números (x e y), se o segundo (y) for igual a 0, então o MDC é o primeiro deles, o x.
-                     //Caso contrário ele diz para adotar y como novo valor de x, e vice-versa ou seja, de (x,y, será (y,x) 
+//Se explica simplesmente por: dado dos números (x e y), se o segundo (y) for igual a 0, então o MDC é o primeiro deles, o x.
+//Caso contrário, ele diz para adotar y como novo valor de x, e adotar o resto da divisão de x por y como novo valor de y 
+
 int mdc(int x,int y) //função int mdc e seus dois parâmetros
 {  
  if(y == 0)  
