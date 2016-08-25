@@ -22,16 +22,16 @@
 #include<stdio.h>
 #include<string.h>
 
-int qnt (int x,int y)
+int qnt (unsigned long int x,int y)
 {
 	cont = 0; 
 	if(x == 0){
-		return 0;
+		return cont;
 	}
 	else {
 		if (y == (x%10))
 		{
-			cont++;
+			cont+=1;
 		}
 		x = x/10;
 		return qnt(x,y);
@@ -42,13 +42,12 @@ int qnt (int x,int y)
 
 int main (int argc,const char *argv[])
 {
-		int x,y,q;
+		unsigned long int x,y,q;
 		printf("Digite número: ");
-		scanf("%d\n",&x);
+		scanf("%lu\n",&x);
 		printf("Digite número: ");
-		scanf("%d\n",&y);
-		q = qnt(x,y);
-		printf("o número aparece %d vezes",q);
+		scanf("%lu\n",&y);
+		printf("o número %lu aparece %d vezes",y,qnt(x,y));
 
 	return 0;
 }
