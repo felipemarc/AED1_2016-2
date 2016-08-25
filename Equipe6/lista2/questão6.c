@@ -24,8 +24,10 @@
  // O mdc de x e y é definido como segue: se y é igual a 0, então mdc(x,y) é x; caso contrário, mdc(x,y) é mdc (y, x%y), onde % é o operador resto.
 
 #include <stdio.h>
-
-int mdc(int x,int y) //Algoritmo de Euclides
+//Algoritmo de Euclides, este algoritmo existe há mais de 3 mil anos e é usado para encontrar o MDC de dois número
+                     //Se explica simplesmente por: dado dos números (x e y), se o segundo (y) for igual a 0, então o MDC é o primeiro deles, o x.
+                     //Caso contrário ele diz para adotar y como novo valor de x, e vice-versa ou seja, de (x,y, será (y,x) 
+int mdc(int x,int y) //função int mdc e seus dois parâmetros
 {  
  if(y == 0)  
   return x;  
