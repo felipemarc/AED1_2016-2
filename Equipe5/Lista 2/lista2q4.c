@@ -15,7 +15,7 @@ Questão 4 - Dado um numero n, gere todas as possiveis combinacoes com as n prime
 
 void imprimir(char *combinacoes)
 {
-	printf("%s \n", combinacoes);
+	printf("%s\n", combinacoes);
 }
 
 //faz a troca de letras
@@ -48,19 +48,20 @@ void comb(int end, int start, char *letrinhas)
 int main()
 {
 	char letras[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *alfabeto;
+	char *alfabeto, alfa1;
 	int i, n;
 	
 	printf("Informe o numero de combinacoes: ");
 	scanf("%i", &n);
 	
-	alfabeto=malloc(sizeof(char) * n);
-	
+	alfabeto=malloc(sizeof(char) * n);	
 	
 	for(i=0;i<n;i++)
 	{
 		alfabeto[i]=letras[i];
 	}
+	
+	alfabeto[n]='\0';
 	
 	comb(n-1, 0, alfabeto);
 	free(alfabeto);
