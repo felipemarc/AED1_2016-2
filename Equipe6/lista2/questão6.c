@@ -3,7 +3,7 @@
  *
  *       Filename:  questão6.c
  *
- *    Description:  modelo de cabeçalho
+ *    Description:  questão6
  *
  *        Version:  1.0
  *        Created:  21-08-2016 12:01:12
@@ -15,7 +15,7 @@
  *	Rebeca Assunção         			
  * Tiago Cauassa
  *         			
- *   Organization:  
+ *   Organization:  AED 1
  *
  * =====================================================================================
  */
