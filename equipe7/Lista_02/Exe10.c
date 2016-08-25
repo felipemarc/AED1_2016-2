@@ -6,7 +6,7 @@ int maze[MAXN][MAXN],i,j,n;
 int ff(int i, int j){
     int d[]={-1,0,1,0},achou, k;
     if (i<0 || i>=n || j<0 || j>=n) return 0;
-    if (maze[i][j]!=0) return 0;
+    if (maze[i][j] != 0) return 0;
 
     maze[i][j]=8;
 
@@ -42,13 +42,13 @@ int main(){
 
         ff(n-1,n-1);//chama a funçao a partir do destino apenas pra corrigir a impressao do caminho que eh em ordem contraria
 
-        /*for (int i=0;i<n;i++){
+        for (int i=0;i<n;i++){
             for (int j=0;j<n;j++){
-                cout<<maze[i][j]<<" ";
+                printf("%d ",maze[i][j]);//cout<<maze[i][j]<<" ";
                 maze[i][j]=0;
             }
-            cout<<endl;
-        }*/
+            printf("\n");//            cout<<endl;
+        }
 
         printf("\n");//cout<<endl;
     }
