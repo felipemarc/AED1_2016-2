@@ -23,13 +23,39 @@
 #include<stdlib.h>
 #define TAM 10
 
-void imprime(int matriz[10][10]){
-	int i,j;
-	for(i=0;i<9;i++){
-		for(j=0;j<9;j++){
-			printf("%d",matriz[i][j]);
+void imprime(char maze[tam][tam])
+{
+	int i, j,k;
+	printf("   ");
+
+	printf("\n");
+	k = 0;
+	for ( i = 0; i < tam i++ )
+	{
+		if (k < tam)
+		{
+		printf("%d  ", k++);
+		}else
+		{
+		printf("%d ", k++);
 		}
-	   printf("\n");
+		for ( j = 0; j < tam; j++ )
+		{
+		switch (maze[i][j])
+		{
+			case '1':
+				printf("ꗞ");
+				break;
+			case '0':
+				printf(" ");
+				break;
+			case '2':
+				printf("P");
+				break;
+	   
+		}
+	}
+		printf ( "\n" );
 	}
 }
 void loadMaze(char maze[tam][tam])
@@ -67,9 +93,9 @@ void loadMaze(char maze[tam][tam])
 
 int main(){
 
-	FILE *arquivo = fopen ("maze.txt","r");
-	int matriz[9][9];
-	int i,j;
+	
+	int matriz[tam][tam];
+	int i=0,j=0;
 
 	if (arquivo == NULL){
 		printf("ERRO\n");
@@ -81,7 +107,8 @@ int main(){
 			fscanf(arquivo,"%d",&matriz[i][j]);
 		}
 	}
+	printf("\n Tabuleiro Inicial\n");
 	imprime(matriz);
-	fclose(arquivo);
+	
 	return 0;
 }
