@@ -83,7 +83,7 @@ void loadMaze(char matriz[tam][tam])
     }
     fclose(fp);
 }
-void caminho (char matriz[tam][tam],int i,int j){
+int caminho (char matriz[tam][tam],int i,int j){
 	if(i==9 && j==8){
 		printf("FIM!");
 		return 0;
@@ -125,11 +125,16 @@ void caminho (char matriz[tam][tam],int i,int j){
 int main(){
 
 	
-	int matriz[tam][tam];
+	char matriz[tam][tam];
 	int i=0,j=0;
-	printf("\n Tabuleiro Inicial\n");
 	loadMaze(matriz);
+	printf("\n Tabuleiro Inicial\n");
 	imprime(matriz);
+	caminho(matriz,i,j);
+	printf("Tabuleiro Final: \n");
+	imprime(matriz);
+	
+	
 	
 	return 0;
 }
