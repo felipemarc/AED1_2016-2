@@ -6,7 +6,7 @@ Lucas Botinelly
 Paulo Marinho
 Stephanny Barreto
 
-1) Impressão de um número natural em base binária
+1) Impressao de um numero natural em base binaria
 */
 
 #include <stdio.h>

@@ -6,7 +6,7 @@ Lucas Botinelly
 Paulo Marinho
 Stephanny Barreto
 
-3) Soma de dois nuÌmeros naturais, atraveÌs de incrementos sucessivos (Ex.: 3 + 2 = ++(++3)).
+3) Multiplicação de dois numeros naturais, atraves de incrementos sucessivos (Ex.: 3 + 2 = ++(++3)).
 */
 
 #include<stdio.h>

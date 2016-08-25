@@ -5,8 +5,8 @@ Jéssica Tavares
 Paulo Marinho
 Stephanny Barreto
 
-7) Escreva uma função recursiva que determine quantas vezes um dígito K ocorree em  
-um número natural N. Por exemplo, o dígito 2 ocorre 3 vezes em 762021192.
+7) Escreva uma fun�ao recursiva que determine quantas vezes um digito K ocorre em  
+um numero natural N. Por exemplo, o dígito 2 ocorre 3 vezes em 762021192.
 */
 
 #include <stdio.h>

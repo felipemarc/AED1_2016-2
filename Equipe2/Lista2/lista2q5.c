@@ -6,7 +6,7 @@ Lucas Botinelly
 Paulo Marinho
 Stephanny Barreto
 
-5) Gere todas as possíveis combinações para um jogo da MegaSena com 6 dezenas.
+5) Gere todas as possiveis combina�oes para um jogo da MegaSena com 6 dezenas.
 */
 
 #include <stdio.h>

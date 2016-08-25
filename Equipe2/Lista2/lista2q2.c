@@ -6,7 +6,7 @@ Lucas Botinelly
 Paulo Marinho
 Stephanny Barreto
 
-2) Multiplicação de dois números naturais, através de somas sucessivas (Ex.: 6 ∗ 4 = 4+4+4+4+4+4)
+2) Mutiplica��o de dois numeros naturais atraves de somas sucessivas (Ex.: 6 ∗ 4 = 4+4+4+4+4+4)
 */
 
 #include<stdio.h>

@@ -7,7 +7,7 @@ Hermann Hernani
 Paulo Marinho
 Jﾃｩsssica Tavares
 
-//9) A multiplicacﾌｧaﾌバ de dois nuﾌ［eros inteiros pode ser feita atraveﾌ《 de somas sucessivas. Proponha um algoritmo recursivo Multip_Rec(n1,n2) que calcule a multiplicacﾌｧaﾌバ de dois inteiros.
+//9) A multiplica鈬o de dois nummeros inteiros pode ser feita atraves de somas sucessivas. Proponha um algoritmo recursivo Multip_Rec(n1,n2) que calcule a multiplicacao de dois inteiros.
 */
 #include<stdio.h>
 
