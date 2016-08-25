@@ -37,9 +37,8 @@ void comb(int end, int start, char *letrinhas)
 	{
 		for(i=start;i<=end;i++)
 		{
-			troca((letrinhas+start),(letrinhas+i));
-			comb(end, start+1, letrinhas);
-			//troca((letrinhas+start),(letrinhas+i));
+			troca((letrinhas+start),(letrinhas+i)); //faz a troca das letras no vetor
+			comb(end, start+1, letrinhas); //chama a funcao novamente
 		}
 	}
 }
@@ -48,7 +47,7 @@ void comb(int end, int start, char *letrinhas)
 int main()
 {
 	char letras[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *alfabeto, alfa1;
+	char *alfabeto;
 	int i, n;
 	
 	printf("Informe o numero de combinacoes: ");
@@ -61,7 +60,7 @@ int main()
 		alfabeto[i]=letras[i];
 	}
 	
-	alfabeto[n]='\0';
+	alfabeto[n]='\0'; //fim da string
 	
 	comb(n-1, 0, alfabeto);
 	free(alfabeto);
