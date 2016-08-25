@@ -22,7 +22,7 @@
 
 #include<stdio.h>
 
-int soma(int x, int y)
+int multi(int x, int y)
 {
 	int i;
 	if(x == 0 )
@@ -44,7 +44,7 @@ int main ()
 	printf("Digite outro numero: ")
 	scanf("%d",&y);
 
-	z = soma(x,y);
+	z = multi(x,y);
 	printf("multiplicação é %d\n",z);
 	return 0;
 
