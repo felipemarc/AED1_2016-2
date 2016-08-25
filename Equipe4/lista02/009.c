@@ -19,12 +19,12 @@ int main()
     printf("Digite o primeiro fator: ");
     scanf("%d",&a);
 
-    printf("\nDigite o segundo fator: ");
+    printf("Digite o segundo fator: ");
     scanf("%d",&b);
 
     int resultado=produto(a,b);
 
-    printf("%d",resultado);
+    printf("%d\n",resultado);
 
 }
 

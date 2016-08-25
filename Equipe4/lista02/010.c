@@ -68,9 +68,9 @@ int main()
 bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
 {
   // Se achar a saída retorna 'TRUE'
-  if (x == tam-1 && y == tam-1)
+  if (x == tam && y == tam)
     {
-      result[x][y] = 1;
+      result[x][y] = 2;
       return true;
     }
 
@@ -78,16 +78,25 @@ bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
   if (valido(matriz,x,y) == true)
     {
       // Adiciona a posição a matriz resultado
-      result[x][y] = 1;
+      result[x][y] = 2;
+
+      if (acha_saida(matriz, x-1, y, result) == true)
+        {
+          return true;
+        }
+
+      if (acha_saida(matriz, x, y-1, result) == true)
+        {
+          return true;
+        }
 
       // Move uma posição na direção de 'x'
       if (acha_saida(matriz, x+1, y, result) == true)
         {
           return true;
         }
-
       // Se movendo na direção de 'x' não retornar alguma solução então volta e move na direção de 'y'
-      if (acha_saida(matriz, x, y+1, result))
+      if (acha_saida(matriz, x, y+1, result) == true)
         {
           return true;
         }
@@ -96,6 +105,7 @@ bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
       result[x][y] = 0;
       return false;
     }
+
   return false;
 }
 
