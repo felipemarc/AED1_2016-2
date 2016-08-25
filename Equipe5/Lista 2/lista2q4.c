@@ -16,7 +16,7 @@ void imprimir(char *combinacoes)
 	printf("%s \n", combinacoes);
 }
 
-
+//faz a troca de letras
 void troca(char *a, char *b)
 {
 	char aux;
