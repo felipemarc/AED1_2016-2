@@ -11,6 +11,8 @@ Stephanny Barreto
 
 #include<stdio.h>
 
+#include<stdio.h>
+
 void printMaze(char maze[10][10])
 {
 	int i, j,k;
@@ -47,6 +49,76 @@ void printMaze(char maze[10][10])
 	}
 }
 
+int volta(char maze[10][10], int i, int j)
+{
+	if(maze[i][j+1] == '0' || maze[i][j-1] == '0' || maze[i+1][j] == '0' || maze[i-1][j] == '0'){
+		//printf("ai papai\n");
+		return 0;
+	} 
+	if(maze[i][j+1] == 'P')
+	{	
+		//printf("Ai, papai1\n");
+		maze[i][j+1] = '3';
+		volta(maze, i, j+1);
+	}
+	else
+	{
+		if(maze[i+1][j] == 'P')
+		{		
+			//printf("Ai, papai2\n");
+			maze[i+1][j] = '3';
+			volta(maze, i+1, j);
+		}	
+		
+		else
+		{
+			if(maze[i-1][j] == 'P')
+			{
+				//printf("Ai, papai3\n");
+				maze[i-1][j] == '3';
+				volta(maze, i-1, j);
+			}
+			
+			else
+			{
+				if(maze[i][j-1] == 'P')
+				{
+					//printf("Ai, papai4\n");
+					maze[i][j-1] = '3';
+					volta(maze, i, j-1);
+				}
+				else
+				{
+					printf("Sem caminho possível, fim de jogo !\n");
+				}
+			}
+		}
+	}
+}
+
+void verificaCaminho(char maze[10][10], int i, int j)
+{
+	
+	if((maze[i][j+1] == 'P' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
+		//printf("Entrou 1!\n");
+		volta(maze, i, j);
+	}
+	if((maze[i][j+1] == '1' && maze[i][j-1] == 'P' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
+		//printf("Entrou 2!\n");
+		volta(maze, i, j);
+	}
+	if((maze[i][j+1] == '1' && maze[i][j-1] == '1' && maze[i+1][j] == 'P' && maze[i-1][j] == '1'))
+	{
+		//printf("Entrou 3!\n");
+		volta(maze, i, j);
+	}
+	if((maze[i][j+1] == '1' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == 'P'))
+	{
+		//printf("Entrou 4!\n");
+		volta(maze, i, j);
+	}
+}
+
 void loadMaze(char maze[10][10])
 {
 	char ch;
@@ -75,7 +147,7 @@ void loadMaze(char maze[10][10])
 
 int anda(char maze[10][10], int i, int j)
 {
-	if(i==9 && j==8)
+	if(i==9 && j==9)
 	{
 		printf("Fim de jogo, tu ganhou mizera !!!! \n");
 		return 0;
@@ -85,6 +157,7 @@ int anda(char maze[10][10], int i, int j)
 	{	
 		//printf("Ai, papai1\n");
 		maze[i][j+1] = '2';
+		verificaCaminho(maze, i, j+1);
 		anda(maze, i, j+1);
 	}
 	else
@@ -93,6 +166,7 @@ int anda(char maze[10][10], int i, int j)
 		{		
 			//printf("Ai, papai2\n");
 			maze[i+1][j] = '2';
+			verificaCaminho(maze, i+1, j);
 			anda(maze, i+1, j);
 		}	
 		
@@ -102,6 +176,7 @@ int anda(char maze[10][10], int i, int j)
 			{
 				//printf("Ai, papai3\n");
 				maze[i-1][j] == '2';
+				verificaCaminho(maze, i-1, j);
 				anda(maze, i-1, j);
 			}
 			
@@ -111,11 +186,12 @@ int anda(char maze[10][10], int i, int j)
 				{
 					//printf("Ai, papai4\n");
 					maze[i][j-1] = '2';
+					verificaCaminho(maze, i, j-1);
 					anda(maze, i, j-1);
 				}
 				else
 				{
-					printf("Caminho errado, fim de jogo !\n");
+					printf("Sem caminho possível, fim de jogo !\n");
 				}
 			}
 		}
