@@ -1,9 +1,9 @@
 /*
  * =====================================================================================
  *
- *       Filename:  questão.c
+ *       Filename:  questão3.c
  *
- *    Description:  modelo de cabeçalho
+ *    Description:  questão3
  *
  *        Version:  1.0
  *        Created:  19-08-2016 14:07:12
@@ -14,7 +14,7 @@
  *         			Jailson Pereira
  *         			Tiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  
+ *   Organization:  AED 1
  *
  * =====================================================================================
  */
