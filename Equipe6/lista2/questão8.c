@@ -41,6 +41,7 @@ int main (int argc,const char *argv[])
 {
 
 	int x, f;
+	printf("Digite numero para sequencia do fibonacci: ");
 	scanf("%d",&x);
 	f = fibo(x);
 	printf("%d\n",f);
