@@ -21,8 +21,8 @@ int somainc(int x, int y)
 int main()
 {
 	int x, y;
-	x =3;
-	y =2;
+	scanf("%d", &x);
+	scanf("%d", &y);
 
 	printf("%d\n", somainc(x,y));
 	return 0; 

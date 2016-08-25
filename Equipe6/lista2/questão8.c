@@ -12,7 +12,7 @@
  *
  *         Author: 	Hélio Paulo
  *         			Jailson Pereira
- *         			Thiago Cauassa
+ *         			Tiago Cauassa
  *         			Rebeca Assunção
  *   Organization: AED 1 
  *

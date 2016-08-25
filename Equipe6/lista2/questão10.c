@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  modelo.c
+ *       Filename:  questão10.c
  *
  *    Description:  questão10
  *
@@ -12,7 +12,7 @@
  *
  *         Author:              Hélio Paulo
  *         			Jailson Pereira
- *         			Thiago Cauassa
+ *         			Tiago Cauassa
  *         			Rebeca Assunção
  *   Organization:  AED 1
  *
