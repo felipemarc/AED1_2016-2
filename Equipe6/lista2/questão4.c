@@ -67,7 +67,7 @@ int main() {
 	scanf("%d",&N);
 	
 	s = (int*)malloc((N+1)*sizeof(int)); 
-	//variável recebendo valor do resultado da locação de memória sendo int*:
+	//variável recebendo valor do resultado da locação de memória
 	// sizeof é um operador usado quando o real tamanho d eum objeto deve ser conhecido.
 	for (i=1; i<=N; i++) s[i] = i;
 	Permuta (s, 1, N);//chamando a função
