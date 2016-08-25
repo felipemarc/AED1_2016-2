@@ -27,15 +27,15 @@
 //Algoritmo de Euclides, este algoritmo existe há mais de 3 mil anos e é usado para encontrar o MDC de dois número
 //Se explica simplesmente por: dado dos números (x e y), se o segundo (y) for igual a 0, então o MDC é o primeiro deles, o x.
 //Caso contrário, ele diz para adotar y como novo valor de x, e adotar o resto da divisão de x por y como novo valor de y 
-
-int mdc(int x,int y) //função int mdc e seus dois parâmetros
+// Uma característica da função com recursividade é que ela chama ela mesma, então observe: 
+int mdc(int x,int y) //função mdc e seus dois parâmetros
 {  
- if(y == 0)  
+ if(y == 0)  // se y = 0, vai retornar x
   return x;  
- else  
-  return mdc(y,x%y); 
-} 
-
+ else        // se não, vai acontecer o que eu expliquei ai em cima: x vai receber y, e y vai receber o resto da divisão de x por y
+  return mdc(y,x%y); //Daí você se pergunta, tá mas o que acontece depois? A função se repete como um loop, ou seja:
+} // dados os novos valores aos parâmetros, a função recursiva se chama novamente e os novos valores passam pelas mesmas condições:
+// y=0? se sim, MDC será x, se não... x<=y e y<-resto de x por y: x%y (sendo % o operador resto)
 int main()
 {
  int x, y;
