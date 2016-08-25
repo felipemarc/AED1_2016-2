@@ -3,7 +3,7 @@
   Fabiola Maciel
   Jefferson Avilar
   Matheus Obando
-  Kaue Fontes
+  Alerrandro Barreto
 
 4) Dado um número n, gere todas as possíveis combinações com as n primeiras letras do alfabeto.
    Ex.: n = 3. Resposta: ABC, ACB, BAC, BCA, CAB, CBA
