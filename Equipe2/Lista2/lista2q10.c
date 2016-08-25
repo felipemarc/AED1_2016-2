@@ -9,7 +9,7 @@ Stephanny Barreto
 10) Uma matriz maze de 0s e 1s, de 10X10, representa um labirinto no qual um viajante precisa encontrar um caminho de maze[0][0] a maze[9][9]. O viajante pode passar de um quadrado para qualquer outro adjacente na mesma fileira ou coluna, mas não pode saltar quadrados nem se movimentar na diagonal. Além disso, o viajante não pode entrar num quadrado contendo um 1. maze[0][0] e maze[9][9] contêm 0s. Escreva uma rotina recursiva que aceite este labirinto maze e imprima uma mensagem informando a inexistência de um caminho através do labirinto, ou que imprima uma lista de posições representando um caminho de [0][0] a [9][9].
 */
 
-#include<stdio.h>
+//10) Uma matriz maze de 0s e 1s, de 10X10, representa um labirinto no qual um viajante precisa encontrar um caminho de maze[0][0] a maze[9][9]. O viajante pode passar de um quadrado para qualquer outro adjacente na mesma fileira ou coluna, mas não pode saltar quadrados nem se movimentar na diagonal. Além disso, o viajante não pode entrar num quadrado contendo um 1. maze[0][0] e maze[9][9] contêm 0s. Escreva uma rotina recursiva que aceite este labirinto maze e imprima uma mensagem informando a inexistência de um caminho através do labirinto, ou que imprima uma lista de posições representando um caminho de [0][0] a [9][9].
 
 #include<stdio.h>
 
@@ -99,20 +99,20 @@ int volta(char maze[10][10], int i, int j)
 void verificaCaminho(char maze[10][10], int i, int j)
 {
 	
-	if((maze[i][j+1] == 'P' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
+	if((maze[i][j+1] == '2' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
 		//printf("Entrou 1!\n");
 		volta(maze, i, j);
 	}
-	if((maze[i][j+1] == '1' && maze[i][j-1] == 'P' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
+	if((maze[i][j+1] == '1' && maze[i][j-1] == '2' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
 		//printf("Entrou 2!\n");
 		volta(maze, i, j);
 	}
-	if((maze[i][j+1] == '1' && maze[i][j-1] == '1' && maze[i+1][j] == 'P' && maze[i-1][j] == '1'))
+	if((maze[i][j+1] == '1' && maze[i][j-1] == '1' && maze[i+1][j] == '2' && maze[i-1][j] == '1'))
 	{
 		//printf("Entrou 3!\n");
 		volta(maze, i, j);
 	}
-	if((maze[i][j+1] == '1' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == 'P'))
+	if((maze[i][j+1] == '1' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == '2'))
 	{
 		//printf("Entrou 4!\n");
 		volta(maze, i, j);
