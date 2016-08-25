@@ -14,7 +14,7 @@
  *         			Jailson Pereira
  *         			Tiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  
+ *   Organization:  AED 1
  * =====================================================================================
  */
  //2) Multiplicação de dois números naturais, através de somas sucessivas (Ex.: 6 ∗ 4 = 4+4+4+4+4+4)
