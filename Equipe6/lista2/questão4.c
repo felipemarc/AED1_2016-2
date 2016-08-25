@@ -21,14 +21,15 @@
  // Dado um número n, gere todas as possíveis combinações com as n primeiras letras do alfabeto. Ex.: n = 3. Resposta: ABC, ACB, BAC, BCA, CAB, CBA
 #include <stdio.h>
 #include <stdlib.h>
-
+// Basicamente, como todas as questões, este programa é feito com funções recursivas
+// Essa é a primeira função
 void Troca(int v[],int i,int j) {
 	int t;
 	t = v[i];
 	v[i] = v[j];
 	v[j] = t;
 }
-
+//Segunda função
 void Gira_Esquerda(int v[],int go,int n) {
 	int tmp = v[go];
 	for (int i=go; i<n; i++){
@@ -36,6 +37,7 @@ void Gira_Esquerda(int v[],int go,int n) {
 	}
 	v[n] = tmp;
 }
+//Terceira função
 void Imprima(int s[], int k) {
 	int i;
 	printf("\n");
@@ -43,7 +45,7 @@ void Imprima(int s[], int k) {
 		printf("%c", s[i]+'A'-1);
 	}
 }
-
+//Quarta função
 void Permuta(int v[],int inicio, int n) {
 	Imprima(v,n);
 	if (inicio<n) {
@@ -57,15 +59,17 @@ void Permuta(int v[],int inicio, int n) {
 		}
 	}
 }
+//Início do programa
 int main() {
-	int * s;
+	int * s;//Foi usado locação de memório dinâmica MALLOC, que armazena os dados e devolve o valor para o ponteiro, no caso: *s
 	int N, i;
 	
-	printf("\nEntre com n: ");
+	printf("\nEntre com n: ");//Pedido de entrada e leitura normail...
 	scanf("%d",&N);
 	
-	s = (int*)malloc((N+1)*sizeof(int));
-	
+	s = (int*)malloc((N+1)*sizeof(int)); 
+	//variável recebendo valor do resultado da locação de memória sendo int*:
+	// sizeof é um operador usado quando o real tamanho d eum objeto deve ser conhecido.
 	for (i=1; i<=N; i++) s[i] = i;
-	Permuta (s, 1, N);
+	Permuta (s, 1, N);//chanando a função
 }
