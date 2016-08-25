@@ -32,6 +32,38 @@ void imprime(int matriz[10][10]){
 	   printf("\n");
 	}
 }
+void loadMaze(char maze[tam][tam])
+{
+	char ch;
+	int i=0,j=0;
+	FILE *fp;
+  	fp = fopen("maze.txt","r" );
+    if(fp == NULL)
+          printf("Erro, nao foi possivel abrir o arquivo\n");
+    else
+    {
+          while( (ch=fgetc(fp))!= EOF )
+          {
+                  if (ch != '\n')
+                  {
+                          maze[i][j] = ch;
+                          j++;
+                  }else
+                  {
+                          j = 0;
+                          i++;
+                  }
+          }
+    }
+    fclose(fp);
+}
+/*void acha (char matriz[tam][tam]){
+	char aux[tam][tam] = {{'0','0','0','0','0','0','0','0','0','0'},
+			      {'0','0','0','0','0','0','0','0','0','0'},
+                              {'0','0','0','0','0','0','0','0','0','0'},
+			      {'0','0','0','0','0','0','0','0','0','0'},
+			      {'0','0','0','0','0','0','0','0','0','0'},
+}*/
 
 int main(){
 
