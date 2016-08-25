@@ -15,7 +15,6 @@
  *         			Tiago Cauassa
  *         			Rebeca Assunção
  *   Organization:  
- *
  * =====================================================================================
  */
  //1) Impressão de um número natural em base binária
