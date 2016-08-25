@@ -38,11 +38,11 @@ int main(int argc,const char *argv[]){
 void perm(int dezenas[]){
 	for(int i=5; i>=0;i--){
 		if(i==0){
-			return 0;
+			imprime(dezenas);//ERROR return 0;
 		}else{
-			imprime(dezenas[]);
-			troca(i,dezenas[]);
-			return perm();
+			imprime(dezenas);//[]);
+			troca(i,dezenas);//[]);
+			perm(dezenas);//ERRORreturn perm();
 		}
 	}
 }
@@ -57,8 +57,9 @@ int troca (int i, int vetnovo[]){
 }
 
 void imprime(int vetor[]){
-	for(int i=0; i<=5;i==){
+	for(int i=0; i<=5;i++){//ERROR==){
 		printf("%d  ",vetor[i]);
 	}
+	printf ("\n");
 }
   
