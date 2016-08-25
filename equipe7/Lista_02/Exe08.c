@@ -13,6 +13,21 @@ fibg(f0, f1, n) = fibg(f0, f1, n-1) + fibg(f0, f1, n-2), se n > 1. Escreva uma f
 
 #include <stdio.h>
 
+int fibg(int f0, int f1, int n)
+{
+	if (n == 0) return 0;
+	else if (n == 1) return 1;
+        else
+        {   
+            z = fibg(f0, f1, n-1) + fibg(f0, f1, n-2);
+            printf("%d ", z);
+            return 
+        }
+}
+
 int main()
 {
+	int n;
+	scanf("%d", &n);
+	fibg(n);
 }
