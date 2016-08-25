@@ -26,7 +26,7 @@ e maze[9][9] contêm 0s. Escreva uma rotina recursiva que aceite este labirinto
 #define tam 10
 
 /* Chamando as funções que serão usadas */
-bool valido(int matriz[tam][tam], int x, int y);
+bool valido(int matriz[tam][tam], int x, int y, int result[tam][tam]);
 bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam]);
 bool if_acha_saida(int matriz[tam][tam]);
 void imprime(int matriz[tam][tam]);
@@ -34,6 +34,8 @@ void imprime(int matriz[tam][tam]);
 int main()
 {
 
+  /* Abrindo o arquivo e adicionando numa
+  matriz temporária dentro do programa */
   FILE *arquivo = fopen("matriz.txt", "r");
   int matriz[tam][tam];
 
@@ -75,18 +77,25 @@ bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
     }
 
   // Verifica se a posição é válida
-  if (valido(matriz,x,y) == true)
+  if (valido(matriz,x,y,result) == true)
     {
       // Adiciona a posição a matriz resultado
       result[x][y] = 2;
 
-      // Faz a verificação das linhas
-      if (acha_saida(matriz, x+1, y, result) == true)
+      /* Vai fazendo a verificação nas quatro direções possiveis na matriz */
+      if (acha_saida(matriz, x, y+1, result) == true)
         {
           return true;
         }
-      // Faz a verificação das colunas
-      if (acha_saida(matriz, x, y+1, result) == true)
+      else if (acha_saida(matriz, x+1, y, result) == true)
+        {
+          return true;
+        }
+      else if (acha_saida(matriz, x, y-1, result) == true)
+        {
+          return true;
+        }
+      else if (acha_saida(matriz, x-1, y, result) == true)
         {
           return true;
         }
@@ -100,11 +109,11 @@ bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
 }
 
 /* Função para verificar se x,y é uma posição válida na matriz */
-bool valido(int matriz[tam][tam], int x, int y)
+bool valido(int matriz[tam][tam], int x, int y, int result[tam][tam])
 {
 
   /* Se a coordenada fizer parte da matriz */
-  if (x >= 0 && x < tam && y >= 0 && y < tam && matriz[x][y] == 0)
+  if (x >= 0 && x < tam && y >= 0 && y < tam && matriz[x][y] == 0 && !result[x][y])
     {
       return true;
     }
