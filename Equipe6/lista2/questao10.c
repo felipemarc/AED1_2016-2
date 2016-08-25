@@ -21,16 +21,16 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#define TAM 10
+#define tam 10
 
-void imprime(char maze[tam][tam])
+void imprime(char matriz[tam][tam])
 {
 	int i, j,k;
 	printf("   ");
 
 	printf("\n");
 	k = 0;
-	for ( i = 0; i < tam i++ )
+	for ( i = 0; i < tam; i++ )
 	{
 		if (k < tam)
 		{
@@ -41,7 +41,7 @@ void imprime(char maze[tam][tam])
 		}
 		for ( j = 0; j < tam; j++ )
 		{
-		switch (maze[i][j])
+		switch (matriz[i][j])
 		{
 			case '1':
 				printf("ꗞ");
@@ -58,7 +58,7 @@ void imprime(char maze[tam][tam])
 		printf ( "\n" );
 	}
 }
-void loadMaze(char maze[tam][tam])
+void loadMaze(char matriz[tam][tam])
 {
 	char ch;
 	int i=0,j=0;
@@ -72,7 +72,7 @@ void loadMaze(char maze[tam][tam])
           {
                   if (ch != '\n')
                   {
-                          maze[i][j] = ch;
+                          matriz[i][j] = ch;
                           j++;
                   }else
                   {
@@ -83,13 +83,44 @@ void loadMaze(char maze[tam][tam])
     }
     fclose(fp);
 }
-/*void acha (char matriz[tam][tam]){
-	char aux[tam][tam] = {{'0','0','0','0','0','0','0','0','0','0'},
-			      {'0','0','0','0','0','0','0','0','0','0'},
-                              {'0','0','0','0','0','0','0','0','0','0'},
-			      {'0','0','0','0','0','0','0','0','0','0'},
-			      {'0','0','0','0','0','0','0','0','0','0'},
-}*/
+void caminho (char matriz[tam][tam],int i,int j){
+	if(i==9 && j==8){
+		printf("FIM!");
+		return 0;
+	}
+	matriz[0][0] = '2';
+	if(matriz[i][j+1] == '0'){
+		matriz[i][j+1] = '2';
+		caminho(matriz,i,j+1);
+	}
+	else
+	{
+		if(matriz[i+1][j] == '0'){
+			matriz[i+1][j] = '2';
+			caminho(matriz,i+1,j);
+		}
+		else
+		{
+			if(matriz[i-1][j] == '0')
+			{
+				matriz[i-1][j] == '2';
+				caminho(matriz,i-1,j);
+			}
+			else
+			{
+				if(matriz[i][j-1] == '0')
+				{
+					matriz[i][j-1] = '2';
+					caminho(matriz,i,j-1);
+				}
+				else
+				{
+					printf("nao é por aqui,fim\n");
+				}
+			}
+		}
+	}
+}
 
 int main(){
 
