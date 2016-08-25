@@ -2,7 +2,7 @@
 
   Fabiola Maciel
   Matheus Obando
-  Kauê Fontes
+  Alerrandro Barreto
   Jefferson Avilar
 
   1) Impressão de um número natural em base binária

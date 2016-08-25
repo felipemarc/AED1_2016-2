@@ -3,7 +3,7 @@
   Fabiola Maciel
   Jefferson Avilar
   Matheus Obando
-  Kaue Fontes
+  Alerrandro Barreto
 
 10) Uma matriz maze de 0s e 1s, de 10X10, representa um labirinto no qual
 um viajante precisa encontrar um caminho de maze[0][0] a maze[9][9].
