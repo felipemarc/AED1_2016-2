@@ -44,7 +44,7 @@ void imprime(char matriz[tam][tam])
 		switch (matriz[i][j])
 		{
 			case '1':
-				printf("0");
+				printf("ꗞ");
 				break;
 			case '0':
 				printf(" ");
