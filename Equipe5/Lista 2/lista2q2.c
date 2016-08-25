@@ -8,6 +8,9 @@
 
 Questão 2 - Multiplicação de dois números naturais, através de somas
 sucessivas (Ex.: 6 * 4 = 4+4+4+4+4+4).
+
+	se a == 1, entao multiplicacao = b;
+	se a>b, entao multiplicacao = b+multiplicacao(b, a-1);
 */
 
 #include<stdio.h>
