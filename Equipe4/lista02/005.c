@@ -3,7 +3,7 @@
 Matheus Obando
 Jefferson Avilar
 Fabíola Maciel
-Kaua Fontes
+Alerrandro Barreto
 
 5) Gere todas as possíveis combinações para um jogo da MegaSena com 6 dezenas.
 */
