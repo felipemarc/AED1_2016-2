@@ -1,8 +1,9 @@
 /* equipe:
-    Fabiana Bezerra
-    Paulo Roberto
-    Paulo Silveira
-    Pedro Sena
+	Fabiana Bezerra
+	Paulo Roberto
+	Paulo Silveira
+	Pedro Sena
+	Sywan Neto
     
     2. Multiplicação de dois números naturais, através de somas sucessivas (Ex.: 6 ∗ 4 = 4+4+4+4+4+4)
 */
