@@ -14,7 +14,8 @@
  *         			Jailson Pereira
  *         			Tiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  
+ *   Organization:  AED 1
+ *
  * =====================================================================================
  */
  //1) Impressão de um número natural em base binária
