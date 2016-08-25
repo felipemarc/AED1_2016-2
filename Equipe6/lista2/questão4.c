@@ -3,7 +3,7 @@
  *
  *       Filename:  questão4.c
  *
- *    Description:  modelo de cabeçalho
+ *    Description:  questão4
  *
  *        Version:  1.0
  *        Created:  21-08-2016 11:07:12
@@ -14,7 +14,7 @@
  *         			Jailson Pereira
  *         			Tiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  
+ *   Organization:  AED 1
  * =====================================================================================
  */
  // Dado um número n, gere todas as possíveis combinações com as n primeiras letras do alfabeto. Ex.: n = 3. Resposta: ABC, ACB, BAC, BCA, CAB, CBA
