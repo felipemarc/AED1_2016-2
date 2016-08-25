@@ -68,7 +68,7 @@ int main()
 bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
 {
   // Se achar a saída retorna 'TRUE'
-  if (x == tam && y == tam)
+  if (x == tam-1 && y == tam-1)
     {
       result[x][y] = 2;
       return true;
@@ -80,22 +80,12 @@ bool acha_saida(int matriz[tam][tam], int x, int y, int result[tam][tam])
       // Adiciona a posição a matriz resultado
       result[x][y] = 2;
 
-      if (acha_saida(matriz, x-1, y, result) == true)
-        {
-          return true;
-        }
-
-      if (acha_saida(matriz, x, y-1, result) == true)
-        {
-          return true;
-        }
-
-      // Move uma posição na direção de 'x'
+      // Faz a verificação das linhas
       if (acha_saida(matriz, x+1, y, result) == true)
         {
           return true;
         }
-      // Se movendo na direção de 'x' não retornar alguma solução então volta e move na direção de 'y'
+      // Faz a verificação das colunas
       if (acha_saida(matriz, x, y+1, result) == true)
         {
           return true;
@@ -114,7 +104,7 @@ bool valido(int matriz[tam][tam], int x, int y)
 {
 
   /* Se a coordenada fizer parte da matriz */
-  if (x >= 0 && x < tam && y >= 0 && y < tam && matriz[x][y] == 1)
+  if (x >= 0 && x < tam && y >= 0 && y < tam && matriz[x][y] == 0)
     {
       return true;
     }
