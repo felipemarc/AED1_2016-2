@@ -39,7 +39,7 @@ void comb(int end, int start, char *letrinhas)
 		{
 			troca((letrinhas+start),(letrinhas+i));
 			comb(end, start+1, letrinhas);
-			troca((letrinhas+start),(letrinhas+i));
+			//troca((letrinhas+start),(letrinhas+i));
 		}
 	}
 }
