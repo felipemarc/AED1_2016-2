@@ -25,19 +25,14 @@
 int qnt (unsigned long int x,int y)
 {
 	cont = 0; 
-	if(x == 0){
-		return cont;
-	}
-	else {
-		if (y == (x%10))
-		{
+	while(x != 0){
+		if(x%10 == y){
 			cont+=1;
 		}
-		x = x/10;
-		return qnt(x,y);
+		x =x/10;
+		
 	}
-	return 0;
-
+	return cont;
 }
 
 int main (int argc,const char *argv[])
