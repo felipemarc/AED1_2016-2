@@ -58,7 +58,7 @@ void imprime(char matriz[tam][tam])
 		printf ( "\n" );
 	}
 }
-void loadMaze(char matriz[tam][tam])
+/*void loadMaze(char matriz[tam][tam])
 {
 	char ch;
 	int i=0,j=0;
@@ -82,36 +82,109 @@ void loadMaze(char matriz[tam][tam])
           }
     }
     fclose(fp);
+}*/
+int volta(char matriz[tam][tam], int i, int j)
+{
+	if(matriz[i][j+1] == '0' || matriz[i][j-1] == '0' || matriz[i+1][j] == '0' || matriz[i-1][j] == '0'){
+		
+		return 0;
+	} 
+	if(matriz[i][j+1] == 'P')
+	{	
+		
+		matriz[i][j+1] = '3';
+		volta(matriz, i, j+1);
+	}
+	else
+	{
+		if(matriz[i+1][j] == 'P')
+		{		
+			
+			matriz[i+1][j] = '3';
+			volta(matriz, i+1, j);
+		}	
+		
+		else
+		{
+			if(matriz[i-1][j] == 'P')
+			{
+				
+				matriz[i-1][j] == '3';
+				volta(matriz, i-1, j);
+			}
+			
+			else
+			{
+				if(matriz[i][j-1] == 'P')
+				{
+					
+					matriz[i][j-1] = '3';
+					volta(matriz, i, j-1);
+				}
+				else
+				{
+					printf("Beco sem saída, fim de jogo !\n");
+				}
+			}
+		}
+	}
 }
-int caminho (char matriz[tam][tam],int i,int j){
-	if(i==9 && j==8){
-		printf("FIM!");
+
+void ver(char maze[tam][tam], int i, int j)
+{
+	
+	if((matriz[i][j+1] == '2' && matriz[i][j-1] == '1' && matriz[i+1][j] == '1' && matriz[i-1][j] == '1')){
+		
+		volta(matriz, i, j);
+	}
+	if((matriz[i][j+1] == '1' && matriz[i][j-1] == '2' && matriz[i+1][j] == '1' && matriz[i-1][j] == '1')){
+		
+		volta(matriz, i, j);
+	}
+	if((matriz[i][j+1] == '1' && matriz[i][j-1] == '1' && matriz[i+1][j] == '2' && matriz[i-1][j] == '1'))
+	{
+		
+		volta(matriz, i, j);
+	}
+	if((matriz[i][j+1] == '1' && matriz[i][j-1] == '1' && matriz[i+1][j] == '1' && matriz[i-1][j] == '2'))
+	{
+		volta(matriz, i, j);
+	}
+}
+int caminha (char matriz[tam][tam]){
+	int i =0 , j=0;
+	if(i==9 && j==9){
+		printf("FIM!\n");
 		return 0;
 	}
 	matriz[0][0] = '2';
 	if(matriz[i][j+1] == '0'){
 		matriz[i][j+1] = '2';
-		caminho(matriz,i,j+1);
+		ver(matriz,i,j+1);
+		caminha(matriz,i,j+1);
 	}
 	else
 	{
 		if(matriz[i+1][j] == '0'){
 			matriz[i+1][j] = '2';
-			caminho(matriz,i+1,j);
+			ver(matriz,i+1,j);
+			caminha(matriz,i+1,j);
 		}
 		else
 		{
 			if(matriz[i-1][j] == '0')
 			{
 				matriz[i-1][j] == '2';
-				caminho(matriz,i-1,j);
+				ver(matriz,i-1,j);
+				caminha(matriz,i-1,j);
 			}
 			else
 			{
 				if(matriz[i][j-1] == '0')
 				{
 					matriz[i][j-1] = '2';
-					caminho(matriz,i,j-1);
+					ver(matriz,i,j-1);
+					caminha(matriz,i,j-1);
 				}
 				else
 				{
@@ -127,11 +200,21 @@ int main(){
 	
 	char matriz[tam][tam];
 	int i=0,j=0;
-	loadMaze(matriz);
-	printf("\n Tabuleiro Inicial\n");
+//	loadMaze(matriz);
+	FILE *arquivo;
+	arquivo = fopen("maze.txt","r");
+	if(arquivo != NULL){
+		for(i=0;i<tam;i++){
+			for(j=0;j<tam;j++){
+				fscanf(arquivo,"%c",&matriz[tam][tam]);
+			}
+		}
+		fclose(arquivo);
+	}
+	printf("\n Labirinto Inicial\n");
 	imprime(matriz);
-	caminho(matriz,i,j);
-	printf("Tabuleiro Final: \n");
+	caminha(matriz);
+	printf("Labirinto com o caminho de saída: \n");
 	imprime(matriz);
 	
 	
