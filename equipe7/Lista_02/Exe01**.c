@@ -10,7 +10,7 @@ void convert_binario(int n)
 }
 int main()
 {
-    int n, x;
+    int n;
     scanf("%d", &n);
     printf("\n");
     printf("Forma binaria: ");
