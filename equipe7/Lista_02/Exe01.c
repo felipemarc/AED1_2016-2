@@ -13,17 +13,17 @@
 int binario(int n){
 
 	if (n/2 != 0) binario(n/2);
-	
+
 	printf("%d ", n%2);
 
 	return 0;
 }
 
 int main (){
-	int n,bin=0,aux=0;
+	int n;
 
 	scanf ("%d",&n); // numero decimal para transformar em binario
-	
+
 	binario(n);
 
 	printf("\n");
