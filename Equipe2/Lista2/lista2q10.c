@@ -158,7 +158,7 @@ int anda(char maze[10][10], int i, int j)
 		//printf("Ai, papai1\n");
 		maze[i][j+1] = '2';
 		verificaCaminho(maze, i, j+1);
-		anda(maze, i, j);
+		anda(maze, i, j+1);
 	}
 	else
 	{
@@ -167,7 +167,7 @@ int anda(char maze[10][10], int i, int j)
 			//printf("Ai, papai2\n");
 			maze[i+1][j] = '2';
 			verificaCaminho(maze, i+1, j);
-			anda(maze, i, j);
+			anda(maze, i+1, j);
 		}	
 		
 		else
@@ -177,7 +177,7 @@ int anda(char maze[10][10], int i, int j)
 				//printf("Ai, papai3\n");
 				maze[i-1][j] == '2';
 				verificaCaminho(maze, i-1, j);
-				anda(maze, i, j);
+				anda(maze, i-1, j);
 			}
 			
 			else
@@ -187,7 +187,7 @@ int anda(char maze[10][10], int i, int j)
 					//printf("Ai, papai4\n");
 					maze[i][j-1] = '2';
 					verificaCaminho(maze, i, j-1);
-					anda(maze, i, j);
+					anda(maze, i, j-1);
 				}
 				else
 				{

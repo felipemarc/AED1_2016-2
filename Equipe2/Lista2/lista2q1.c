@@ -23,37 +23,9 @@ int bin(int num){
 
 int main() {
  int n;
- int r;
- 
- char url[3];
- char ch;
- FILE *arq;
- int i;
- //printf("Digite o numero: ");
- //scanf("%d", &n);
- 
- 
- arq = fopen("entrada01.txt","r" );
-	if(arq == NULL)
-	    printf("Erro, nao foi possivel abrir o arquivo\n");
-	else
-	{
-		while( (ch=fgetc(arq))!= EOF )
-          {
-                for(i = 0; i<3; i++)
-				{
-					if (ch != '\n'){
-					
-						printf("%c\n", ch);
-                		url[i] = ch;	
-          			}
-				}
-		  }
-	}
-	    	
-	fclose(arq);
- printf("%c\n", url[0]);
- bin((int)url[0]);
+ scanf("%d", &n);
+ bin(n);
+ printf("\n");
  system("pause");
 }
 
