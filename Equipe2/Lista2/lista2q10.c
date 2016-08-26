@@ -34,7 +34,7 @@ void printMaze(char maze[10][10])
 		switch (maze[i][j])
 		{
 			case '1':
-				printf("ꗞ");
+				printf("-");
 				break;
 			case '0':
 				printf(" ");
@@ -100,21 +100,21 @@ void verificaCaminho(char maze[10][10], int i, int j)
 {
 	
 	if((maze[i][j+1] == '2' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
-		//printf("Entrou 1!\n");
+		printf("Entrou 1!\n");
 		volta(maze, i, j);
 	}
 	if((maze[i][j+1] == '1' && maze[i][j-1] == '2' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
-		//printf("Entrou 2!\n");
+		printf("Entrou 2!\n");
 		volta(maze, i, j);
 	}
 	if((maze[i][j+1] == '1' && maze[i][j-1] == '1' && maze[i+1][j] == '2' && maze[i-1][j] == '1'))
 	{
-		//printf("Entrou 3!\n");
+		printf("Entrou 3!\n");
 		volta(maze, i, j);
 	}
 	if((maze[i][j+1] == '1' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == '2'))
 	{
-		//printf("Entrou 4!\n");
+		printf("Entrou 4!\n");
 		volta(maze, i, j);
 	}
 }
@@ -158,7 +158,7 @@ int anda(char maze[10][10], int i, int j)
 		//printf("Ai, papai1\n");
 		maze[i][j+1] = '2';
 		verificaCaminho(maze, i, j+1);
-		anda(maze, i, j+1);
+		anda(maze, i, j);
 	}
 	else
 	{
@@ -167,7 +167,7 @@ int anda(char maze[10][10], int i, int j)
 			//printf("Ai, papai2\n");
 			maze[i+1][j] = '2';
 			verificaCaminho(maze, i+1, j);
-			anda(maze, i+1, j);
+			anda(maze, i, j);
 		}	
 		
 		else
@@ -177,7 +177,7 @@ int anda(char maze[10][10], int i, int j)
 				//printf("Ai, papai3\n");
 				maze[i-1][j] == '2';
 				verificaCaminho(maze, i-1, j);
-				anda(maze, i-1, j);
+				anda(maze, i, j);
 			}
 			
 			else
@@ -187,7 +187,7 @@ int anda(char maze[10][10], int i, int j)
 					//printf("Ai, papai4\n");
 					maze[i][j-1] = '2';
 					verificaCaminho(maze, i, j-1);
-					anda(maze, i, j-1);
+					anda(maze, i, j);
 				}
 				else
 				{
