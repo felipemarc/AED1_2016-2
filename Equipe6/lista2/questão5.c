@@ -1,9 +1,9 @@
 /*
  * =====================================================================================
  *
- *       Filename:  modelo.c
+ *       Filename:  questão5.c
  *
- *    Description:  modelo de cabeçalho
+ *    Description: questão5
  *
  *        Version:  1.0
  *        Created:  19-08-2016 14:07:12
@@ -12,9 +12,10 @@
  *
  *         Author:  Hélio Paulo
  *         			Jailson Pereira
- *         			Thiago Cauassa
+ *         			Tiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  
+ *
+ *   Organization:  AED1
  *
  * =====================================================================================
  */
