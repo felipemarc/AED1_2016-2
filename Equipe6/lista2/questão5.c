@@ -46,7 +46,7 @@ void comb(int *arr, size_t n, size_t index) {
         arr[index] = tmp;
     }
 int main(void) {
-    int v[] = {1, 2, 3, 4};
+    int v[] = {60};
     comb(v, sizeof v / sizeof *v, 0);
     return 0;
 }
