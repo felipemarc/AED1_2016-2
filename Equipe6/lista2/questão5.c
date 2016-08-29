@@ -1,9 +1,19 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:  modelo.c
+ *
+ *    Description:  modelo de cabe√ßalho
+ *
+ *        Version:  1.0
+ *        Created:  19-08-2016 14:07:12
+ *       Revision:  none
 #include <stdio.h>
 
 void comb(int *arr, size_t n, size_t index) {
     size_t k;
     if (index == n) {
-        /* array vazio, imprime o que est· "para tr·s" */
+        /* array vazio, imprime o que est√° "para tr√°s" */
         printf("%d", arr[0]);
         for (k = 1; k < n; k++) printf(" %d", arr[k]);
         puts("");
