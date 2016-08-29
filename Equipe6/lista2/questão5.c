@@ -19,6 +19,21 @@
  *
  * =====================================================================================
  */
+ /* Quero gerar todas as combinações possiveís dado um array com os elementos, por exemplo:
+v=(2,5,6);
+O output seria:
+2
+5
+6
+25
+52
+256
+526
+562
+652
+*/
+
+
 #include <stdio.h>
 
 void comb(int *arr, size_t n, size_t index) {
