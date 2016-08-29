@@ -5,9 +5,9 @@
  *
  *    Description:  questão6
  *
- *        Version:  1.0
- *        Created:  21-08-2016 12:01:12
- *       Revision:  none
+ *        Version:  2.0
+ *        Created:  29-08-2016 09:43:12
+ *       Revision:  Tiago
  *       Compiler:  gcc
  *
  *         Author:  Hélio Paulo
