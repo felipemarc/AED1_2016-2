@@ -31,8 +31,9 @@ O output seria:
 526
 562
 652
-*/
 
+*/
+/*5) Gere todas as possíveis combinações para um jogo da MegaSena com 6 dezenas.*/
 
 #include <stdio.h>
 
