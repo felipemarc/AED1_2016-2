@@ -3,8 +3,8 @@
 	Fernando Calderaro
 	Leticia Mota
 	Rodrigo Oliveira
-	Thailana Neves		
-	
+	Thailana Neves
+
 	exercicio 01
 	Impressão de um número natural em base binária
 */
@@ -12,60 +12,65 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int numero;
+//Faz a potenciação de n ao expoente exp
 
-int binario(int x)
+int potencia(int n,int exp)
 {
-    int y,k;
-    static int contador = 1;
-    static int w = 0;
+    int x;
+    if(exp==0)
+    {
+        return 1;
+    }
+    if(exp==1)
+    {
+        return n;
+    }
+    x = n * potencia(n,(exp-1));
+    return x;
+}
 
-    if(x==0)
+/*
+Para converter um numero natural para binario, o numero foi dividido sucessivas vezes e o resto de cada divisão
+foi multiplicado por potencias de 10, elevadas inicialmente por 0.
+exemplo:
+numero = 10(natural)= 1010(binario)
+| 10%2=0 | 5%2=1 | 2%2=0 | 1%1=1  resto das divisoes
+| *10^0  | *10^1 | *10^2 | *10^3  multiplicado por potencias de dez
+| =      | =     | =     | =
+  0      + 10    + 0     + 1000 = 1010
+*/
+
+int binario(int n)
+{
+    static int u,v;
+    int x,y;
+    if(v>=1)
+    {
+        u++;
+    }
+    if(n==0)
     {
         return 0;
     }
-    if(x==1)
+    if(n==1)
     {
-        if(w==1)
+        if(v>=1)
         {
-        contador = contador * 10;
-        return (1 * contador);
+            y = potencia(10,u);
+            return y;
         }
-        else
-        {
-            return 1;
-        }
+        return 1;
     }
-    if(x>1)
-    {
-        w = 1;
-        contador = contador  * 10;
-        y = (x%2) * contador + binario(x/2);
-    }
-    return y;
+    v++;
+    x = ((n%2)*potencia(10,u)) + binario(n/2);
+    return x;
 }
-
 int main()
 {
-    int metade_numero ,resultado, z;
-    printf("- Conversão de numero decimal para binario -\n");
-    printf("Informe o valor do numero: \n");
-    scanf("%d",&numero);
-
-    if(numero==1)
-    {
-        metade_numero = numero;
-    }
-    else
-    {
-        metade_numero = numero/2;
-    }
-
-    resultado = binario(metade_numero);
-    z = (numero)%2;
-    printf("%d (decimal) = %d (binario)",numero,(resultado + z));
+    int x,n;
+    printf("Informe um numero natural: \n");
+    scanf("%d",&n);
+    x = binario(n);
+    printf("\n%d (Decimal) = %d (Binario)",n,x);
     return 0;
 }
-
-
-
