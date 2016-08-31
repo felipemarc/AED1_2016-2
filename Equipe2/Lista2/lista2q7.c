@@ -30,7 +30,7 @@ um numero natural N. Por exemplo, o diÌgito 2 ocorre 3 vezes em 762021192.
 	int main()
 	{
 		int num, i, cont = 0, result = 0, cab = 0, tam = 0;
-		char aux[10000], dig[1];
+		char aux[1000], dig[1];
 
 		//Entrada de dados
 		printf("O dígito a ser procurado: ");
@@ -47,13 +47,7 @@ um numero natural N. Por exemplo, o diÌgito 2 ocorre 3 vezes em 762021192.
 		{
 			vet[i] = aux[i];
 		}	
-		/*
-		for(i = 0; i<tam; i++)
-		{
-			printf("%c\n", vet[i]);
-		}	
-		*/
-		//Processamento
+				//Processamento
 		result = conta(dig, vet, cont, cab, tam);
 
 		//saida
