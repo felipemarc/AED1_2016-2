@@ -11,7 +11,7 @@ Stephanny Barreto
 
 #include<stdio.h>
 
-void printMaze(char maze[10][10])
+void print_maze(char maze[10][10])
 {
 	int i, j,k;
 	printf("   ");
@@ -23,7 +23,8 @@ void printMaze(char maze[10][10])
 		if (k < 10)
 		{
 		printf("%d  ", k++);
-		}else
+		}
+		else
 		{
 		printf("%d ", k++);
 		}
@@ -94,14 +95,16 @@ int volta(char maze[10][10], int i, int j)
 	}
 }
 
-void verificaCaminho(char maze[10][10], int i, int j)
+void verifica_caminho(char maze[10][10], int i, int j)
 {
 	
-	if((maze[i][j+1] == '2' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
+	if((maze[i][j+1] == '2' && maze[i][j-1] == '1' && maze[i+1][j] == '1' && maze[i-1][j] == '1'))
+	{
 		printf("Entrou 1!\n");
 		volta(maze, i, j);
 	}
-	if((maze[i][j+1] == '1' && maze[i][j-1] == '2' && maze[i+1][j] == '1' && maze[i-1][j] == '1')){
+	if((maze[i][j+1] == '1' && maze[i][j-1] == '2' && maze[i+1][j] == '1' && maze[i-1][j] == '1'))
+	{
 		printf("Entrou 2!\n");
 		volta(maze, i, j);
 	}
@@ -117,7 +120,7 @@ void verificaCaminho(char maze[10][10], int i, int j)
 	}
 }
 
-void loadMaze(char maze[10][10])
+void load_maze(char maze[10][10])
 {
 	char ch;
 	int i=0,j=0;
@@ -133,7 +136,8 @@ void loadMaze(char maze[10][10])
                   {
                           maze[i][j] = ch;
                           j++;
-                  }else
+                  }
+				  else
                   {
                           j = 0;
                           i++;
@@ -155,7 +159,7 @@ int anda(char maze[10][10], int i, int j)
 	{	
 		//printf("Ai, papai1\n");
 		maze[i][j+1] = '2';
-		verificaCaminho(maze, i, j+1);
+		verifica_caminho(maze, i, j+1);
 		anda(maze, i, j+1);
 	}
 	else
@@ -164,7 +168,7 @@ int anda(char maze[10][10], int i, int j)
 		{		
 			//printf("Ai, papai2\n");
 			maze[i+1][j] = '2';
-			verificaCaminho(maze, i+1, j);
+			verifica_caminho(maze, i+1, j);
 			anda(maze, i+1, j);
 		}	
 		
@@ -174,7 +178,7 @@ int anda(char maze[10][10], int i, int j)
 			{
 				//printf("Ai, papai3\n");
 				maze[i-1][j] == '2';
-				verificaCaminho(maze, i-1, j);
+				verifica_caminho(maze, i-1, j);
 				anda(maze, i-1, j);
 			}
 			
@@ -184,7 +188,7 @@ int anda(char maze[10][10], int i, int j)
 				{
 					//printf("Ai, papai4\n");
 					maze[i][j-1] = '2';
-					verificaCaminho(maze, i, j-1);
+					verifica_caminho(maze, i, j-1);
 					anda(maze, i, j-1);
 				}
 				else
@@ -200,7 +204,7 @@ int main()
 {
 	char matriz[10][10];
 	int i=0, j=0;
-	loadMaze(matriz);
+	load_maze(matriz);
 	/*for(i=0; i<10;i++)
 	{
 		for(j = 0; j<10;j++)
@@ -210,10 +214,10 @@ int main()
 	}
 	*/
 	printf("Tabuleiro Inicial: \n");
-	printMaze(matriz);
+	print_maze(matriz);
 	anda(matriz, i, j);
 	printf("Tabuleiro Final: \n");
-	printMaze(matriz);
+	print_maze(matriz);
 	
 	return 0;
 }

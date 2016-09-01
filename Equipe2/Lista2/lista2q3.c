@@ -10,12 +10,12 @@ Stephanny Barreto
 */
 
 #include<stdio.h>
-int somainc(int x, int y)
+int soma_incremental(int x, int y)
 {
 	if (x==0)
 		return y;
 	else	
-		return somainc(x-1, y+1);
+		return soma_incremental(x-1, y+1);
 
 }
 int main()
@@ -24,6 +24,6 @@ int main()
 	scanf("%d", &x);
 	scanf("%d", &y);
 
-	printf("%d\n", somainc(x,y));
+	printf("%d\n", soma_incremental(x,y));
 	return 0; 
 }

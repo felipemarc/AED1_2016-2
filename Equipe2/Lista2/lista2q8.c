@@ -15,19 +15,19 @@ fibg(f0, f1, n) = fibg(f0, f1, n-1) + fibg(f0, f1, n-2), se n > 1. Escreva uma f
 
 #include<stdio.h>
 
-int fibGen(int f0, int f1, int n)
+int fib_gen(int f0, int f1, int n)
 {
 	if(n<2)
 		return n;
 	else
-		return fibGen(f0, f1, n-1) + fibGen(f0, f1, n-2);
+		return fib_gen(f0, f1, n-1) + fib_gen(f0, f1, n-2);
 }
 //0, 1, 1, 2, 3, 5, 8
 int main()
 {
 	int f0 = 0, f1 = 1, n, result;
 	scanf("%d", &n);
-	result = fibGen(f0, f1, n-1);
+	result = fib_gen(f0, f1, n-1);
 	printf("%d\n", result);
 	return 0;
 }
