@@ -1,6 +1,8 @@
 Grupos de até 6 pessoas
 Entrega: 15/set/2016
 
+Todos os programas deverão ser escritos em linguagem C e usando os padrões de programação especificados em sala
+
 1) Pesquise e implemente em C o BubbleSort
 2) Pesquise e implemente em C o QuickSort
 3) Crie um programa em C que gere em um arquivo .txt
