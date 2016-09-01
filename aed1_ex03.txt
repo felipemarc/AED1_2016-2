@@ -1,0 +1,36 @@
+Grupos de até 6 pessoas
+Entrega: 15/set/2016
+
+1) Pesquise e implemente em C o BubbleSort
+2) Pesquise e implemente em C o QuickSort
+3) Crie um programa em C que gere em um arquivo .txt
+- arquivo com 10000 números ordenados em ordem crescente
+- arquivo com 10000 números ordenados em ordem descrescente
+- arquivo com 10000 números gerados de maneira aleatória
+- arquivo com 100000 números ordenados em ordem crescente
+- arquivo com 100000 números ordenados em ordem descrescente
+- arquivo com 1000000 números gerados de maneira aleatória
+- arquivo com 1000000 números ordenados em ordem crescente
+- arquivo com 1000000 números ordenados em ordem descrescente
+- arquivo com 1000000 números gerados de maneira aleatória
+
+os arquivos deverão ser gerados pelo mesmo programa bastando alterar os parâmetros. Dica: use o ARGC e ARGV do main()
+
+4) Usando o comando time, meça o tempo que os arquivos criados na questão 3 são ordenados pelo BubbleSort e QuickSort implementados nas questões 1 e 2. 
+Cada medição deverá ser reaizada 10 vezes para evitar erros. Calcule o tempo médio, variância e desvio padrão
+
+5) Implemente a Busca Sequencial em C
+
+6) Implemente a Busca Binária em C
+
+7) Pesquise e Implemente a Busca Sequencial com Sentinela em C
+
+8) Usando o comando time, busque, usando os algoritmos implementados nas questões 5,6 e 7, por um valor nos arquivos criados na questão 3
+Cada medição deverá ser reaizada 10 vezes para evitar erros. Calcule o tempo médio, variância e desvio padrão
+
+9) Usando o comando time, busque, usando os algoritmos implementados nas questões 5,6 e 7, por um valor NÃO EXISTENTE nos arquivos criados na questão 3
+Cada medição deverá ser reaizada 10 vezes para evitar erros. Calcule o tempo médio, variância e desvio padrão
+
+10) Faça um relatório comparando os tempos encontrados nas questões 4, 8, 9 com os valores calculados através da análise de complexidade dos algoritmos
+
+
