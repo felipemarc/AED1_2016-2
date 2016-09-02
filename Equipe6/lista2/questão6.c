@@ -43,3 +43,21 @@ int main()//início do programa
  scanf("%d""%d", &x, &y);//Lendo e agregando valores as variáveis
  printf("O MDC dos valores eh: %d",mdc(x,y)); //Imprimindo o resultado da função mdc(x,y)
 }
+
+#include <stdio.h>
+
+int mdc(int x,int y)
+{  
+ if(y == 0)
+  return x;  
+ else 
+  return mdc(y,x%y);
+}
+
+int main()
+{
+ int x, y;
+ printf("Digite x e y:\n");
+ scanf("%d""%d", &x, &y);
+ printf("O MDC dos valores eh: %d",mdc(x,y));
+}
