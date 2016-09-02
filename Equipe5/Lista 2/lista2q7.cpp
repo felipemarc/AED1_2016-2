@@ -2,7 +2,6 @@
 	Aline Lima
 	Amanda Leticia
 	Eduardo Azevedo
-	Elisandra Oliveira
 	Frank Nápolis
 	Lucas Almeida
 
