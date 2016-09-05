@@ -33,15 +33,15 @@ int multi(int x, int y)
 	{
 		return y;
 	}
-	return y+soma(x-1,y);
+	return y+multi(x-1,y);
 }
 
 int main ()
 {
 	int x,y,z;
-	printf("Digite numero: ")
+	printf("Digite numero: ");
 	scanf("%d",&x);
-	printf("Digite outro numero: ")
+	printf("Digite outro numero: ");
 	scanf("%d",&y);
 
 	z = multi(x,y);
