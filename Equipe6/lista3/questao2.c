@@ -15,7 +15,9 @@
  *
  * =====================================================================================
  */
- 
+#include <stdio.h>
+#include <stdlib.h>
+
 void Quick(int vetor[10], int inicio, int fim);
 int main(){
 	
