@@ -15,3 +15,24 @@
  *
  * =====================================================================================
  */
+ 
+void Quick(int vetor[10], int inicio, int fim);
+int main(){
+	
+	int vetor[10] = {7, 9, 4, 3, 6, 1, 18, 2, 10, 5};
+	
+	int i;	
+	printf("Vetor desordenado:\n");
+	for(i = 0; i < 10; i++){
+		printf("%d ", vetor[i]);
+	}
+	printf("\n");	
+	
+	Quick(vetor, 0, 9);
+	
+	printf("Vetor ordenado:\n");
+	for(i = 0; i < 10; i++){
+		printf("%d ", vetor[i]);
+	}
+	printf("\n");	
+}
