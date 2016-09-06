@@ -30,6 +30,16 @@ int buscaS (int vet[],int k){
 		}
 	}
 }
+
+void print_arquivo(int vet[]){
+	int i;
+	const int tam = 10;
+	for(i=0;i<tam;i++)
+	{
+		printf("%d\n",vet[i]);
+	}
+}
+
 int main(int argc,const char *argv[]){
 
 		//char url[] = "teste.txt";
