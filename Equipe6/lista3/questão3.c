@@ -1,20 +1,20 @@
 /*
  * =====================================================================================
  *
- *       Filename:  modelo.c
+ *       Filename:  questão3.c
  *
- *    Description:  modelo de cabeçalho
+ *    Description:  questão3
  *
  *        Version:  1.0
- *        Created:  19-08-2016 14:07:12
+ *        Created:  05-09-2016 14:07:12
  *       Revision:  none
  *       Compiler:  gcc
  *
  *         Author:  Hélio Paulo
  *         			Jailson Pereira
- *         			Thiago Cauassa
+ *         			Tiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  
+ *   Organization:  AED1
  *
  * =====================================================================================
  */
