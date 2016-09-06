@@ -17,11 +17,12 @@
  */
 
 #include<stdio.h>
-#include<stdio.h>
+#include<stdlib.h>
 
-int buscaS (int vet[],int k){
+int busca_seq (int vet[],int k){
 	int i;
-	for(i=0;;i++){
+	const int tam = 10;
+	for(i=0;i<tam;;i++){
 		if(vet[i] == k){
 			return vet[i];
 		}
@@ -46,13 +47,19 @@ int main(int argc,const char *argv[]){
 		/*  char ch;
 		FILE *arq;*/
 		const int tam = 10;
-		int i;
+		int i,k,num;
 		int vet[tam];	
 		for(i=0;i<tam;i++){
 			scanf("%d",&vet[i]);
 		}
 		print_arquivo(vet);
-		/*  arq = fopen(url,"r");
+		printf("#########################################");
+		printf("digite numero a pesquisar: ");
+		scanf("%d",&k);
+		printf("#########################################");
+		num = busca_seq(vet,k);
+		printf("a posicao do numero está em: %d\n",num);
+			/*  arq = fopen(url,"r");
 		if( arq == NULL){
 			printf("Erro ao abrir arquivo\n");
 		}
