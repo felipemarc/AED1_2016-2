@@ -20,13 +20,15 @@
 #include<stdlib.h>
 #define tam 10
 int busca_seq (int vet[],int k){
-	int i;
-//	const int tam = 10;
-	for(i=0;i<=tam;i++){
-		if(k == vet[i]){
-			return i;
-		}
-		
+	int i=0;
+	while(k != vet[i] && i<tam){
+		i =i+1;
+	}
+	if(i<tam){
+		return i;
+	}
+	else{
+		return -1;
 	}
 }
 
