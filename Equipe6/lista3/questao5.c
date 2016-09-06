@@ -22,13 +22,11 @@
 int busca_seq (int vet[],int k){
 	int i;
 //	const int tam = 10;
-	for(i=0;i<tam;i++){
-		if(vet[i] == k){
+	for(i=0;i<=tam;i++){
+		if(k == vet[i]){
 			return i;
 		}
-		else{
-			return -1;
-		}
+		
 	}
 }
 
@@ -73,10 +71,10 @@ int main(int argc,const char *argv[]){
 	    printf("digite numero a pesquisar:");
 		scanf("%d",&k);
 		
-		//printf("\n#########################################\n");
-		//num = busca_seq(vet,k);
+		printf("\n#########################################\n");
+		num = busca_seq(vet,k);
 		
-		//printf("a posicao do numero está em: %d\n",num);
+		printf("a posicao do numero está em: %d\n",num);
 
 		
 	return 0;
