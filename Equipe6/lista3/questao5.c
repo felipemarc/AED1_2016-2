@@ -22,7 +22,7 @@
 int busca_seq (int vet[],int k){
 	int i;
 	const int tam = 10;
-	for(i=0;i<tam;;i++){
+	for(i=0;i<tam;i++){
 		if(vet[i] == k){
 			return vet[i];
 		}
