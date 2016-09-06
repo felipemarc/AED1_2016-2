@@ -30,3 +30,32 @@ int buscaS (int vet[],int k){
 		}
 	}
 }
+int main(int argc,const char *argv[]){
+
+		//char url[] = "teste.txt";
+		/*  char ch;
+		FILE *arq;*/
+		const int tam = 10;
+		int i;
+		int vet[tam];	
+		for(i=0;i<tam;i++){
+			scanf("%d",&vet[i]);
+		}
+		print_arquivo(vet);
+		/*  arq = fopen(url,"r");
+		if( arq == NULL){
+			printf("Erro ao abrir arquivo\n");
+		}
+		else{
+			while((ch=fgetc(arq)) != EOF){
+			
+				putchar(ch);
+				
+			}
+		}
+		
+		fclose(arq);*/
+
+	return 0;
+}
+
