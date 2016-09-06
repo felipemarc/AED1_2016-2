@@ -19,20 +19,25 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define tam 10
-int busca_seq (int vet[],int k){
+int busca_seq (int vet[],int k)
+{
 	int i=0;
-	while(k != vet[i] && i<tam){
+	while(k != vet[i] && i<tam)
+	{
 		i =i+1;
 	}
-	if(i<tam){
+	if(i<tam)
+	{
 		return i;
 	}
-	else{
+	else
+	{
 		return -1;
 	}
 }
 
-void print_arquivo(int vet[]){
+void print_arquivo(int vet[])
+{
 	int i;
 //	const int tam = 10;
 	for(i=0;i<=tam-1;i++)
@@ -41,21 +46,26 @@ void print_arquivo(int vet[]){
 	}
 }
 
-void load (int vet[]){
+void load (int vet[])
+{
 	int i;
 	int ch;
 	FILE *arq;
 	arq = fopen("teste.txt","r");
-	if(arq){
-		do{
-			for(i=0;i<tam;i++){
+	if(arq)
+	{
+		do
+		{
+			for(i=0;i<tam;i++)
+			{
 				fscanf(arq,"%d",&vet[i]);
 			}
 		}while( !feof (arq));
 	}
 }
 
-int main(int argc,const char *argv[]){
+int main(int argc,const char *argv[])
+{
 
 		
 	//	const int tam = 10;
