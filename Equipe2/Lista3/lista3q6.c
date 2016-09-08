@@ -1,3 +1,12 @@
+/*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+6) Implemente a Busca Binária em C
+*/
 #include<stdio.h>
 
 int busca_bin(int vet[], int inicio, int final,int tam,int chave)
