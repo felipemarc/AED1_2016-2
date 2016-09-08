@@ -1,4 +1,12 @@
-
+/*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+2) Pesquise e implemente em C o QuickSort
+*/
 #include<stdio.h>
 #include<stdlib.h>
 
