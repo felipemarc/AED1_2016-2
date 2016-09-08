@@ -1,3 +1,13 @@
+/*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+5) Implemente a Busca Sequencial em C
+
+*/
 #include<stdio.h>
 
 int busca_seq(int vet[], int tam, int chave)
