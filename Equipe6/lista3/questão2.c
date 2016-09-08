@@ -65,3 +65,21 @@ void Quick(int vetor[10], int inicio, int fim){
 	if(i < fim) Quick(vetor, i, fim);	
 
 }
+
+/*void load (int vet[])
+{
+	int i;
+	int ch;
+	FILE *arq;
+	arq = fopen("teste.txt","r");
+	if(arq)
+	{
+		do
+		{
+			for(i=0;i<tam;i++)
+			{
+				fscanf(arq,"%d",&vet[i]);
+			}
+		}while( !feof (arq));
+	}
+}
