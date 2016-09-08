@@ -1,4 +1,12 @@
-/*3) Crie um programa em C que gere em um arquivo .txt
+/*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+
+3) Crie um programa em C que gere em um arquivo .txt
 - arquivo com 10000 números ordenados em ordem crescente
 - arquivo com 10000 números ordenados em ordem descrescente
 - arquivo com 10000 números gerados de maneira aleatória
