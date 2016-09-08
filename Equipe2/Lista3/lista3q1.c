@@ -1,3 +1,12 @@
+/*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+1) Pesquise e implemente em C o BubbleSort
+*/
 #include<stdio.h>
 
 void bubble_sort(int vet[], int tam)
