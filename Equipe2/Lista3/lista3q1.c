@@ -1,10 +1,8 @@
 #include<stdio.h>
 
-int main()
+void bubble_sort(int vet[], int tam)
 {
-    int vet[10] = {10,9,8,7,6,5,4,3,2,1};
-    int tam = 10, i ,j ,r ,aux;
-    
+	int i ,j ,aux;
     for(i=tam-1; i >= 1; i--) 
     {  
         for(j=0; j < i ; j++) 
@@ -17,10 +15,21 @@ int main()
             }
         }
     }
+}
 
-    for(r = 0; r < 10; ++r)
-    {
-        printf("%d\n",vetor[r]);
-    }
+int main()
+{
+	int tam;
+    scanf("%d", &tam);
+    int vet[tam], i, num;    
+	for(i = 0; i<tam; i++)
+	{
+		scanf("%d", &num);
+		vet[i] = num;
+	}    
+    bubble_sort(vet, tam);
+    for(i = 0; i<tam; i++)
+		printf("%d", vet[i]);
+	printf("\n");    
 	return 0;
 }
