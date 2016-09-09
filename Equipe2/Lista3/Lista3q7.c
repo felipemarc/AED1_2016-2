@@ -1,3 +1,12 @@
+/*
+Hermann Hernani
+Jéssica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+7) Pesquise e Implemente a Busca Sequencial com Sentinela em C
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #define tam 10
