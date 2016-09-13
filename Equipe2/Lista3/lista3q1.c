@@ -38,7 +38,9 @@ int main()
 	}    
     bubble_sort(vet, tam);
     for(i = 0; i<tam; i++)
-		printf("%d", vet[i]);
+    {
+		printf("%d ", vet[i]);
+	}
 	printf("\n");    
 	return 0;
 }
