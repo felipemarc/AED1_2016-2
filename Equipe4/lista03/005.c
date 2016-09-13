@@ -1,3 +1,14 @@
+
+//Equipe 4:
+  //Fabiola Maciel
+ // Jefferson Avilar
+  //Matheus Obando
+  //Alerrandro Barreto
+
+//5) Implemente a Busca Sequencial em C
+
+
+
 #include <stdio.h>
 int acha_valor(int tam, int v[tam], int n);
 
