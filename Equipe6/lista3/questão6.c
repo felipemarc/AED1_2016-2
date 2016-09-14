@@ -19,6 +19,7 @@
  *
  * =====================================================================================
  */
+ 
  //6) Implemente a Busca Binária em C
  #include <stdio.h>
  #include <stdlib.h>
