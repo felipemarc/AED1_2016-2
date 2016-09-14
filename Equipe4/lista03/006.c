@@ -1,17 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define TAM 10
+#define TAM 1000000
 
-int busca_binaria(int r, int l, int x, int v[TAM]);
+int busca_binaria(int r, int l, int x, int *v);
 
 int main()
 {
 
-	int v[TAM], i, n;
+	int 
+		*v, n;
+
+	v = (int *) malloc (sizeof(int) * TAM);
 	
 	scanf("%d", &n);
-	
-	for (i = 0; i < TAM; i++) 
+
+	for (int i = 0; i < TAM; i++) 
 		scanf ("%d", &v[i]);
 	
 	printf("%d\n", busca_binaria(TAM-1, 0, n, v));
@@ -19,7 +23,7 @@ int main()
 	return 0;
 }
 
-int busca_binaria(int r, int l,int x, int v[TAM])
+int busca_binaria(int r, int l,int x, int *v)
 {
 
 	int i = (r+l)/2;
@@ -43,4 +47,5 @@ int busca_binaria(int r, int l,int x, int v[TAM])
 			return busca_binaria(r,x-1,x,v);
 		}
 }
+
 
