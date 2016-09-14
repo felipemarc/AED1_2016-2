@@ -4,7 +4,7 @@
  *
  *       Filename:  bubblesort
  *
- *    Description:  
+ *    Description:  bubblesort
  *
  *        Version:  1.0
  *        Created:  05-09-2016 08:45:20
