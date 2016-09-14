@@ -5,16 +5,16 @@ void conquista(int v[], int inicio, int fim);
 
 int main() {
 
-  int v[10], int i;
+  int v[10];
 
-  for (i = 0; i < 10; i++)
+  for (int i = 0; i < 10; i++)
   {
     scanf("%d", &v[i]);
   }
 
   conquista(v,0,10);
 
-  for (i = 0; i < 10; i++)
+  for (int i = 0; i < 10; i++)
   {
     printf("%d ", v[i]);
   }

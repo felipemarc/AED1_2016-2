@@ -40,10 +40,7 @@ int acha_valor(int tam, int v[tam], int n)
 
 	for (i = 0; i < tam; i++)
 	{
-		if (v[i] == n)	
-		{	
-		    return i;
-		}
+		if (v[i] == n)	{	return i;}
 	}	
 	return -1;
 }
