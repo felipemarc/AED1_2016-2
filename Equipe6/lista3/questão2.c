@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  quicksort
+ *       Filename:  quicksort.c
  *
  *    Description:  quicksort	
  *
