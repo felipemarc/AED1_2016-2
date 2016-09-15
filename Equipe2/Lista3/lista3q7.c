@@ -8,34 +8,40 @@ Stephanny Barreto
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#define tam 10
-int sentinela(int numero, int chave, int vec[])
+
+int sentinela(int chave, int tam, int vec[])
 {
-	int i=0;
+	int i;
 	vec[tam]=chave;
 	
-	while(chave!=vec[i])
-	{
-		i++;
-	}
+	for(i=0; chave!=vec[i]; i++)
 	
-	if(i<numero)
+	if(i<tam)
 	{
-		return i;
+		return 1;
 	}
 		
 	return -1;
 }
 
-
-
 int main()
 {
-	int vec[tam+1]={9,23,56,3,25,78,81,3,6,34}, numero;
+     int tam;
+     scanf("%d",&tam);
+	int vec[tam+1], chave, i, valor;
+	scanf("%d",&chave);
 	
-	//printf("Informe um numero: "); scanf("%d",&numero);
-	printf("%d",sentinela(5, tam, vec));
+	for(i=0; i<=tam; i++);
+	{
+	     scanf("%d",&valor);
+	     vec[i]=valor;
+	}
+		
+	retorno = sentinela(chave, tam, vec));
+	if(retorno == 1)
+		printf("O numero está no vetor!\n");
+	if(retorno == -1)
+		printf("O numero não está no vetor!\n");
 	
-	system("pause");
+	return 0;
 }
