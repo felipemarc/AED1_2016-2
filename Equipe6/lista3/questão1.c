@@ -11,7 +11,11 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  Helio (), 
+ *         Author:                  Hélio Paulo
+ *         			    Jailson Pereira
+ *         			    Tiago Cauassa
+ *         			    Rebeca Assunção
+ *         			    Miguel Angelo
  *   Organization:  AED1
  *
  * =====================================================================================
