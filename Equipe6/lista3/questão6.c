@@ -15,7 +15,8 @@
  *         			Jailson Pereira
  *         			Tiago Cauassa
  *         			Rebeca Assunção
- *   Organization:  AED 1
+ *         			Miguel Angelo
+ *   Organization:  AED1
  *
  * =====================================================================================
  */
