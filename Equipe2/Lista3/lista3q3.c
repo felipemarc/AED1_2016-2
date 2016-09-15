@@ -43,58 +43,59 @@ void gera(char opc)
 			printf("10000");
 			printf("\n");
 			for(i=0; i<10000; i++)
-				printf("%d ", i);
+				printf("%d\n", i);
 			break;
 		case '2':
 			printf("10000");
 			printf("\n");
 			for(i=10000; i>0; i--)
-				printf("%d ", i);
+				printf("%d\n", i);
 			break;
 		case '3':
 			printf("1000");
 			printf("\n");
 			for(i=0; i<1000; i++)
-				printf("%d ", rand() % 100);
+				printf("%d\n", rand() % 10000);
 			break;
 		case '4':
 			printf("100000");
 			printf("\n");
 			for(i=0; i<100000; i++)
-				printf("%d ", i);
+				printf("%d\n", i);
 			break;
 		case '5':
 			printf("100000");
 			printf("\n");
 			for(i=100000; i>0; i--)
-				printf("%d ", i);
+				printf("%d\n", i);
 			break;
 		case '6':
 			printf("10000");
 			printf("\n");
 			for(i=0; i<10000; i++)
-				printf("%d ", rand() % 100);
+				printf("%d\n", rand() % 100000);
 			break;
 		case '7':
 			printf("100000");
 			printf("\n");
 			for(i=0; i<100000; i++)
-				printf("%d ", i);
+				printf("%d\n", i);
 			break;
 		case '8':
 			printf("1000000");
 			printf("\n");
 			for(i=1000000; i>0; i--)
-				printf("%d ", i);
+				printf("%d\n", i);
 			break;
 		case '9':
 			printf("100000");
 			printf("\n");
 			for(i=0; i<100000; i++)
-				printf("%d ", rand() % 100);
+				printf("%d\n", rand() % 1000000);
 			break;			
 	}
 }
+
 
 int main()
 {

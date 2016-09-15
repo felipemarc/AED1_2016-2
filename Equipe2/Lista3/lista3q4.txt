@@ -1,9 +1,27 @@
 Tempos do Bubble Sort
 (10 testes, sempre o mesmo resultado)
 
-real	0m0.001s
-user	0m0.000s
+real	0m0.006s
+user	0m0.004s
 sys		0m0.000s
+
+real	0m0.006s
+user	0m0.008s
+sys		0m0.000s
+
+real	0m0.006s
+user	0m0.004s
+sys		0m0.000s
+
+real	0m0.006s
+user	0m0.004s
+sys		0m0.000s
+
+real	0m0.006s
+user	0m0.004s
+sys		0m0.000s
+
+Tempo médio (0.005)
 
 Tempo Quick Sort
 (10 testes, sempre o mesmo resultado)
