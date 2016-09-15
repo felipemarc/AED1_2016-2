@@ -1,4 +1,11 @@
 /*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+
 8) Usando o comando time, busque, usando os algoritmos implementados nas questões 5,6 e 7, por um valor nos arquivos criados na questão 3
 Cada medição deverá ser reaizada 10 vezes para evitar erros.
 Calcule o tempo médio, variância e desvio padrão
