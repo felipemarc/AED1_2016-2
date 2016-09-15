@@ -1,0 +1,7 @@
+Tempos do Bubble Sort
+(10 testes, sempre o mesmo resultado)
+
+real	0m0.001s
+user	0m0.000s
+sys		0m0.000s
+
