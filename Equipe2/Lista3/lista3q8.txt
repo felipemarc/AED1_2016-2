@@ -1,0 +1,164 @@
+/*
+8) Usando o comando time, busque, usando os algoritmos implementados nas questões 5,6 e 7, por um valor nos arquivos criados na questão 3
+Cada medição deverá ser reaizada 10 vezes para evitar erros.
+Calcule o tempo médio, variância e desvio padrão
+*/
+
+Tempos questão 5
+
+1ª vez
+real	0m0.001s
+user	0m0.000s
+sys	    0m0.000s
+
+2ª vez
+real	0m0.001s
+user	0m0.000s
+sys	    0m0.000s
+
+3ª vez
+real	0m0.001s
+user	0m0.000s
+sys	    0m0.000s
+
+4ª vez
+real	0m0.001s
+user	0m0.000s
+sys	    0m0.000s
+
+5ª vez
+real	0m0.001s
+user	0m0.000s
+sys     0m0.000s
+
+6ª vez
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+7ªvez
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+8ª vez
+real	0m0.001s
+user	0m0.004s
+sys	0m0.000s
+
+9ª vez
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+10ª vez
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+
+
+Tempos questão 6
+
+1ª vez
+
+real	0m0.138s
+user	0m0.000s
+sys     0m0.004s
+
+2ª vez
+real	0m0.181s
+user	0m0.000s
+sys     0m0.004s
+
+3ª vez
+real	0m0.176s
+user	0m0.004s
+sys     0m0.000s
+
+4ª vez
+real	0m0.179s
+user	0m0.004s
+sys	    0m0.000s
+
+5ª vez
+real	0m0.173s
+user	0m0.000s
+sys     0m0.004s
+
+6ª vez
+real	0m0.184s
+user	0m0.000s
+sys	    0m0.004s
+
+7ª vez
+real	0m0.181s
+user	0m0.004s
+sys     0m0.000s
+
+8ª vez
+real	0m0.178s
+user	0m0.000s
+sys     0m0.004s
+
+9ª vez
+real	0m0.181s
+user	0m0.004s
+sys     0m0.000s
+
+10ª vez
+real	0m0.177s
+user	0m0.000s
+sys	0m0.004s
+
+Tempos da questão 7
+
+1ª vez
+real	0m0.002s
+user	0m0.000s
+sys     0m0.000s
+
+2ª vez
+real	0m0.002s
+user	0m0.000s
+sys     0m0.000s
+
+3ª vez
+real	0m0.001s
+user	0m0.000s
+sys     0m0.000s
+
+4ª vez
+real	0m0.001s
+user	0m0.000s
+sys     0m0.000s
+
+5ª vez
+real	0m0.002s
+user	0m0.000s
+sys     0m0.000s
+
+6ª vez
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+7ª vez
+real	0m0.001s
+user	0m0.000s
+sys     0m0.000s
+
+8ª vez
+real	0m0.002s
+user	0m0.000s
+sys     0m0.000s
+
+9ª vez
+real	0m0.002s
+user	0m0.000s
+sys     0m0.000s
+
+10ª vez
+real	0m0.002s
+user	0m0.000s
+sys     0m0.000s
