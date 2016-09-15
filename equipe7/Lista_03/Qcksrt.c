@@ -2,32 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-int main(int argc, char *argv[])
-{
-
-    time_t tinicio, tfim;
-
-    tinicio = time(NULL);
-
-    int max = atoi(argv[1]);
-
-    int tempo, i, vetor [max];
-
-
-    for (i = 0;i < MAX; i++)
-    {
-        scanf("%d", &vetor[i])
-    }
-
-    Quick(vetor[], 0, MAX);
-
-    tfim = time(NULL);
-    tempo = difftime(tinicio, tfim);
-    return 0;
-}
-
-void Quick(int vetor[10], int inicio, int fim){
+void Quick(int vetor[], int inicio, int fim){
 
    int pivo, aux, i, j, meio;
 
@@ -54,3 +29,28 @@ void Quick(int vetor[10], int inicio, int fim){
    if(i < fim) Quick(vetor, i, fim);
 
 }
+
+int main(int argc, const char *argv[])
+{
+
+    time_t tinicio, tfim;
+
+    tinicio = time(NULL);
+
+    int max = atoi(argv[1]);
+
+    int tempo, i, vetor [max];
+
+
+    for (i = 0;i < max; i++)
+    {
+        scanf("%d", &vetor[i]);
+    }
+
+    Quick(vetor, 0, max);
+
+    tfim = time(NULL);
+    tempo = difftime(tfim, tinicio);
+    return 0;
+}
+
