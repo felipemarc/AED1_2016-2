@@ -10,7 +10,11 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
+ *         Author:                  Hélio Paulo
+ *         			    Jailson Pereira
+ *         			    Tiago Cauassa
+ *         			    Rebeca Assunção
+ *         			    Miguel Angelo
  *   Organization:  AED1
  *
  * =====================================================================================
