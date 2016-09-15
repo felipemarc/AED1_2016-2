@@ -56,6 +56,8 @@ real	0m0.002s
 user	0m0.004s
 sys     0m0.000s
 
+Tempo médio: 
+
 Tempos da questão 6
 
 1ª vez
@@ -108,6 +110,8 @@ real	0m0.169s
 user	0m0.000s
 sys     0m0.004s
 
+Tempo médio: 0.017s
+
 Tempos da questão 7
 
 1ª vez
@@ -159,3 +163,5 @@ sys     0m0.000s
 real	0m0.002s
 user	0m0.000s
 sys     0m0.000s
+
+Tempo médio: 
