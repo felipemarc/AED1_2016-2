@@ -1,3 +1,12 @@
+/*
+Equiepe 5: Aline Lima
+	   Amanda Leticia
+	   Eduardo Azevedo
+	   Lucas ALmeida
+
+7) Pesquise e Implemente a Busca Sequencial com Sentinela em C
+*/
+
 #include<stdio.h>
 
 int busca_sentinela(int x, int n, int v[])
