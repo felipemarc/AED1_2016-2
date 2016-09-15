@@ -16,10 +16,11 @@ int main (int argc, char *argv[])
 		for(i = MAX-1; i>0;i--) printf("%d ", i);
 	}
 	else
-	if(strcmp(argv[2], "A")
+	if(strcmp(argv[2], "A"))
 	{
 		for(i = 0; i < MAX; i++) printf("%d ", rand()%1000000);
 	}
 	else for(i = 0; i < MAX; i++) printf("%d ", i);
 	
+	return 0;
 }
