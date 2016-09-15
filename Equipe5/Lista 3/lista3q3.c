@@ -1,16 +1,21 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-void gerador(value){
+void gerador(int value, char escolha){
 	int i;
 	int vector[value];
 	for(i=0; i<value; i++){
 		vector[i]=rand() % value;
-		//printf("%d ", rand() % 100);
-		printf("%d ", vector[i]);
+		//printf("%d------ ", rand() % 100);
+	//	printf("%d ", vector[i]);
 	}
-			OrdenaVetorDecrescente(value,vector);
+			switch(escolha){
+				case 'a':
+					OrdenaVetorCrescente(value,vector);
+				case 'b':
+					OrdenaVetorDecrescente(value,vector);
 
+	}
 }
 void OrdenaVetorCrescente(int value, int vector[]){
 	int i,j,aux;
@@ -50,9 +55,13 @@ void OrdenaVetorDecrescente(int value, int vector[]){
 	}	
 }
 int main(int argc, const char *argv[]){
+	int i=0;
 	int value;
+	char escolha;
 	scanf("%d", &value);
-	gerador(value);
+	scanf("%c", &escolha);
+	scanf("%c", &escolha);
+	gerador(value,escolha);
 	printf("\n");
 	return 0;
 }
