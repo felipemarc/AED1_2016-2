@@ -26,7 +26,7 @@ int main()
 	int tam;
 	scanf("%d", &tam);
 	int vet[tam], chave, i,num, result = 0;
-	scanf("%d", chave);
+	scanf("%d", &chave);
 	for(i = 0; i<tam; i++)
 	{
 		scanf("%d", &num);
