@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
     for (i=0;i < max;i++) scanf("%d", vetor[i]);
 
-    busca_seq(vetor, chave);
+    busca_seq(vetor, chave, max);
 
     tfim = time(NULL);
     tempo = difftime(tinicio, tfim);
@@ -27,11 +27,11 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-void busca_seq (int vetor[], int chave)
+void busca_seq (int vetor[], int chave, int tam)
 {
     int i;
 
-    for (i=0;i<n;i++)
+    for (i=0;i<tam;i++)
     {
         if (vetor[i]==chave)
         {
@@ -43,4 +43,3 @@ void busca_seq (int vetor[], int chave)
     printf("Chave não encontrada \n");
     break;
 }
-
