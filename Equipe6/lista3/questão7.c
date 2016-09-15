@@ -3,7 +3,7 @@
  *
  *       Filename:  busca.c
  *
- *    Description:  busca
+ *    Description:  Busca Sequencial com Sentinela
  *
  *        Version:  1.0
  *        Created:  03-09-2016 20:49:52
