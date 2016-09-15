@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+//Troca posições na memória
 void troca(int *n1, int *n2)
 {
     int aux;
@@ -21,7 +21,7 @@ void troca(int *n1, int *n2)
 }
 
 
-
+//Particiona o vetor diversas vezes até encontro do valor "r" requisitado "p" posicao inicial
 int particao(int vetor[], int p, int r)
 {
     int i, j, x, temp;

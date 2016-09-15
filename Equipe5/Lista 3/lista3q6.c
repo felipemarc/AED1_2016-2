@@ -7,7 +7,7 @@
     */
 #include <stdio.h>
 
-
+// Realiza diversas partições meio a meio até encontrar valor desejado
 int BuscaBinaria(int vector[], int inicio, int end, int numBusc)
 {
    if (end >= inicio)
@@ -30,8 +30,7 @@ int main(void)
 	int vector[vectoraysize];
 	for(i=0; i<vectoraysize; i++){
 		scanf("%d", &vector[i]);
-		//printf("%d------ ", rand() % 100);
-	//	printf("%d ", vector[i]);
+
 	}
    int n = sizeof(vector)/ sizeof(vector[0]);
    int result = BuscaBinaria(vector, 0, n-1, search);

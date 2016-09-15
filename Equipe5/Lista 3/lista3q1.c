@@ -19,6 +19,7 @@ int bubble (int total)
     {
         for(j=i+1;j<total;j++)
         {
+        	//Substituição e memorização de elementos do vetor com variável auxiliar
             if(vetor[i]>vetor[j])
             {
                 aux=vetor[i];
@@ -34,19 +35,19 @@ int bubble (int total)
 int main(int argc, const char * argv[])
 {
     int i;
-    
+    // Leitura de valores de Entrada
     for(i=0;i<10;i++)
     {
         scanf("%d", &vetor[i]);
     }
-    
+    //Imprimir para doc
     for(i=0;i<10;i++)
     {
         printf (" %d ", vetor[i]);
     }
     
     printf("\n\n");
-    
+    //Chamar funcao
     bubble(10);
     
     for(i=0;i<10;i++)
