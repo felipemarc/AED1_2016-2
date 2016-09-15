@@ -1,3 +1,17 @@
+/* 	Equipe 01:
+	Diogo Abreu
+	Elisandra Oliveira
+	Fernando Calderaro
+	Leticia Mota
+	Luana Andrade
+	Rodrigo Oliveira
+	Thailana Neves
+
+	Exercicio 04
+	Usando o comando time, meça o tempo que os arquivos criados na questão 3 são ordenados pelo BubbleSort e QuickSort implementados nas questões 1 e 2. 
+        Cada medição deverá ser reaizada 10 vezes para evitar erros. Calcule o tempo médio, variância e desvio padrão
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

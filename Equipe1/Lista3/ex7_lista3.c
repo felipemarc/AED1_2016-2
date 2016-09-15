@@ -1,4 +1,4 @@
-/* 	Equipe 01:
+﻿/* 	Equipe 01:
 	Diogo Abreu
 	Elisandra Oliveira
 	Fernando Calderaro
@@ -7,9 +7,10 @@
 	Rodrigo Oliveira
 	Thailana Neves
 
-	Exercicio 06
-	Implemente a Busca Binaria em C.
+	Exercicio 07
+	Pesquise e Implemente a Busca Sequencial com Sentinela em C,
 */
+
 #include<stdio.h>
 #define tam 10000
 

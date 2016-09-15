@@ -1,3 +1,16 @@
+/* 	Equipe 01:
+	Diogo Abreu
+	Elisandra Oliveira
+	Fernando Calderaro
+	Leticia Mota
+	Luana Andrade
+	Rodrigo Oliveira
+	Thailana Neves
+
+	Exercicio 02
+	Pesquise e implemente em C o QuickSort.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -56,3 +69,4 @@ int main(int argc,char *argv[])
     return 0;
     }
 }
+

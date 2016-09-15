@@ -1,3 +1,16 @@
+/* 	Equipe 01:
+	Diogo Abreu
+	Elisandra Oliveira
+	Fernando Calderaro
+	Leticia Mota
+	Luana Andrade
+	Rodrigo Oliveira
+	Thailana Neves
+
+	Exercicio 03
+	Crie um programa em C que gere em um arquivo .txt.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -101,4 +114,3 @@ int main(int argc,char *argv[])
     }
     return 0;
 }
-

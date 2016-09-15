@@ -1,3 +1,16 @@
+/* 	Equipe 01:
+	Diogo Abreu
+	Elisandra Oliveira
+	Fernando Calderaro
+	Leticia Mota
+	Luana Andrade
+	Rodrigo Oliveira
+	Thailana Neves
+
+	Exercicio 01
+	Pesquise e implemente em C o BubbleSort.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
