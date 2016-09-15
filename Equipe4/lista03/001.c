@@ -1,3 +1,10 @@
+/*Equipe 4:
+Fabiola Maciel
+Jefferson Avilar
+Matheus Obando
+Alerrandro Barreto
+1) Pesquise e implemente em C o BubbleSort
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
