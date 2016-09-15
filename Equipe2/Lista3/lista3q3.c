@@ -43,12 +43,14 @@ void gera(char opc, int vet[])
 		case '1':
 			for(i=0; i<10000; i++)
 			{
-					vet[i] = i;
+				vet[i] = i;
 			}
 			break;
 		case '2':
 			for(i=10000; i>0; i--)
-				printf("%d ", i);
+			{
+				vet[i] = i;
+			}
 			break;
 		case '3':
 			for(i=0; i<1000; i++)
@@ -84,7 +86,7 @@ void gera(char opc, int vet[])
 int main()
 {
 	char opc;
-	int vet;
+	int vet[TAM];
 	scanf("%c", &opc);
 	gera(opc, vet);
 	printf("\n");
@@ -97,6 +99,23 @@ int main()
 			printf("%d", vet[n]);
 		}
 	}
+	
+	if(opc == 2)
+	{
+		for(n = 0; n < 10000; n++)	
+		{
+			printf("%d", vet[n]);
+		}
+	}
+	
+	if(opc == 3)
+	{
+		for(n = 0; n < 1000; n++)	
+		{
+			printf("%d", vet[n]);
+		}
+	}
+	
 	
 	return 0;
 }
