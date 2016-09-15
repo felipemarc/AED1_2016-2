@@ -1,3 +1,11 @@
+/*Equipe 4: 
+Fabiola Maciel
+Jefferson Avilar
+Matheus Obando
+Alerrandro Barreto
+
+2) Pesquise e implemente em C o QuickSort*/
+
 #include <stdio.h>
 
 int divide(int v[], int inicio, int final);
