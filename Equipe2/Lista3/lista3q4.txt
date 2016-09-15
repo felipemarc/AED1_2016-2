@@ -1,32 +1,88 @@
-Tempos do Bubble Sort
-(10 testes, sempre o mesmo resultado)
+Tempos do Bubble Sort (Teste 10000 numeros aleatórios)
 
-real	0m0.006s
-user	0m0.004s
-sys		0m0.000s
+real	0m0.302s
+user	0m0.300s
+sys	  0m0.000s
 
-real	0m0.006s
-user	0m0.008s
-sys		0m0.000s
+real	0m0.338s
+user	0m0.336s
+sys	  0m0.000s
 
-real	0m0.006s
-user	0m0.004s
-sys		0m0.000s
+real	0m0.333s
+user	0m0.332s
+sys	  0m0.000s
 
-real	0m0.006s
-user	0m0.004s
-sys		0m0.000s
+real	0m0.339s
+user	0m0.336s
+sys	  0m0.000s
 
-real	0m0.006s
-user	0m0.004s
-sys		0m0.000s
+real	0m0.339s
+user	0m0.336s
+sys	  0m0.000s
 
-Tempo médio (0.005)
+real	0m0.335s
+user	0m0.332s
+sys	  0m0.000s
 
-Tempo Quick Sort
-(10 testes, sempre o mesmo resultado)
+real	0m0.339s
+user	0m0.336s
+sys	  0m0.000s
 
-real	0m0.001s
-user	0m0.000s
-sys		0m0.000s
+real	0m0.302s
+user	0m0.300s
+sys	  0m0.000s
+
+real	0m0.330s
+user	0m0.328s
+sys	  0m0.000s
+
+real	0m0.339s
+user	0m0.336s
+sys	  0m0.000s
+
+Tempo médio = 0.329s
+
+Tempo Quick Sort (Teste 10000 numeros aleatórios)
+
+real	0m0.066s
+user	0m0.064s
+sys	  0m0.000s
+
+real	0m0.102s
+user	0m0.100s
+sys	  0m0.000s
+
+real	0m0.092s
+user	0m0.088s
+sys	  0m0.000s
+
+real	0m0.099s
+user	0m0.096s
+sys	  0m0.000s
+
+real	0m0.093s
+user	0m0.092s
+sys	  0m0.000s
+
+real	0m0.101s
+user	0m0.100s
+sys	  0m0.000s
+
+real	0m0.103s
+user	0m0.100s
+sys	  0m0.000s
+
+real	0m0.102s
+user	0m0.100s
+sys	  0m0.000s
+
+real	0m0.103s
+user	0m0.100s
+sys	  0m0.000s
+
+real	0m0.103s
+user	0m0.100s
+sys	  0m0.000s
+
+Tempo médio = 0.96s
 
