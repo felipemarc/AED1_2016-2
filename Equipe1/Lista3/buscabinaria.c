@@ -1,7 +1,9 @@
 /* 	Equipe 01:
 	Diogo Abreu
+	Elisandra Oliveira
 	Fernando Calderaro
 	Leticia Mota
+	Luana Andrade
 	Rodrigo Oliveira
 	Thailana Neves
 
