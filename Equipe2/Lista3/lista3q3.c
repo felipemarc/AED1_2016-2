@@ -33,15 +33,18 @@ gcc lista3q3.c -o /q3
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-
-void gera(char opc)
+#define TAM 1000000
+void gera(char opc, int vet[])
 {
 	int i;
+	
 	switch(opc)
 	{
 		case '1':
 			for(i=0; i<10000; i++)
-				printf("%d ", i);
+			{
+					vet[i] = i;
+			}
 			break;
 		case '2':
 			for(i=10000; i>0; i--)
@@ -81,8 +84,19 @@ void gera(char opc)
 int main()
 {
 	char opc;
+	int vet;
 	scanf("%c", &opc);
-	gera(opc);
+	gera(opc, vet);
 	printf("\n");
+	int n;
+	
+	if(opc == 1)
+	{
+		for(n = 0; n < 10000; n++)	
+		{
+			printf("%d", vet[n]);
+		}
+	}
+	
 	return 0;
 }
