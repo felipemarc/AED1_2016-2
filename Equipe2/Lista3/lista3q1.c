@@ -30,6 +30,7 @@ void bubble_sort(int vet[], int tam)
 int main()
 {
 	int tam;
+	printf("Tamanho do vetor: ");
     scanf("%d", &tam);
     int vet[tam], i, num;    
 	for(i = 0; i<tam; i++)
