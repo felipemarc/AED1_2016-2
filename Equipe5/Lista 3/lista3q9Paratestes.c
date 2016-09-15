@@ -105,7 +105,7 @@ int main(int argc, const char *argv[]){
 	gerador(value,escolha);
 	end = clock();
 	cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-	printf("\n Time: %f- \n",cpu_time_used);
+	printf("%f    ",cpu_time_used);
 	}
 	return 0;
 }

@@ -1,43 +1,34 @@
 #include <stdio.h>
 
 
-int binarySearch(int arr[], int l, int r, int x)
+int BuscaBinaria(int vector[], int inicio, int end, int numBusc)
 {
-   if (r >= l)
+   if (end >= inicio)
    {
-        int mid = l + (r - l)/2;
+        int meio = inicio + (end - inicio)/2;
+        if (vector[meio] == numBusc)  return meio;
 
-        // If the element is present at the middle itself
-        if (arr[mid] == x)  return mid;
+        if (vector[meio] > numBusc) return BuscaBinaria(vector, inicio, meio-1, numBusc);
 
-        // If element is smaller than mid, then it can only be present
-        // in left subarray
-        if (arr[mid] > x) return binarySearch(arr, l, mid-1, x);
-
-        // Else the element can only be present in right subarray
-        return binarySearch(arr, mid+1, r, x);
+        return BuscaBinaria(vector, meio+1, end, numBusc);
    }
 
-   // We reach here when element is not present in array
    return -1;
 }
 
 int main(void)
 {
 	int i=0;
-	int value= 2,arraysize=8;
-	
-	scanf("%c", &escolha);
-		for(i=0; i<arraysize; i++){
-		scanf("%d", &value[i]);
+	int search= 2,vectoraysize=8;
+	int vector[vectoraysize];
+	for(i=0; i<vectoraysize; i++){
+		scanf("%d", &vector[i]);
 		//printf("%d------ ", rand() % 100);
 	//	printf("%d ", vector[i]);
 	}
-   int arr[] = {2, 3, 4, 10, 40};
-   int n = sizeof(arr)/ sizeof(arr[0]);
-   int x = 10;
-   int result = binarySearch(arr, 0, n-1, x);
-   (result == -1)? printf("Element is not present in array")
-                 : printf("Element is present at index %d", result);
+   int n = sizeof(vector)/ sizeof(vector[0]);
+   int result = BuscaBinaria(vector, 0, n-1, search);
+   (result == -1)? printf("Não ta no array")
+                 : printf("O elemento está na posicao %d", result);
    return 0;
 }
