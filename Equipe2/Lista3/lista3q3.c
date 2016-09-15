@@ -7,7 +7,7 @@ Paulo Marinho
 Stephanny Barreto
 
 3) Crie um programa em C que gere em um arquivo .txt
-
+u
 1 arquivo com 10000 números ordenados em ordem crescente
 
 2 arquivo com 10000 números ordenados em ordem descrescente
@@ -33,50 +33,63 @@ gcc lista3q3.c -o /q3
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#define TAM 1000000
-void gera(char opc, int vet[])
+
+void gera(char opc)
 {
 	int i;
-	
 	switch(opc)
 	{
 		case '1':
+			printf("10000");
+			printf("\n");
 			for(i=0; i<10000; i++)
-			{
-				vet[i] = i;
-			}
+				printf("%d ", i);
 			break;
 		case '2':
+			printf("10000");
+			printf("\n");
 			for(i=10000; i>0; i--)
-			{
-				vet[i] = i;
-			}
+				printf("%d ", i);
 			break;
 		case '3':
+			printf("1000");
+			printf("\n");
 			for(i=0; i<1000; i++)
 				printf("%d ", rand() % 100);
 			break;
 		case '4':
+			printf("100000");
+			printf("\n");
 			for(i=0; i<100000; i++)
 				printf("%d ", i);
 			break;
 		case '5':
+			printf("100000");
+			printf("\n");
 			for(i=100000; i>0; i--)
 				printf("%d ", i);
 			break;
 		case '6':
+			printf("10000");
+			printf("\n");
 			for(i=0; i<10000; i++)
 				printf("%d ", rand() % 100);
 			break;
 		case '7':
+			printf("100000");
+			printf("\n");
 			for(i=0; i<100000; i++)
 				printf("%d ", i);
 			break;
 		case '8':
+			printf("1000000");
+			printf("\n");
 			for(i=1000000; i>0; i--)
 				printf("%d ", i);
 			break;
 		case '9':
+			printf("100000");
+			printf("\n");
 			for(i=0; i<100000; i++)
 				printf("%d ", rand() % 100);
 			break;			
@@ -86,36 +99,8 @@ void gera(char opc, int vet[])
 int main()
 {
 	char opc;
-	int vet[TAM];
 	scanf("%c", &opc);
-	gera(opc, vet);
+	gera(opc);
 	printf("\n");
-	int n;
-	
-	if(opc == 1)
-	{
-		for(n = 0; n < 10000; n++)	
-		{
-			printf("%d", vet[n]);
-		}
-	}
-	
-	if(opc == 2)
-	{
-		for(n = 0; n < 10000; n++)	
-		{
-			printf("%d", vet[n]);
-		}
-	}
-	
-	if(opc == 3)
-	{
-		for(n = 0; n < 1000; n++)	
-		{
-			printf("%d", vet[n]);
-		}
-	}
-	
-	
 	return 0;
 }
