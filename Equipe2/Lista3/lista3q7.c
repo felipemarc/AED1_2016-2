@@ -11,37 +11,38 @@ Stephanny Barreto
 
 int sentinela(int chave, int tam, int vec[])
 {
-	int i;
-	vec[tam]=chave;
+	  int i;
+	  vec[tam]=chave;
 	
-	for(i=0; chave!=vec[i]; i++)
+	  for(i=0; chave!=vec[i]; i++)
+	  {
 	
-	if(i<tam)
-	{
-		return 1;
-	}
-		
-	return -1;
+	      if(i == tam-1)
+	      {
+		      return -1;
+	      }
+		}
+	  return 1;
 }
 
 int main()
 {
-     int tam;
-     scanf("%d",&tam);
-	int vec[tam+1], chave, i, valor;
-	scanf("%d",&chave);
+    int tam, retorno;
+    scanf("%d",&tam);
+	  int vec[tam], chave, i, valor;
+	  scanf("%d",&chave);
 	
-	for(i=0; i<=tam; i++);
-	{
-	     scanf("%d",&valor);
-	     vec[i]=valor;
-	}
+	  for(i=0; i < tam; i++)
+	  {
+	       scanf("%d",&valor);
+	       vec[i]=valor;
+	  }
 		
-	retorno = sentinela(chave, tam, vec));
-	if(retorno == 1)
-		printf("O numero está no vetor!\n");
-	if(retorno == -1)
-		printf("O numero não está no vetor!\n");
+	  retorno = sentinela(chave, tam, vec);
+	  if(retorno == 1)
+		    printf("O numero está no vetor!\n");
+	  if(retorno == -1)
+		    printf("O numero não está no vetor!\n");
 	
 	return 0;
 }
