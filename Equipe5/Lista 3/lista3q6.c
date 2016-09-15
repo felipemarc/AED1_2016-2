@@ -1,32 +1,34 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int bb(int v[], int start, int end, int k)
+
+int BuscaBinaria(int vector[], int inicio, int end, int numBusc)
 {
-	int m=(end-1)/2;
+   if (end >= inicio)
+   {
+        int meio = inicio + (end - inicio)/2;
+        if (vector[meio] == numBusc)  return meio;
 
-	if (v[m]=k)
-		return m+1;
-	
-	if (k>v[m])
-		bb(v, m+1, end, k);
-	else
-	{
-		if(k<v[m])
-			bb(v0, start, m-1, k);
-	}
-		
-			
+        if (vector[meio] > numBusc) return BuscaBinaria(vector, inicio, meio-1, numBusc);
+
+        return BuscaBinaria(vector, meio+1, end, numBusc);
+   }
+
+   return -1;
 }
 
-int main(int argc, const char *argv[])
+int main(void)
 {
-	int k=0, v[10];
-
-	for(int i=0; i<10; i++)
-	{
-		scanf("%d", &v[i]);
+	int i=0;
+	int search= 2,vectoraysize=8;
+	int vector[vectoraysize];
+	for(i=0; i<vectoraysize; i++){
+		scanf("%d", &vector[i]);
+		//printf("%d------ ", rand() % 100);
+	//	printf("%d ", vector[i]);
 	}
-	//printf("\nDigite o numero a encontrar: ");
-	scanf("%d", &k);
-	printf("\n A posicao do numero e: %d\n", bb(v, 0, 10, k));
+   int n = sizeof(vector)/ sizeof(vector[0]);
+   int result = BuscaBinaria(vector, 0, n-1, search);
+   (result == -1)? printf("Não ta no array")
+                 : printf("O elemento está na posicao %d", result);
+   return 0;
 }
