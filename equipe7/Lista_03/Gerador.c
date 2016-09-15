@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 
-int main (int argc, char *argv[])
+int main (int argc, const char *argv[])
 {
 	int MAX = atoi(argv[1]);
 	int i;
@@ -23,4 +23,5 @@ int main (int argc, char *argv[])
 	else for(i = 0; i < MAX; i++) printf("%d ", i);
 	
 	return 0;
+	
 }
