@@ -10,10 +10,10 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:                  Hélio Paulo
+ *         Author:                  HÃ©lio Paulo
  *         			    Jailson Pereira
  *         			    Tiago Cauassa
- *         			    Rebeca Assunção
+ *         			    Rebeca AssunÃ§Ã£o
  *         			    Miguel Angelo
  *   Organization:  AED1
  *
