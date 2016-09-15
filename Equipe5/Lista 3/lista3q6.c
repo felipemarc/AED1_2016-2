@@ -1,3 +1,10 @@
+/*
+    Aline Lima
+    Amanda Leticia
+    Eduardo Azevedo
+    Lucas Almeida
+    6) Implemente a Busca Binária em C
+    */
 #include <stdio.h>
 
 

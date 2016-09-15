@@ -1,3 +1,19 @@
+/*
+    Aline Lima
+    Amanda Leticia
+    Eduardo Azevedo
+    Lucas Almeida
+    3) Crie um programa em C que gere em um arquivo .txt
+	- arquivo com 10000 números ordenados em ordem crescente
+	- arquivo com 10000 números ordenados em ordem descrescente
+	- arquivo com 10000 números gerados de maneira aleatória
+	- arquivo com 100000 números ordenados em ordem crescente
+	- arquivo com 100000 números ordenados em ordem descrescente
+	- arquivo com 1000000 números gerados de maneira aleatória
+	- arquivo com 1000000 números ordenados em ordem crescente
+	- arquivo com 1000000 números ordenados em ordem descrescente
+	- arquivo com 1000000 números gerados de maneira aleatória
+ */
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
