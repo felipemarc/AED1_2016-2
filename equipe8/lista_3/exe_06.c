@@ -10,7 +10,6 @@ int bus_bin( int x, int n, int *V ){
 		else if (x < V[m]) f = m-1;
 		else if(x > V[m]) i = m+1;
 		}
-	}
 	return 0;
 }
 
