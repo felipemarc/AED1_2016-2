@@ -2,7 +2,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  bubblesort
+ *       Filename:  bubblesort.c
  *
  *    Description:  bubblesort
  *
