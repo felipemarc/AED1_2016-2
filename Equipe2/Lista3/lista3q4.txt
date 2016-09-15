@@ -84,5 +84,12 @@ real	0m0.103s
 user	0m0.100s
 sys	  0m0.000s
 
-Tempo médio = 0.96s
+Tempo médio = 0.096s
+
+
+
+Especificaçoes da Maquina: 
+Processador: Intel® Core™ i5-3330 CPU @ 3.00GHz × 4 
+Memoria: 7,7 GB
+Sistema: Ubuntu 16.04 LTS 64-bit
 
