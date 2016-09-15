@@ -33,6 +33,5 @@ int main(int argc, const char * argv[]){
            printf("%d\n ", rand() % 10000);
       }
       
-
       return 0;
 }
