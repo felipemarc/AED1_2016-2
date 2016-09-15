@@ -1,3 +1,15 @@
+/*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+
+4) Usando o comando time, meça o tempo que os arquivos criados na questão 3 são ordenados pelo BubbleSort e QuickSort implementados nas questões 1 e 2. 
+Cada medição deverá ser reaizada 10 vezes para evitar erros. Calcule o tempo médio, variância e desvio padrão
+
+*/
 Tempos do Bubble Sort (Teste 10000 numeros aleatórios)
 
 real	0m0.302s
