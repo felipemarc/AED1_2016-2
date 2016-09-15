@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 
@@ -9,16 +10,14 @@ int main(int argc, char *argv[])
 
     tinicio = time(NULL);
 
-    MAX = (int)argv[1];
+    int max = atoi(argv[1]);
 
-    int tempo, i, vetor [MAX];
+    int tempo, i, vetor [max];
 
-
-    srand(time(NULL));
 
     for (i = 0;i < MAX; i++)
     {
-        vetor[i] = rand() % 1000000;
+        scanf("%d", &vetor[i])
     }
 
     Quick(vetor[], 0, MAX);
