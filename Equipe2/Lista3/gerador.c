@@ -1,3 +1,12 @@
+/*
+Equipe2
+Hermann Hernani
+Jessica Tavares
+Lucas Botinelly
+Paulo Marinho
+Stephanny Barreto
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
