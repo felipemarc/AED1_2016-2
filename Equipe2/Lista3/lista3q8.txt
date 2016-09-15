@@ -56,7 +56,7 @@ real	0m0.002s
 user	0m0.000s
 sys	0m0.000s
 
-Tempo médio:
+Tempo médio: 0.015s
 
 Tempos questão 6
 
@@ -166,7 +166,7 @@ real	0m0.002s
 user	0m0.000s
 sys     0m0.000s
 
-Tempo médio:
+Tempo médio: 0.012s
 
 Especificaçoes da Maquina: 
 Processador: Intel® Core™ i5-3330 CPU @ 3.00GHz × 4 
