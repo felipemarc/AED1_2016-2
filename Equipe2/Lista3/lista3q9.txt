@@ -11,167 +11,199 @@ Cada medição deverá ser reaizada 10 vezes para evitar erros.
 Calcule o tempo médio, variância e desvio padrão
 */
 
-Tempos da questão 5
+Testes feitos com 1000000 números de forma crescente !
 
-1ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+Testes da Busca sequencial 
+-----------------------------------------------------------------------------------
+O numero não etá no vetor!
 
-2ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.173s
+user	0m0.164s
+sys		0m0.008s
 
-3ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+O numero não etá no vetor!
 
-4ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.174s
+user	0m0.172s
+sys		0m0.000s
 
-5ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+O numero não etá no vetor!
 
-6ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.169s
+user	0m0.164s
+sys		0m0.004s
 
-7ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+O numero não etá no vetor!
 
-8ª vez
-real	0m0.002s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.173s
+user	0m0.164s
+sys		0m0.008s
 
-9ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s        
+O numero não etá no vetor!
 
-10ª vez
-real	0m0.002s
-user	0m0.004s
-sys   0m0.000s
+real	0m0.165s
+user	0m0.152s
+sys		0m0.012s
 
-Tempo médio: 014.7s
+O numero não etá no vetor!
 
-Tempos da questão 6
+real	0m0.157s
+user	0m0.152s
+sys		0m0.008s
 
-1ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+O numero não etá no vetor!
 
-2ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.170s
+user	0m0.168s
+sys		0m0.000s
 
-3ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.004s
+O numero não etá no vetor!
 
-4ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.173s
+user	0m0.164s
+sys		0m0.008s
 
-5ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+O numero não etá no vetor!
 
-6ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.139s
+user	0m0.136s
+sys		0m0.000s
+O numero não etá no vetor!
 
-7ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.004s
+real	0m0.175s
+user	0m0.172s
+sys	    0m0.000s
 
-8ª vez
-real	0m0.001s
-user	0m0.004s
-sys   0m0.000s
+Média = 0.166s
 
-9ª vez
-real	0m0.001s
-user	0m0.004s
-sys   0m0.000s
+Testes da busca binária 
+-----------------------------------------------------------------------------------
 
-10ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+O numero não está no vetor!
 
-Tempo médio:
+real	0m0.170s
+user	0m0.168s
+sys		0m0.000s
 
-Tempos da questão 7
+O numero não está no vetor!
 
-1ª vez
-real	0m0.002s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.136s
+user	0m0.132s
+sys		0m0.000s
 
-2ª vez
-real	0m0.001s
-user	0m0.000s
-sys	  0m0.000s
+O numero não está no vetor!
 
-3ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.171s
+user	0m0.168s
+sys		0m0.000s
 
-4ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+O numero não está no vetor!
 
-5ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.171s
+user	0m0.168s
+sys		0m0.000s
 
-6ª vez
-real	0m0.002s
-user	0m0.000s
-sys   0m0.000s
+O numero não está no vetor!
 
-7ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.160s
+user	0m0.156s
+sys		0m0.000s
 
-8ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+O numero não está no vetor!
 
-9ª vez
-real	0m0.001s
-user	0m0.000s
-sys   0m0.000s
+real	0m0.169s
+user	0m0.164s
+sys		0m0.004s
 
-10ª vez
-real	0m0.002s
-user	0m0.000s
-sys   0m0.000s
+O numero não está no vetor!
 
-Tempo médio:  0.012s
+real	0m0.173s
+user	0m0.168s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.136s
+user	0m0.136s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.145s
+user	0m0.144s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.172s
+user	0m0.168s
+sys		0m0.000s
+
+Média = 0.160s
+
+Tempos da busca com sentinela
+-------------------------------------------------------------------------------------
+O numero não está no vetor!
+
+real	0m0.127s
+user	0m0.124s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.172s
+user	0m0.168s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.166s
+user	0m0.164s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.164s
+user	0m0.160s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.168s
+user	0m0.164s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.172s
+user	0m0.168s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.149s
+user	0m0.148s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.172s
+user	0m0.168s
+sys		0m0.000s
+
+O numero não está no vetor!
+
+real	0m0.174s
+user	0m0.168s
+sys		0m0.004s
+
+O numero não está no vetor!
+
+real	0m0.174s
+user	0m0.168s
+sys		0m0.008s
+
+Média = 0.164s
 
 Especificaçoes da Maquina: 
 Processador: Intel® Core™ i5-3330 CPU @ 3.00GHz × 4 
