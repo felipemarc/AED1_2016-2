@@ -40,7 +40,7 @@ void OrdenaVetorDecrescente(int value, int vector[]){
                   }
            }
 		aux=0;
-		for( j=value-1; j>=0; j++ ){
+		for( j=value-1; j>=0; j-- ){
 			newvector[j]=vector[aux];
 			aux++;
 		}	
