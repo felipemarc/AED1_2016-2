@@ -5,7 +5,7 @@ void gerador(value){
 	int i;
 	int vector[value];
 	for(i=0; i<value; i++){
-		vector[i]=rand() % 100;
+		vector[i]=rand() % value;
 		//printf("%d ", rand() % 100);
 		printf("%d ", vector[i]);
 	}
