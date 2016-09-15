@@ -12,8 +12,8 @@ Stephanny Barreto
 int busca_bin(int vet[], int inicio, int final,int tam,int chave)
 {
 	int item = vet[tam/2];
-	if(inicio == final-1)
-		return -1;
+	if(inicio <= final)
+	  return -1;
 	if(item == chave)
 		return 1;
 	if(item>chave)
@@ -26,6 +26,7 @@ int busca_bin(int vet[], int inicio, int final,int tam,int chave)
 		inicio = item;
 		busca_bin(vet, inicio, final, tam, chave);	
 	}
+  return -1;
 }	
 
 int main()
