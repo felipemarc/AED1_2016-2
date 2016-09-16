@@ -23,22 +23,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void bubble (int vetor[], int n)
+
+void bubble (int vet[],int tam)
 {
 
-int i,j;
-int k = n ;
-int aux;
-	for(i=0;i<n;i++){
-		for (j=0;j<k;j++){
-			if (vetor[j] > vetor [j+1]){
-				aux = vetor [j];
-				vetor[j] = vetor[j+1];
-				vetor [j+1] = aux;
+	int i,j;
+	int aux;
+	for(i=0;i<tam;i++){
+		for (j=i+1;j<tam;j++){
+			if (vet[i] > vet [j]){
+				aux = vet [i];
+				vet[i] = vet[j];
+				vet [j] = aux;
 			}
 		}
 
-		k--;
 	}
 
 }
@@ -46,20 +45,21 @@ int aux;
 
 
 
-int main ()
+int main (int argc,const char *argv[])
 {
 
-int vetor [] = {3,5,8,1,9,2,4,7,0,6};
-int n = 10 ;
-int i;
+	int tam = atoi(argv[1]);
+	int n = tam;
+	int i;
+	
+	int *vet = (int *) malloc (sizeof (int)*tam);
 
-
-bubble (vetor,n);
-printf("\n\n\n");
-
-	for(i=0;i<n;i++){
-		printf("%d - ", vetor[i]);
-
+	for (i=0;i<tam;i++){
+		scanf("%d",&vet[i]);
 	}
 
+	bubble (vet,tam);
+
+	free(vet);
+	return 0;
 }
