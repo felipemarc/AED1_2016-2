@@ -21,14 +21,15 @@
  * =====================================================================================
  */
  
- //6) Implemente a Busca Binária em C
  #include <stdio.h>
  #include <stdlib.h>
 
-int buscabin(int n, int vet[], int esq, int dir){
+int buscabin(int n, int vet[], int esq, int dir)
+{
   int i = (dir-esq)/2;
 	
-  if (vet[i] == n){
+  if (vet[i] == n)
+  {
     return i;
   }
 
@@ -38,9 +39,11 @@ int buscabin(int n, int vet[], int esq, int dir){
   }
   else 
   {
-	if(vet[i] < n){
+	if(vet[i] < n)
+	{
        		 return buscabin (n, vet, i+1,dir);
-        }else 
+        }
+        else 
 	{
             return buscabin (n, vet, esq, i-1);
 	}
@@ -48,26 +51,26 @@ int buscabin(int n, int vet[], int esq, int dir){
    }
 }
 
+int main (int argc,char *argv[])
+{
+    int i,n,esq = 0;
+    int *vet;
+    int k = atoi(argv[1]);
+    int dir = atoi (argv[2]);
 
-int main(){
-  
-  int pos, vet[20], i=0, dir, esq=0 ,n;
-    printf ("informe qtde de numeros:");
-    scanf("%d",&dir);
-    while(i < dir){
-      printf ("informe %do numero:",i+1);
-      scanf("%d",&vet[i]);
-      i++;
-    }	
-    printf("informe valor da busca: ");
-    scanf("%d",&n);
+    vet = (int*) malloc (sizeof(int)*dir);
 
-    pos = buscabin(n, vet, esq, dir-1);
-    printf("\n %d \n\n", pos+1);
+    for(i=0;i<dir;i++)
+    {
+        scanf("%d",&vet[i]);
+    }
 
-  return 0;
+     n = buscabin(k,vet,esq,dir);
+
+ 
+    free(vet);
+    return 0;
 }
-
 
 
 
