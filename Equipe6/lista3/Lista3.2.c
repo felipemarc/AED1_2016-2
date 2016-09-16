@@ -22,7 +22,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void quick(int vet[], int inicio, int fim){
+void quick(int vet[], int inicio, int fim)
+{
 	
 	int pivo, aux, i, j, meio;
 	
@@ -36,7 +37,8 @@ void quick(int vet[], int inicio, int fim){
         	while (vet[i] < pivo) i = i + 1;
  		while (vet[j] > pivo) j = j - 1;
 	
-		if(i <= j){
+		if(i <= j)
+		{
 			aux = vet[i];
 			vet[i] = vet[j];
 			vet[j] = aux;
