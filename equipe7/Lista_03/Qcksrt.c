@@ -11,22 +11,34 @@ void Quick(int vetor[], int inicio, int fim){
 
    meio = (int) ((i + j) / 2);
    pivo = vetor[meio];
-
-   do{
-      while (vetor[i] < pivo) i = i + 1;
-      while (vetor[j] > pivo) j = j - 1;
-
-      if(i <= j){
-         aux = vetor[i];
-         vetor[i] = vetor[j];
-         vetor[j] = aux;
-         i = i + 1;
-         j = j - 1;
-      }
-   }while(j > i);
-
-   if(inicio < j) Quick(vetor, inicio, j);
-   if(i < fim) Quick(vetor, i, fim);
+   
+   if(inicio<fim)
+   {
+   	pivo = inicio;
+   	
+   	while(i<j)
+   	{
+   		while((vetor[i]<=vetor[pivo])&&(i<fim)) i++;
+   		
+   		while(vetor[j]>vetor[pivo]) j--;
+   		
+   		if(i<j)
+   		{
+   			aux = vetor[i];
+         	vetor[i] = vetor[j];
+         	vetor[j] = aux;	
+   		}
+   	}
+   	
+   	aux = vetor[pivo];
+    vetor[pivo] = vetor[j];
+    vetor[j] = aux;
+    Quick(vetor, inicio, j-1);
+    Quick(vetor, j+1, fim);	
+   	
+   }
+   
+ 
 
 }
 
@@ -46,11 +58,15 @@ int main(int argc, const char *argv[])
     {
         scanf("%d", &vetor[i]);
     }
+    
+    //for (i = 0;i < max; i++) printf("%d", vetor[i]);
 
     Quick(vetor, 0, max);
-
-    tfim = time(NULL);
-    tempo = difftime(tfim, tinicio);
+	
+	for (i = 0;i < max; i++)
+	{
+   		printf("%d ", vetor[i]);
+    }
+    
     return 0;
 }
-
