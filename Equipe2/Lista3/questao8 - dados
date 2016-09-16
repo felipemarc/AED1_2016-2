@@ -53,6 +53,8 @@ sys	0m0.004s
 
 
 tempo medio = 0m0.163,8s
+Variância = 0,000172s
+Desvio padrão = 0,013098s
 
 tempos busca senquencial com sentinela: valor existente, padrao crescente, 1.000.000 de numeros.
 
@@ -108,11 +110,9 @@ user	0m0.168s
 sys	0m0.000s
 
 
-real	0m0.169s
-user	0m0.164s
-sys	0m0.008s
-
 tempo medio = 0m0.177,4s
+Variância = 0,000302s
+Desvio padrão = 0,017391s
 
 
 

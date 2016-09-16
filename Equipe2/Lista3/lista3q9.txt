@@ -75,6 +75,8 @@ user	0m0.172s
 sys	    0m0.000s
 
 Média = 0.166s
+Variância = 0.000112s
+Desvio Padrão = 0.010591s
 
 Testes da busca binária 
 -----------------------------------------------------------------------------------
@@ -140,6 +142,8 @@ user	0m0.168s
 sys		0m0.000s
 
 Média = 0.160s
+Variância = 0.000211s
+Desvio Padrão = 0.014533s
 
 Tempos da busca com sentinela
 -------------------------------------------------------------------------------------
@@ -204,6 +208,8 @@ user	0m0.168s
 sys		0m0.008s
 
 Média = 0.164s
+Variancia = 0.000201
+Desvio padrão = 0.014162
 
 Especificaçoes da Maquina: 
 Processador: Intel® Core™ i5-3330 CPU @ 3.00GHz × 4 
