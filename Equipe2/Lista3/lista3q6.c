@@ -9,26 +9,19 @@ Stephanny Barreto
 */
 #include<stdio.h>
 
-int busca_bin(int vet[], int inicio, int final,int tam,int chave)
+int busca_binaria (int chave, int vet[], int esq, int dir)
 {
-	int item = vet[tam/2];
-	if(inicio < final)
-	  return -1;
-	if(item == chave)
+	int i = (esq + dir)/2;
+	if (vet[i] == chave)
 		return 1;
-	if(item>chave)
-	{
-		final = item;
-		busca_bin(vet, inicio, final, tam, chave);
-	}
-	if(item<chave)
-	{
-		inicio = item;
-		busca_bin(vet, inicio, final, tam, chave);	
-	}
-  return -1;
-}	
-
+	if (esq >= dir)
+		return -1; // Não foi encontrado
+	else
+		if (vet[i] < chave)
+			return busca_binaria(chave , vet, i+1, dir);
+		else
+			return busca_binaria(chave, vet, esq, i-1);
+}
 int main()
 {
 	int tam, chave;
@@ -41,7 +34,7 @@ int main()
 		scanf("%d", &num);
 		vet[i] = num;
 	}
-	result = busca_bin(vet, 0, tam-1, tam, chave);
+	result = busca_binaria(chave, vet, 0, tam-1);
 	if(result == 1)
 		printf("O numero etá no vetor!\n");
 	if(result == -1)
