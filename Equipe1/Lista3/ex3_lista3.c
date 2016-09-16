@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void criar_txt(int quantidade_de_numeros,int vetor[])
+void criar_txt(int quantidade_de_numeros,int vetor[])//imprime vetor
 {
     int i;
     for(i=0;i<quantidade_de_numeros;i++)
@@ -24,7 +24,7 @@ void criar_txt(int quantidade_de_numeros,int vetor[])
     }
 }
 
-void vetor_aleatorio (int quantidade_de_numeros,int vetor[])
+void vetor_aleatorio (int quantidade_de_numeros,int vetor[])//cria vetor aleatorio
 {
     int i,u,achou;
     srand(time(NULL));
@@ -47,7 +47,7 @@ void vetor_aleatorio (int quantidade_de_numeros,int vetor[])
 }
 
 
-void imprimir_vetor(int quantidade_de_numeros,int vetor[])
+void imprimir_vetor(int quantidade_de_numeros,int vetor[])//imprime o vetor
 {
     int i;
     for(i=0;i<quantidade_de_numeros;i++)
@@ -56,7 +56,7 @@ void imprimir_vetor(int quantidade_de_numeros,int vetor[])
     }
 }
 
-void vetor_crescente(int quantidade_de_numeros,int vetor[])
+void vetor_crescente(int quantidade_de_numeros,int vetor[])//cria vetor crescente
 {
     int i;
     for(i=0;i<quantidade_de_numeros;i++)
@@ -65,7 +65,7 @@ void vetor_crescente(int quantidade_de_numeros,int vetor[])
     }
 }
 
-void vetor_decrescente(int quantidade_de_numeros,int vetor[])
+void vetor_decrescente(int quantidade_de_numeros,int vetor[])//cria vetor decrescente
 {
     int i;
     for(i=quantidade_de_numeros;i>=0;i--)
@@ -76,17 +76,18 @@ void vetor_decrescente(int quantidade_de_numeros,int vetor[])
 
 int main(int argc,char *argv[])
 {
-    int x = atoi(argv[1]);
-    int y = atoi(argv[2]);
+    //"atoi" transforma o argumento do tipo char em tipo int
+    int x = atoi(argv[1]);//quantidade de numeros = argv[1]
+    int y = atoi(argv[2]);//tipo de ordenacao = argv[2]
     int *vetor;
-    vetor = (int *)malloc(x * sizeof(int));
-    if(x<=0)
+    vetor = (int *)malloc(x * sizeof(int));//cria um vetor do tamanho da quantidade de numeros 
+    if(x<=0)//condição para criar vetor maior q zero
     {
         printf("\ncomado invalido!\n");
         return 0;
     }
 
-    switch(y)
+    switch(y)//O valor de Y será o tipo de ordenação (0)crescente (1)decrescente (2)aleatorio
     {
         case 0:
             vetor_crescente(x,vetor);

@@ -43,7 +43,7 @@ int parciona(int *vetor,int inicio,int fim)
     return direita;
 }
 
-void quickSort (int*vetor,int inicio,int fim)
+void quickSort (int*vetor,int inicio,int fim)//parciona o vetor, escolhe um pivor e colaca os menores para um lado e os maiores para o outro.repetindo o processo até alcançar seu objetivo
 {
     int pivo;
     if(fim>inicio)
@@ -54,7 +54,7 @@ void quickSort (int*vetor,int inicio,int fim)
     }
 }
 
-void bubblesort(int quantidade_de_numeros,int * vetor)
+void bubblesort(int quantidade_de_numeros,int * vetor)//troca valores adjacentes ate nao houver mais necessidade
 {
     int fim,i,j;
     for (fim=quantidade_de_numeros-1; fim>0; fim--)
@@ -72,27 +72,29 @@ void bubblesort(int quantidade_de_numeros,int * vetor)
     }
 }
 
+//executa-se o programa seguido de dois argumentos a quantidade de numeros e a função que ira ser utilizada
+
 int main(int argc,char *argv[])
 {
     int i;
     int *vetor;
-    int quantidade_de_numeros = atoi(argv[1]);
-    int ordem = atoi(argv[2]);
-    vetor = (int*)malloc(quantidade_de_numeros*sizeof(int));
-    for(i=0;i<quantidade_de_numeros;i++)
+    int quantidade_de_numeros = atoi(argv[1]);//converte o valor do argumento do tipo char argv[1] para quantidade_de_numeros do tipo int
+    int ordem = atoi(argv[2]);//converte o valor do argumento do tipo char argv[2] para ordem do tipo int
+    vetor = (int*)malloc(quantidade_de_numeros*sizeof(int));//cria um vetor do tamanho da quantidade de numeros
+    for(i=0;i<quantidade_de_numeros;i++)//lê os dados do txt
     {
         scanf("%d",&vetor[i]);
     }
 
-    switch(ordem)
+    switch(ordem)//ordem pode ser:(0)bubblesoft e (1)quicksoft
     {
         case 0:
-            bubblesort(quantidade_de_numeros,vetor);
+            bubblesort(quantidade_de_numeros,vetor);//ordena usando o bubblesoft
             free(vetor);
             break;
 
         case 1:
-            quickSort(vetor,0,quantidade_de_numeros-1);
+            quickSort(vetor,0,quantidade_de_numeros-1);//ordena usando o quicksoft
             free(vetor);
             break;
 
