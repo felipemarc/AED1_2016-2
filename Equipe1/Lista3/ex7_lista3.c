@@ -11,18 +11,16 @@
 	Pesquise e Implemente a Busca Sequencial com Sentinela em C,
 */
 
-#include<stdio.h>
-#define tam 10000
-
-
-int busca(int vet[],int k)
+int busca(int vet[],int valor)
 {
-	vet[tam] = k;
+	vet[tam] = valor;
 	int i = 0;
-	while(k != vet[i])
+	//se valor for diferente do vetor de indice i adiciona +1
+	while(valor != vet[i])
 	{
 		i=i+1;
 	}
+	//se o i for menor que tamanho ele retornara o mesmo
 	if(i<tam)
 	{
 		return i;
@@ -32,19 +30,22 @@ int busca(int vet[],int k)
 		return -1;
 	}
 }
-
-
+ 
 
 int main(int argc,const char *argv[])
 {
-	int i,num,k,vet[tam];	
-	
-	k=atoi(argv[1]);	
+	int i,num,valor,vet[tam];	
+	//usando atoi para pegar um valor através do argv que será passado pelo terminal  
+	valor=atoi(argv[1]);	
+	//lendo o vetor
 	for(i=0;i<=tam-1;i++)
 	{
 		scanf("%d",&vet[i]);
 	}
-	num = busca(vet,k);
-	printf("O valor foi encontrado na possiÃ§Ã£o %d \n",num);
+	//chamando a função busca
+	num = busca(vet,valor);
+	printf("O valor %d foi encontrado \n",num);
 
 }
+
+
