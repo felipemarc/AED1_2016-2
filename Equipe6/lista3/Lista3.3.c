@@ -22,18 +22,61 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-  
-/* as funções rand(), random() e srand() estão no cabeçalho stdlib.h */
-int main(int argc, const char * argv[]){
-     int i;
+#include <string.h>
 
-     /* inicializar o gerador de números aleatórios */
-     srand(10000);
-     for (i=0; i<10000; i++)
-     {
-           /* para gerar números aleatórios de 0 a TAM */
-           printf("%d\n ", rand() % 10000);
-      }
-      
+
+
+void aleatorio ( int tam)
+{
+	   int i;
+	   srand(tam);
+	   for(i=1;i<=tam;i++)
+	   {
+		     printf("%d\n",rand() % tam);
+	   }
+}
+
+void crescente (int tam)
+{
+	   int i;
+	   for(i=1;i<=tam;i++)
+	   {
+		     printf("%d\n",i);
+	   }
+}
+
+void decrescente (int tam)
+{
+  	int i;
+	  for(i=tam;i>=1;i--) 
+	  {
+		    printf("%d\n",i);
+	  }
+}
+
+
+int main(int argc, char * argv[]) 
+{
+    int i;
+	   int tam = atoi(argv[1]);
+	   char *op = (argv[2]);	
+	
+	 
+	 
+	 //crescente(tam);
+	   if(strcmp(op,"a")== 0)
+	   {
+		    aleatorio(tam);
+    }
+	
+	  if(strcmp(op,"c") == 0)
+	  {
+		    crescente(tam);
+	  }
+     
+  	if(strcmp(op,"d") == 0) 
+  	{
+		    decrescente(tam);
+	  }
       return 0;
 }
