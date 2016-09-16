@@ -7,19 +7,19 @@
 
 //5) Implemente a Busca Sequencial em C
 
-
-
 #include <stdio.h>
+#include <stdlib.h>
 int acha_valor(int tam, int v[tam], int n);
 
-int main()
+int main(int argc, char *argv[])
 {
 
-	int tam = 10; int v[tam]; 
-	
-	int pesquisar, i;
-	
-	scanf("%d", &pesquisar);
+	int 
+		*v, tam = atoi(argv[1]), pesquisar = atoi(argv[2]);
+
+	v = (int *) malloc (sizeof(int) * tam);
+    
+    int i;
 	
 	for (i = 0; i < tam; i++)
 		scanf("%d", &v[i]);
