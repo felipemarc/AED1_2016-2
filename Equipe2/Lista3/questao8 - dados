@@ -115,5 +115,60 @@ Variância = 0,000302s
 Desvio padrão = 0,017391s
 
 
+tempos busca binaria: valor existente, padrao crescente, 1.000.000 de numeros.
+
+
+real	0m0.135s
+user	0m0.132s
+sys	0m0.000s
+
+real	0m0.171s
+user	0m0.168s
+sys	0m0.000s
+
+real	0m0.171s
+user	0m0.168s
+sys	0m0.000s
+
+
+real	0m0.171s
+user	0m0.164s
+sys	0m0.004s
+
+
+real	0m0.138s
+user	0m0.136s
+sys	0m0.000s
+
+
+real	0m0.171s
+user	0m0.168s
+sys	0m0.000s
+
+
+real	0m0.137s
+user	0m0.132s
+sys	0m0.000s
+
+
+real	0m0.170s
+user	0m0.164s
+sys	0m0.004s
+
+
+real	0m0.171s
+user	0m0.168s
+sys	0m0.000s
+
+
+real	0m0.171s
+user	0m0.168s
+sys	0m0.000s
+
+tempo medio 0m0.160s
+variancia = 246,040000
+desvio padrao = 15,685662
+
+
 
 
