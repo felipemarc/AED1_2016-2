@@ -154,7 +154,7 @@ sys	0m0.000s
 real	0m0.170s
 user	0m0.164s
 sys	0m0.004s
-
+http://create.barchart.be/chart?w=350&type=bar&h=250&t=Example&xt=EXECU%C7AO&yt=TEMPO&d3=0&bgc1=WHITE&bgc2=WHITE&lr=30&glc=BLACK&gc=black&s=Tempo%20(ms);&sc=BLACK;&l=1;2;3;4;5;6;7;8;9;10;&v=135;171;171;171;138;171;137;170;171;171;?o=v
 
 real	0m0.171s
 user	0m0.168s
