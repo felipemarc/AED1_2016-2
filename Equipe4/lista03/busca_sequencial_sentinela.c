@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int bs_sentinela(int sentinela, int v[], int n);
+int bs_sentinela(int sentinela, int *v, int n);
 
-int main()
+int main(int argc, char *argv[])
 {
+	int 
+		*v, tam = atoi(argv[1]), pesquisar = atoi(argv[2]);
 
-	int tam = 10; int v[tam];
-
-	int pesquisar, i;
-
-	scanf("%d", &pesquisar);
+	v = (int *) malloc (sizeof(int) * tam);
+    
+    int i;
 
 	for (i = 0; i < tam; i++)
 		scanf("%d", &v[i]);
@@ -24,7 +25,7 @@ int main()
 	return 0;
 }
 
-int bs_sentinela(int sentinela, int v[], int n)
+int bs_sentinela(int sentinela, int *v, int n)
 {
   int count = 0;
   v[n] = sentinela;
