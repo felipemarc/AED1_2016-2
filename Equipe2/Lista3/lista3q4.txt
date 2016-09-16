@@ -53,6 +53,8 @@ user	0m0.336s
 sys	  0m0.000s
 
 Tempo médio = 0.329s
+variancia = 198,840000
+desvio padrao = 14,101064
 
 Tempo Quick Sort (Teste 10000 numeros aleatórios)
 
@@ -97,7 +99,8 @@ user	0m0.100s
 sys	  0m0.000s
 
 Tempo médio = 0.096s
-
+Variancia = 119,640000
+Desvio Padrao = 10,846197
 
 
 Especificaçoes da Maquina: 
