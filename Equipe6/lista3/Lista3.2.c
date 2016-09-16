@@ -22,27 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void Quick(int vetor[10], int inicio, int fim);
-int main(){
-	
-	int vetor[10] = {7, 9, 4, 3, 6, 1, 18, 2, 10, 5};
-	
-	int i;	
-	printf("Vetor desordenado:\n");
-	for(i = 0; i < 10; i++){
-		printf("%d ", vetor[i]);
-	}
-	printf("\n");	
-	
-	Quick(vetor, 0, 9);
-	
-	printf("Vetor ordenado:\n");
-	for(i = 0; i < 10; i++){
-		printf("%d ", vetor[i]);
-	}
-	printf("\n");	
-}
-void Quick(int vetor[10], int inicio, int fim){
+void quick(int vet[], int inicio, int fim){
 	
 	int pivo, aux, i, j, meio;
 	
@@ -50,40 +30,47 @@ void Quick(int vetor[10], int inicio, int fim){
 	j = fim;
 	
 	meio = (int) ((i + j) / 2);
-	pivo = vetor[meio];
+	pivo = vet[meio];
 	
 	do{
-        	while (vetor[i] < pivo) i = i + 1;
- 		while (vetor[j] > pivo) j = j - 1;
+        	while (vet[i] < pivo) i = i + 1;
+ 		while (vet[j] > pivo) j = j - 1;
 	
 		if(i <= j){
-			aux = vetor[i];
-			vetor[i] = vetor[j];
-			vetor[j] = aux;
+			aux = vet[i];
+			vet[i] = vet[j];
+			vet[j] = aux;
 			i = i + 1;
 			j = j - 1;
 		}
 	}while(j > i);
 	
-	if(inicio < j) Quick(vetor, inicio, j);
-	if(i < fim) Quick(vetor, i, fim);	
+	if(inicio < j) 
+		quick(vet, inicio, j);
+	if(i < fim) 
+		quick(vet, i, fim);	
 
 }
 
-/*void load (int vet[])
+
+
+int main (int argc,const char *argv[])
 {
+
+	int tam = atoi(argv[1]);
 	int i;
-	int ch;
-	FILE *arq;
-	arq = fopen("teste.txt","r");
-	if(arq)
+	int *vet = (int *) malloc (sizeof (int)*tam);
+	for(i=0;i<tam;i++)
 	{
-		do
-		{
-			for(i=0;i<tam;i++)
-			{
-				fscanf(arq,"%d",&vet[i]);
-			}
-		}while( !feof (arq));
+		scanf("%d",&vet[i]);
 	}
+	
+	quick(vet,0,tam-1);
+	
+
+	free(vet);
+
+	return 0;
 }
+
+
