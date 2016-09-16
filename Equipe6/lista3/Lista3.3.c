@@ -67,15 +67,15 @@ int main(int argc, char * argv[])
 	   if(strcmp(op,"a")== 0)
 	   {
 		    aleatorio(tam);
-    }
+           }
 	
 	  if(strcmp(op,"c") == 0)
 	  {
 		    crescente(tam);
 	  }
      
-  	if(strcmp(op,"d") == 0) 
-  	{
+  	  if(strcmp(op,"d") == 0) 
+  	  {
 		    decrescente(tam);
 	  }
       return 0;
