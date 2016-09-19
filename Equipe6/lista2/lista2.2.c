@@ -1,9 +1,9 @@
 /*
  * =====================================================================================
  *
- *       Filename:  questão2.c
+ *       Filename:  lista2.2.c
  *
- *    Description:  questão2.c
+ *    Description:  questão 2
  *
  *        Version:  1.0
  *        Created:  25-08-2016 11:02:42
