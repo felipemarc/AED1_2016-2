@@ -1,9 +1,9 @@
 /*
  * =====================================================================================
  *
- *       Filename:  questão1.c
+ *       Filename:  questão 1
  *
- *    Description:  questão1.c
+ *    Description:  questão 1
  *
  *        Version:  1.0
  *        Created:  25-08-2016 10:43:12
