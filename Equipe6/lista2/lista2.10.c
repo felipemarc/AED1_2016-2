@@ -1,9 +1,9 @@
 /*
  * =====================================================================================
  *
- *       Filename:  questão10.c
+ *       Filename:  lista2.10.c
  *
- *    Description:  questão10
+ *    Description:  questão 10
  *
  *        Version:  1.0
  *        Created:  19-08-2016 14:07:12
