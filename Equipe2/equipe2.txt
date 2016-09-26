@@ -1,6 +1,8 @@
-//Equipe2
-//Lucas Botinelly
-//Stephanny Barreto
-//Hermann Hernani
-//Jéssica Tavares
-//Paulo Marinho
+/*
+Equipe2
+Lucas Botinelly
+Stephanny Barreto
+Hermann Hernani
+Jéssica Tavares
+Paulo Marinho
+*/
