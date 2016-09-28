@@ -1,0 +1,11 @@
+Grupos de até 6 pessoas
+Entrega: 6/out/2016
+
+
+1) Crie uma agenda em forma de lista duplamente encadeada
+- CRUD completo: inserir, deletar, atualizar, mostrar e listar
+- dados nome, endereço, telefone e email
+- a chave de busca será o número de telefone ( apenas números )
+
+2) Crie 
+
