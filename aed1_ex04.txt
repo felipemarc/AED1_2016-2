@@ -1,4 +1,4 @@
-Grupos de até 6 pessoas
+Grupos de até 10 pessoas
 Entrega: 6/out/2016
 
 
@@ -7,5 +7,46 @@ Entrega: 6/out/2016
 - dados nome, endereço, telefone e email
 - a chave de busca será o número de telefone ( apenas números )
 
-2) Crie 
+2) Crie uma fila circular de tamanho fixo usando listas encadeadas. Utilize essa fila para criar um buffer circular ( https://en.wikipedia.org/wiki/Circular_buffer )
+
+3) Backtracking recursivo usando pilhas são usados para achar a solução de labirintos ( https://en.wikipedia.org/wiki/Maze_generation_algorithm e http://alumni.cs.ucr.edu/~tmatinde/projects/cs455/Maze/mazedoc.htm e https://www.youtube.com/watch?v=elMXlO28Q1U). 
+
+Uma matriz maze de 0s e 1s, de 10X10, representa um labirinto no qual um viajante precisa encontrar um caminho de maze[0][0] a maze[9][9]. O viajante pode passar de um quadrado para qualquer outro adjacente na mesma fileira ou coluna, mas não pode saltar quadrados nem se movimentar na diagonal. Além disso, o viajante não pode entrar num quadrado contendo um 1. maze[0][0] e maze[9][9] contêm 0s. Escreva uma rotina recursiva que aceite este labirinto maze e imprima uma mensagem informando a inexistência de um caminho através do labirinto, ou que imprima uma lista de posições representando um caminho de [0][0] a [9][9].
+
+Deve ser impresso os caminhos percorridos e o caminho final. A busca sempre deverá iniciar de maze[0][0]
+
+labirintos de teste:
+
+0011011111
+1011010000
+1000010111
+1111000011
+0111111011
+0000011011
+0111111011
+0000000011
+0110111111
+0110000000
+
+0011011111
+1011010000
+1000010111
+1111000011
+0111111011
+0000011011
+0111111011
+0000000011
+0111111111
+0110000000
+
+0011000011
+1011010000
+1000011101
+1111000001
+0111111011
+0000011011
+0111111011
+0000000011
+0110111011
+0110000000
 
