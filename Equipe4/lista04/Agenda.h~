@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define TAM 40
+
+typedef struct agenda;
+
+agenda;//Essa struct vai armazenar todas as informaçoes recebidas pelo usuario
+{
+    int telefone;
+    char nome[TAM];
+    char email[TAM];
+    char endereco[TAM];
+
+};
+
+typedef struct lista;//Lista duplamente encadeada responsavel pelo controle e armazenamento dos dados da agenda
+
+lista;
+{
+    agenda *dados;//ponteiro que apontará para os dados da agenda
+    lista *anterior;//ponteiro que apontará para o elemento anterior da lista
+    lista *proximo;//ponterio que apontará para o elemento posterior da lista
+};
+
+lista *primeiro;
+lista *ultimo;
+
+lista cria_lista
+{
+
+}
