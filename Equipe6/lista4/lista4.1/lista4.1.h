@@ -73,6 +73,18 @@ No* busca(Lista *l,char k)
     return p;
 }
 
+int vazia (Lista *l)
+{
+    if(l->prim == l->ult)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 void print_lista (Lista *l)
 {
 	No *temp;
