@@ -19,10 +19,10 @@
 #include <stdlib.h>
 typedef struct item Item;
 struct item{
-	string nome;
-	string ende;
+	//string nome;
+	//string ende;
 	int tele;
-	string email;
+	//string email;
 };
 
 typedef struct no No;
@@ -32,22 +32,31 @@ struct no{
     No *ant;
 };
 
-No *queue_begin = NULL;
-No *queue_end = NULL;
-No *atual = NULL;
+//No *begin = NULL;
+//No *end = NULL;
+//No *atual;
 /*
  cria a fila
  */
-No *queue_create()
+typedef struct lista Lista;
+struct lista{
+	No *begin;
+	No *end;
+};
+Lista *create()
 {
-    return NULL;
+	begin = (No*)malloc(sizeof(No));
+	begin->prox = NULL;
+	end = begin;
 }
 
 /*
  insere elementos na fim da fila
  */
-void queue_insert(int i)
+void insert(Lista *l ,int i)
 {
+    No *atual;
+
     No *novo;
     novo = (No*)malloc(sizeof(No));
     novo->ant = NULL;
@@ -55,28 +64,29 @@ void queue_insert(int i)
     novo->next = NULL;
     
     // se a fila estiver vazia
-    if (queue_begin == NULL)
+    if (begin == NULL)
     {
-        queue_begin = novo;
-        queue_end = novo;
-	atual = novo;
+        l->begin = novo;
+        l->end = novo;
+	atual = l->begin;
     }
     else
     {
+	
 	while(atual->next != NULL)
 		atual = atual->prox;
 
-        queue_end->next = novo;
-        queue_end = novo;
-	atual->prox = queue_end;
-	queue_end->ant = atual;
+        l->end->next = novo;
+        l->end = novo;
+	atual->prox = l->end;
+	l->end->ant = atual;
     }
 }
 
 /*
  remove elementos do inicio da fila
  */
-void queue_delete()
+/*void queue_delete()
 {
     No* temp;
     
@@ -104,10 +114,10 @@ void queue_delete()
 /*
  imprime os elementos da fila sem remover
  */
-void queue_print(No *queue_begin)
+void print(No *begin)
 {
     No *temp;
-    temp = queue_begin;
+    temp = begin;
     
     if(temp == NULL)
         printf("fila vazia\n");
