@@ -83,37 +83,7 @@ void insert(Lista *l ,int i)
     }
 }
 
-/*
- remove elementos do inicio da fila
- */
-/*void queue_delete()
-{
-    No* temp;
-    
-    // deleta apenas se a fila não estiver vazia
-    if (queue_begin != NULL)
-    {
-        temp = queue_begin;
-        
-        // se a fila tiver apenas
-        if (queue_begin == queue_end)
-        {
-            queue_begin = NULL;
-            queue_end = NULL;
-        }
-        else
-        {
-            queue_begin = queue_begin->next;
-        }
-        
-        temp -> next = NULL;
-        free(temp);
-    }
-}
 
-/*
- imprime os elementos da fila sem remover
- */
 void print(No *begin)
 {
     No *temp;
