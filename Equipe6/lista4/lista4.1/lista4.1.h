@@ -16,75 +16,49 @@
  * =====================================================================================
  */
 #include <stdio.h>
-#include <stdlib.h>
+#include<stdlib.h>
+
 typedef struct item Item;
 struct item{
-	//string nome;
-	//string ende;
-	int tele;
-	//string email;
+	int tel;
 };
 
 typedef struct no No;
 struct no{
-    Item info;
-    No *next;
-    No *ant;
+	Item dados;
+	No *prox;
+	No *ant;
 };
 
-//No *begin = NULL;
-//No *end = NULL;
-//No *atual;
-/*
- cria a fila
- */
 typedef struct lista Lista;
 struct lista{
-	No *begin;
-	No *end;
+	No *prim;
+	No *ult;
+	No *atual;
 };
-Lista *create()
-{
-	begin = (No*)malloc(sizeof(No));
-	begin->prox = NULL;
-	end = begin;
-}
 
-/*
- insere elementos na fim da fila
- */
-void insert(Lista *l ,int i)
+Lista *create(Lista l)
 {
-    No *atual;
-
-    No *novo;
-    novo = (No*)malloc(sizeof(No));
-    novo->ant = NULL;
-    novo->info = i;
-    novo->next = NULL;
-    
-    // se a fila estiver vazia
-    if (begin == NULL)
-    {
-        l->begin = novo;
-        l->end = novo;
-	atual = l->begin;
-    }
-    else
-    {
+	l->prim = (No*)malloc(sizeof(No));
+	l->prim->prox = nullptr;
+	//l->prim->ant = nullptr;
+	l->ult = l->prim;
+	//l->atual = l->prim;
 	
-	while(atual->next != NULL)
-		atual = atual->prox;
+}
 
-        l->end->next = novo;
-        l->end = novo;
-	atual->prox = l->end;
-	l->end->ant = atual;
-    }
+void insert (Lista *l, Item i)
+{
+	l->ult->prox = (No*)malloc(sizeof(No));
+	//l->atual->prox = l->ult;
+	//l->ult->ant = l->atual->prox;
+	l->ult = l->ult->prox;
+	l->ult->prox = nullptr;
+	l->ult->dados = i;
 }
 
 
-void print(No *begin)
+/*void print(No *begin)
 {
     No *temp;
     temp = begin;
@@ -116,4 +90,4 @@ void print(No *begin)
     }
     
     
-}
+}*/
