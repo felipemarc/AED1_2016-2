@@ -59,7 +59,7 @@ void insert (Lista *l, Item i)
 
 void print_lista (Lista *l)
 {
-	Lista *temp;
+	No *temp;
 	temp = l->prim->prox;
 	if(temp == nullptr)
 	{
