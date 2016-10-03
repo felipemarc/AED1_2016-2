@@ -62,6 +62,17 @@ void insert (Lista *l, Item i)
 	l->ult->dados = i;
 }
 
+No* busca(Lista *l,char k) 
+{
+    No *p;
+    p = l->prim->prox;
+    while (p != NULL && strcmp(p->dados.nome,k) != 0) 
+    {
+            p = p->prox;
+    }
+    return p;
+}
+
 void print_lista (Lista *l)
 {
 	No *temp;
