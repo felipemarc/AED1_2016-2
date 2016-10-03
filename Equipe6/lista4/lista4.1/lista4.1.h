@@ -40,8 +40,8 @@ struct lista{
 Lista *create(Lista l)
 {
 	l->prim = (No*)malloc(sizeof(No));
-	l->prim->prox = nullptr;
-	//l->prim->ant = nullptr;
+	l->prim->prox = NULL;
+	//l->prim->ant = NULL;
 	l->ult = l->prim;
 	//l->atual = l->prim;
 	
@@ -51,9 +51,9 @@ void insert (Lista *l, Item i)
 {
 	l->ult->prox = (No*)malloc(sizeof(No));
 	//l->atual->prox = l->ult;
-	//l->ult->ant = l->atual->prox;
+	//l->ult->ant = l->atual;
 	l->ult = l->ult->prox;
-	l->ult->prox = nullptr;
+	l->ult->prox = NULL;
 	l->ult->dados = i;
 }
 
@@ -61,13 +61,13 @@ void print_lista (Lista *l)
 {
 	No *temp;
 	temp = l->prim->prox;
-	if(temp == nullptr)
+	if(temp == NULL)
 	{
 		printf("Lista vazia\n");
 	}
 	else
 	{
-		while(temp != nullptr)
+		while(temp != NULL)
 		{
 			printf(" %d ",temp->item);
 			temp = temp->prox;
