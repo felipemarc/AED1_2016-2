@@ -50,8 +50,13 @@ Lista *create(Lista l)
 void insert (Lista *l, Item i)
 {
 	l->ult->prox = (No*)malloc(sizeof(No));
-	//l->atual->prox = l->ult;
-	//l->ult->ant = l->atual;
+	while(l->atual->prox != NULL)
+	{
+        	l->atual = l->atual->prox;
+	}
+	
+	l->atual->prox = l->ult;
+	l->ult->ant = l->atual;
 	l->ult = l->ult->prox;
 	l->ult->prox = NULL;
 	l->ult->dados = i;
@@ -69,41 +74,8 @@ void print_lista (Lista *l)
 	{
 		while(temp != NULL)
 		{
-			printf(" %d ",temp->item);
+			printf(" %d ",temp->dados);
 			temp = temp->prox;
 		}
 	}
 }
-/*void print(No *begin)
-{
-    No *temp;
-    temp = begin;
-    
-    if(temp == NULL)
-        printf("fila vazia\n");
-    else
-    {
-        while( temp != NULL )
-        {
-            printf(" %d ", temp->info);
-            temp = temp->next;
-        }
-        printf("\n");
-    }
-    
-    
-}
-    if(temp == NULL)
-        printf("pilha vazia\n");
-    else
-    {
-        while( temp != NULL )
-        {
-            printf(" %d ", temp->info);
-            temp = temp->next;
-        }
-        printf("\n");
-    }
-    
-    
-}*/
