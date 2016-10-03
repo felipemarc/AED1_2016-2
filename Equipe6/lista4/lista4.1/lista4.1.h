@@ -57,7 +57,23 @@ void insert (Lista *l, Item i)
 	l->ult->dados = i;
 }
 
-
+void print_lista (Lista *l)
+{
+	Lista *temp;
+	temp = l->prim->prox;
+	if(temp == nullptr)
+	{
+		printf("Lista vazia\n");
+	}
+	else
+	{
+		while(temp != nullptr)
+		{
+			printf(" %d ",temp->item);
+			temp = temp->prox;
+		}
+	}
+}
 /*void print(No *begin)
 {
     No *temp;
