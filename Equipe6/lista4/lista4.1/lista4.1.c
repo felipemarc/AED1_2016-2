@@ -1,6 +1,8 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "lista4.1.h"
 
 int main(int argc, const char * argv[]) 
@@ -39,6 +41,7 @@ int main(int argc, const char * argv[])
                     insert_lista(&lista,aux);
                     break;
             case 2 :
+                print_lista(&lista);
                 break;
             case 3 :
                 break;
