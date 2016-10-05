@@ -6,7 +6,7 @@
 int main(int argc, const char *argv[])
 {
     int opc=0;
-    printf("%s" )
+    //printf("%s" )
     while(opc != 9)
     {
         printf("Menu\n");

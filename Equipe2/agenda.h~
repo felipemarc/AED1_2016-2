@@ -47,25 +47,14 @@ void insere(Agenda *agend)
     
 }
 
-void delete()
+void delete(Agenda *agend, int tel)
 {
-    Agenda* temp;
-    
-    if (inicio != NULL)
+    Agenda temp;
+    int i, achou = 1;
+    if()
     {
-        temp = inicio;
         
-        if (inicio == fim)
-        {
-            inicio = NULL;
-            fim = NULL;
-        }
-        else
-        {
-            inicio = inicio->next;
-        }
-        
-        temp -> next = NULL;
-        free(temp);
     }
+    else
+        printf("NAO TEM O QUE EXCLUIR !!1!onze!");    
 }
