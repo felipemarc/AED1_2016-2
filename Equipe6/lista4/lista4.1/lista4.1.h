@@ -84,6 +84,23 @@ int vazia (Lista *l)
         return 0;
     }
 }
+/*void remove_lista(Lista *l,No* r) {
+    //No *temp;
+    //temp = r->ant;
+    if(vazia(&l) == 1 || r == NULL || r == l->prim){
+        printf("impossivel remover");
+    }
+    else{
+        //x = r->dados;
+        No *temp = pred(&l,r);
+        temp->prox = r->prox;
+        if(temp->prox == NULL){
+            l->ult = temp;
+        }
+        free(r);
+    }
+}*/
+
 
 void print_lista (Lista *l)
 {
