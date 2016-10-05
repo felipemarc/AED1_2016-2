@@ -59,7 +59,7 @@ Item insert_item (char *name, int tele, char *ende,char *email )
     return tempo;
 }
 
-void insert (Lista *l, Item i)
+void insert_lista (Lista *l, Item i)
 {
 	l->ult->prox = (No*)malloc(sizeof(No));
 	while(l->atual->prox != NULL)
@@ -96,21 +96,22 @@ int vazia (Lista *l)
         return 0;
     }
 }
-/*void remove_lista(Lista *l,No* r) {
-    //No *temp;
-    //temp = r->ant;
-    if(vazia(&l) == 1 || r == NULL || r == l->prim){
-        printf("impossivel remover");
+/*void remove_lista(Lista *l,int x) 
+{
+    No *aux = busca(l,x);
+    No *tem;
+    tem = aux->ant;
+    if(vazia(l) == 1 || aux == NULL || aux == l->prim)
+    	printf("Impossivel remover\n");
+    else
+    {
+    	// Item x = aux->dados;
+	tem->prox = aux->prox;
+	if(tem->prox == NULL)
+		l->ult = tem;
+	free(aux);
     }
-    else{
-        //x = r->dados;
-        No *temp = pred(&l,r);
-        temp->prox = r->prox;
-        if(temp->prox == NULL){
-            l->ult = temp;
-        }
-        free(r);
-    }
+    
 }*/
 
 
