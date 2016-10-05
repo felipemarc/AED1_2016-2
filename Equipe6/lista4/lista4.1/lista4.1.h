@@ -74,17 +74,17 @@ void insert (Lista *l, Item i)
 	l->ult->dados = i;
 }
 
-No* busca(Lista *l,char k) 
+/*No * busca(Lista *l,int *k)
 {
     No *p;
     p = l->prim->prox;
-    while (p != NULL && strcmp(p->dados.nome,k) != 0) 
+    while (p != NULL && p->dados.tel != k)
     {
             p = p->prox;
+
     }
     return p;
-}
-
+}*/
 int vazia (Lista *l)
 {
     if(l->prim == l->ult)
