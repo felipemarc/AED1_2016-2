@@ -126,10 +126,11 @@ void print_lista (Lista *l)
 	{
 		while(temp != NULL)
 		{
-            printf("%c ",temp->dados.nome);
-            printf("%d\n ",temp->dados.tel);
-            printf("%c\n",temp->dados.endere);
-            printf("%c\n",temp->dados.em);
+            		printf("\tNome\t\tTel\t\tEndec\t\tEmail\n");
+            		printf("\t%s ",temp->dados.nome);
+            		printf("\t\t%d ",temp->dados.tel);
+            		printf("\t\t%s",temp->dados.endere);
+            		printf("\t\t%s\n",temp->dados.em);
 			temp = temp->prox;
 		}
 	}
