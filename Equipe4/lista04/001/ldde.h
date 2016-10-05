@@ -75,7 +75,15 @@ ldde * busca_tel_na_lista(ldde *lista, int TELEFONE, int zx)
       printf("\t\tNome\t\tTelefone\n");
       printf("\t\t%s\t\t%d\n", aux->nome, aux->telefone);
 
-      if (zx == 1)
+      free(aux);
+      return lista;
+    }
+  }
+}
+
+void remove()
+{
+    if (zx == 1)
       {
         if (anterior == NULL)
         {
@@ -87,8 +95,4 @@ ldde * busca_tel_na_lista(ldde *lista, int TELEFONE, int zx)
         }
         aux->proximo->anterior = aux->anterior;
       }
-      free(aux);
-      return lista;
-    }
-  }
 }
