@@ -20,7 +20,10 @@
 
 typedef struct item Item;
 struct item{
+	char nome[40];
 	int tel;
+	char endere[100];
+	char em[40];
 };
 
 typedef struct no No;
@@ -45,6 +48,15 @@ Lista *create(Lista l)
 	l->ult = l->prim;
 	//l->atual = l->prim;
 	
+}
+Item insert_item (char *name, int tele, char *ende,char *email )
+{
+    Item tempo;
+    strcpy(tempo.nome,name);
+    tempo.tel = tele;
+    strcpy(tempo.endere,ende);
+    strcpy(tempo.em,email);
+    return tempo;
 }
 
 void insert (Lista *l, Item i)
@@ -114,7 +126,10 @@ void print_lista (Lista *l)
 	{
 		while(temp != NULL)
 		{
-			printf(" %d ",temp->dados);
+            printf("%c ",temp->dados.nome);
+            printf("%d\n ",temp->dados.tel);
+            printf("%c\n",temp->dados.endere);
+            printf("%c\n",temp->dados.em);
 			temp = temp->prox;
 		}
 	}
