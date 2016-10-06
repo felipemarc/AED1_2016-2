@@ -1,7 +1,7 @@
 /* Equipe 4
 Alerrandro Barreto
 Fabiola Maciel
-Matheus Botinelli */
+Matheus Obando */
 
 Estrutura da lista encadeada
 typedef struct ListaDinEncDupla
