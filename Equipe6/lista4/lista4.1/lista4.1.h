@@ -23,188 +23,65 @@
 #include <stdlib.h>
 #include <string.h>
 
-//typedef string Nome;
-
-typedef struct item Item;
-struct item{
-    char nome[40];
-	int tel;
-	char endere[100];
-	char em[40];
-};
 
 typedef struct no No;
 struct no{
-	Item dados;
+	char nome[40];
+	int tele;
+	char ende[100];
+	char email[40];
 	No *prox;
 	No *ant;
 };
 
-typedef struct lista Lista;
-struct lista{
-	No *prim;
-	No *ult;
-	//No *atual;
-};
+No *lista ;
 
-Lista *create(Lista *l)
+No *create()
 {
-	l->prim = (No*)malloc(sizeof(No));
-	l->prim->prox = NULL;
-	l->prim->ant = NULL;
-	l->ult = l->prim;
-	//l->atual = l->prim;
-
+	return NULL;
 }
 
-Item insert_item (char *name, int tele, char *ende,char *email )
+int vazia(No *lista)
 {
-    Item tempo;
-    strcpy(tempo.nome,name);
-    tempo.tel = tele;
-    strcpy(tempo.endere,ende);
-    strcpy(tempo.em,email);
-    return tempo;
+  return (lista == NULL);
 }
 
-void insert_lista (Lista *l, Item i)
+
+No * insert_lista(No *lista,char *name, int telefo, char *endere,char *em ) //insere o item na lista
 {
-    void insert_lista (Lista *l, Item i)
-{
-    //l->atual->prox = l->ult
-	//l->ult->prox = (No*)malloc(sizeof(No));
-	No *no = l->prim, *novo;
-	while(no->prox != NULL)
+	No *novo;
+	novo = (No*)malloc(sizeof(No));
+	strcpy(novo->nome,name);
+	novo->tele = telefo;
+	strcpy(novo->ende,endere);
+	strcpy(novo->email,em);
+	novo->prox = NULL;
+	novo->ant = NULL;
+	if(lista == NULL)
 	{
-       		no = no->prox;
-    	}
-   	l->ult->prox = (No*)malloc(sizeof(No));
-	//l->atual->prox = l->ult;
-
-	//l->ult->dados = i;
-	no->prox = l->ult->prox;
-	l->ult->ant = no;
-	l->ult = l->ult->prox;
-	l->ult->prox= NULL;
-	l->ult->dados = i;
-	//l->ult = novo;
-	//l->ult->dados = i;
-}
-}
-
-No void busca(Lista *l,int k)
-{
-    No *p;
-    p = l->prim->prox;
-    while (p != NULL && p->dados.tel != k)
-    {
-            p = p->prox;
-
-    }
-	//printf("achei\n");
-    return p;
-}
-
-int vazia (Lista *l)
-{
-    if(l->prim == l->ult)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
-/*No* pred(Lista *l,No* r) {
-    No* p = l->prim;
-    while (p->prox != r) {
-        p = p->prox;
-    }
-    return p;
-}*/
-
-/*void remove_lista(Lista *l,No* r) {
-    //No *temp;
-    //temp = r->ant;
-    if(vazia(&l) == 1 || r == NULL || r == l->prim){
-        printf("impossivel remover");
-    }
-    else{
-        //x = r->dados;
-        No *temp = pred(&l,r);
-        temp->prox = r->prox;
-        if(temp->prox == NULL){
-            l->ult = temp;
-        }
-        free(r);
-    }
-}*/
-
-void atualiza_contato (No * aux)
-{
-    int opcao;
-    char name[40];
-    char email[100];
-    char ede[40];
-    int tele;    //No *aux = busca(&l,tel);
-    Item tem = aux->dados;
-    printf("Qual Campo deseja atualizar:\n");
-    printf("---(1) Nome ----------------\n");
-    printf("---(2) Telefone ------------\n");
-    printf("---(3) Edereço -------------\n");
-    printf("---(4) Email ---------------\n");
-    scanf("%d",&opcao);
-    __fpurge(stdin);
-    switch(opcao)
-    {
-        case 1:
-            printf("Digite novo nome:\n");
-            scanf("%s[^\n]",name);
-           // strcpy(tem.nome,name);
-            __fpurge(stdin);
-            break;
-        case 2:
-            printf("Digite novo numero>\n");
-            scanf("%d[^\n]",&tele);
-           // strcpy(aux->dados.tel,tele);
-            __fpurge(stdin);
-            break;
-        case 3:
-            printf("Digite novo endereço:\n");
-            scanf("%s[^\n]",ede);
-            //strcpy(aux->dados.endere,ede);
-            __fpurge(stdin);
-            break;
-        case 4:
-            printf("Digite novo endereço de email:\n");
-            scanf("%s[^\n]",email);
-           // strcpy(aux->dados.em,email);
-            __fpurge(stdin);
-            break;
-        default:
-            printf("opcao Invalida\n");
-    }
-
-}
-void print_lista (Lista *l)
-{
-	No *temp;
-	temp = l->prim->prox;
-	if(temp == NULL)
-	{
-		printf("Lista vazia\n");
+		novo->ant = NULL;
+		novo->prox = NULL;
 	}
 	else
 	{
-		while(temp != NULL)
-		{
-            printf("\tNome\t\tTel\t\tEndec\t\tEmail\n");
-            printf("\t%s ",temp->dados.nome);
-            printf("\t\t%d ",temp->dados.tel);
-            printf("\t\t%s",temp->dados.endere);
-            printf("\t\t%s\n",temp->dados.em);
-			temp = temp->prox;
-		}
+		novo->prox = lista;
+		novo->ant = NULL;
 	}
+	return novo;
+}
+
+void print_lista (No *lista) //imprime a lista
+{
+	No *temp;
+	printf("\tNome\t\tTel\t\tEndec\t\tEmail\n");
+	for (temp = lista; temp != NULL; temp = temp->prox)
+	{
+	
+		printf("\t%s",temp->nome);
+		printf("\t\t%d",temp->tele);
+		printf("\t\t%s",temp->ende);
+		printf("\t\t%s\n",temp->email);
+	}
+		
+	
 }
