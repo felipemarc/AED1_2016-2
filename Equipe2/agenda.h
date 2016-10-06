@@ -7,7 +7,7 @@
   #define CLEARSCR system ( "clear" )
 #endif
 
-typedef struct agenda Agenda;
+typedef struct agenda agenda;
 
 struct agenda
 {
@@ -15,62 +15,77 @@ struct agenda
 	char endereco[100];
 	int tel;
 	char email[50];
+<<<<<<< HEAD
     Agenda *next;
     Agenda *prev;
     Agenda *inicio;
     Agenda *fim;
+=======
+    agenda *next;
+    agenda *prev;
+>>>>>>> a88253d446d4b7a0a172be082dccf7f061a18ccd
 };
 
-void nova_agenda(Agenda *agend)
+agenda *inicio;
+agenda *fim;
+
+
+void nova_agenda()
 {
+<<<<<<< HEAD
     agend->inicio = NULL;
 	agend->fim = NULL;
+=======
+    inicio = NULL;
+	fim = NULL;
+>>>>>>> a88253d446d4b7a0a172be082dccf7f061a18ccd
 }
 
-void insere(Agenda *agend)
+void insere(agenda *agend)
 {
-    Agenda *novo;
-    novo = (Agenda*)malloc(sizeof(Agenda));
+    agenda *novo;
+    novo = (agenda*)malloc(sizeof(agenda));
     strcpy(novo->nome, agend->nome);
     strcpy(novo->endereco, agend->endereco);    
     novo->tel = agend->tel;
     strcpy(novo->email, agend->email);
-    novo->next = NULL;
     
-    if (agend->inicio == NULL)
+    if (inicio == NULL)
     {
-        agend->inicio = novo->prev;
-        agend->fim = novo->next;
+        inicio = novo;
+        fim = novo;
         agend->next = NULL;
         agend->prev = NULL;
-    }
+//		printf("Eh tois\n");
+	}
     else
     {
-        agend->next = novo->prev;
-        novo->prev = agend->next;
-        agend->fim = novo;
+        fim->next = novo;
+        novo->prev = fim;
+        fim = novo;
         novo->next = NULL;
-    }
-    
+		printf("Eh tois\n");
+	}
 }
 
-void imprime(Agenda *agend)
+void imprime(agenda *agend)
 {
-  Agenda *aux;
-  printf("Nome Telefone  Endereco  Email\n\n");
-  for (aux = agend; aux != NULL; aux = aux->next)
-  {
-    	printf("%s\t", aux->nome);
-    	printf("%d\t", aux->tel);
-    	printf("%s\t", aux->endereco);
-    	printf("%s\n", aux->email);
-  }
+	agenda *temp;
+  	printf("Nome Telefone  Endereco  Email\n");
+  	for (temp = inicio; temp != NULL; temp = temp->next)
+  	{
+    	printf("%s\t", temp->nome);
+    	printf("%d\t", temp->tel);
+    	printf("%s\t", temp->endereco);
+    	printf("%s\n", temp->email);
+
+  	}
 }
 
-int mostrar(Agenda *agend, int tel)
+int mostrar(agenda *agend, int tel)
 {
-	Agenda *aux;
-	for (aux = agend; aux != NULL; aux = aux->next)
+	agenda *aux;
+	for (aux = inicio; aux != NULL; aux = aux->next)
 	{
 		if(tel == aux->tel)
 			printf("\t%s", aux->nome);
@@ -83,9 +98,13 @@ int mostrar(Agenda *agend, int tel)
 }
 
 
+<<<<<<< HEAD
 int delete (Agenda *agend, int tel)
+=======
+int delete(agenda *agend, int tel)
+>>>>>>> a88253d446d4b7a0a172be082dccf7f061a18ccd
 {
-    Agenda *aux, *anterior, *proximo;
+    agenda *aux, *anterior, *proximo;
 	for (aux = agend; aux != NULL; aux = aux->next)
 	{
 		if(aux->prev !=NULL)
@@ -115,9 +134,9 @@ int delete (Agenda *agend, int tel)
 	printf("Item não encontrado ou lista vazia !");
 }
 
-void atualizar(Agenda *agend, int tel)
+void atualizar(agenda *agend, int tel)
 {
-	Agenda *aux;
+	agenda *aux;
 	int valor;
 	for (aux = agend; aux != NULL; aux = aux->next)
 	{

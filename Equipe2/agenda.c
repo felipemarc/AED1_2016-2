@@ -29,11 +29,15 @@ int main(int argc, const char *argv[])
         {
         	Agenda *aux;
         	int temp;
+<<<<<<< HEAD
             case 1: // inserir
                 nova_agenda(aux);
                 aux = (Agenda*)malloc(sizeof(Agenda));
 
                 
+=======
+            case 1: // inserir                
+>>>>>>> a88253d446d4b7a0a172be082dccf7f061a18ccd
                 __fpurge(stdin);
 
                 printf("Insira o nome: ");
@@ -51,7 +55,7 @@ int main(int argc, const char *argv[])
                 printf("Insira o email: ");
                 scanf("%[^\n]", aux->email);
                 __fpurge(stdin);
-                
+                insere(aux);
                 printf("Inserido com sucesso !\n");
                 limpa_tela();                         
                 break;

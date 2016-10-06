@@ -188,7 +188,7 @@ void queue_delete(int num)
 }
 
 // atualiza um elemento da lista
-void queue_update(int num)
+void queue_update(int num, char new_name[], char new_end[])
 {
     int coisa =0;
     No *temp;
@@ -203,7 +203,9 @@ void queue_update(int num)
         {
             if(temp->info == num)
             {
-                strcpy(temp->nome, "kiki");
+                printf(" entrou \n\n");
+                strcpy(temp->nome, new_name);
+                strcpy(temp->endereco, new_end);
                 coisa = 1;
                 break;
             }

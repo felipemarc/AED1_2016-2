@@ -85,40 +85,25 @@ void print_lista (No *lista) //imprime a lista
 	}
 }
 
-void busca(No *lista, int tel_buscar)
+No * busca(No *lista, int tel_buscar)
 {
 	No *aux;
-	int encontrado = 0;
 
-	if (aux->prox == NULL)
+	for (aux = lista; aux != NULL; aux = aux->prox)
 	{
-		printf("Vazio\n");
-	}
-
-	else
-	{
-		for (aux = lista; aux != NULL; aux = aux->prox)
+		if (aux->tele == tel_buscar)
 		{
-			if (aux->tele == tel_buscar)
-			{
-				encontrado = 1;
-				printf("Número foi encontrado\n");
-				printf("\tNome\tTelefone\n");
-				printf("\t\t%s\t\t%d\n", aux->nome, aux->tele);
-			}
+			return aux;
 		}
 	}
-	if (encontrado == 0)
-	{
-		printf("Contato não encontrado\n");
-	}
+	
+} 
 
-	free(aux);
-}
-
-No* pred(No *lista,No* r) {
+No* pred(No *lista,No* r) 
+{
     No* p = lista;
-    while (p->prox != r) {
+    while (p->prox != r)
+    {
         p = p->prox;
     }
     return p;
