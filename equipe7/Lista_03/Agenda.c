@@ -76,7 +76,7 @@ void atualizar (struct Lista agenda, char * tel)
 void mostrar(struct Lista agenda, char * tel)
 {
     struct No* aux = busca(tel, agenda);
-    //BOTA O PRINT AQUI
+    printf(No* aux = busca(tel, agenda);
 }
 
 void listar(struct Lista agenda)
@@ -84,7 +84,7 @@ void listar(struct Lista agenda)
     struct No* aux = agenda.prim;
     while(aux->prox != NULL)
     {
-        //BOTA O PRINT AQUI
+        printf(No* aux = agenda.prim);
         aux = aux->prox;
     }
 }
