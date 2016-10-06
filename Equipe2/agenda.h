@@ -15,15 +15,15 @@ struct agenda
 	char endereco[100];
 	int tel;
 	char email[50];
-    Agenda *next;
-    Agenda *prev;
-    Agenda *inicio;
-    Agenda *fim;
+    	Agenda *next;
+    	Agenda *prev;
+    	Agenda *inicio;
+    	Agenda *fim;
 };
 
 void nova_agenda(Agenda *agend)
 {
-    agend->inicio = NULL;
+    	agend->inicio = NULL;
 	agend->fim = NULL;
 }
 
