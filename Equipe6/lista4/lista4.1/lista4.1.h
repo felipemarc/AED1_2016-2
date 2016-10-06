@@ -44,7 +44,7 @@ typedef struct lista Lista;
 struct lista{
 	No *prim;
 	No *ult;
-	No *atual;
+	//No *atual;
 };
 
 Lista *create(Lista *l)
@@ -53,7 +53,7 @@ Lista *create(Lista *l)
 	l->prim->prox = NULL;
 	l->prim->ant = NULL;
 	l->ult = l->prim;
-	l->atual = l->prim;
+	//l->atual = l->prim;
 
 }
 
