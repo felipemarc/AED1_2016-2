@@ -12,7 +12,7 @@
  *
  *         Author:  		Hélio Paulo
  *         		        Jailson Pereira
- 				Jefferson
+ 				Jefferson Avilar
  *         	                Tiago Cauassa
  *         		        Rebeca Assunção
  *         	         	Miguel Angelo,
@@ -71,20 +71,6 @@ No * insert_lista(No *lista,char *name, int telefo, char *endere,char *em ) //in
 	return novo;
 }
 
-void print_lista (No *lista) //imprime a lista
-{
-	No *temp;
-	printf("\tNome\t\tTel\t\tEndec\t\tEmail\n");
-	for (temp = lista; temp != NULL; temp = temp->prox)
-	{
-
-		printf("\t%s",temp->nome);
-		printf("\t\t%d",temp->tele);
-		printf("\t\t%s",temp->ende);
-		printf("\t\t%s\n",temp->email);
-	}
-}
-
 No * busca(No *lista, int tel_buscar)
 {
 	No *aux;
@@ -112,7 +98,7 @@ No* pred(No *lista,No* r)
 void remove_item (No *lista, No *r)
  {
     if (vazia(lista) || r == NULL )
-       printf( "impossÃ­vel remover\n");
+       printf( "impossivel remover\n");
     else
     {
         
@@ -125,3 +111,19 @@ void remove_item (No *lista, No *r)
     }
 
 }
+
+
+void print_lista (No *lista) //imprime a lista
+{
+	No *temp;
+	printf("\tNome\t\tTel\t\tEndec\t\tEmail\n");
+	for (temp = lista; temp != NULL; temp = temp->prox)
+	{
+
+		printf("\t%s",temp->nome);
+		printf("\t\t%d",temp->tele);
+		printf("\t\t%s",temp->ende);
+		printf("\t\t%s\n",temp->email);
+	}
+}
+
