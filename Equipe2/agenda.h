@@ -10,13 +10,13 @@ struct agenda
 	char endereco[100];
 	int tel;
 	char email[50];
-    int *next;
-    int *prev;
-    int *inicio;
-    int *fim;
+    Agenda *next;
+    Agenda *prev;
+    Agenda *inicio;
+    Agenda *fim;
 };
 
-Agenda nova_agenda(Agenda *agend)
+void nova_agenda(Agenda *agend)
 {
     agend->inicio = NULL;
 	agend->fim = NULL;
@@ -41,20 +41,36 @@ void insere(Agenda *agend)
     }
     else
     {
-        fim->next = novo;
-        fim = novo;
+        agend->next = novo->prev;
+        agend->fim = novo;
+        novo->next = NULL;
     }
     
 }
 
+void imprime(Agenda *agend)
+{
+  Agenda *aux;
+  printf("Nome Telefone  Endereco  Email\n\n");
+  for (aux = agend; aux != NULL; aux = aux->next)
+  {
+    printf("\t%s", aux->nome);
+    printf("\t\t%d", aux->tel);
+    printf("\t\t%s", aux->endereco);
+    printf("\t\t%s\n", aux->email);
+  }
+}
+/*
 void delete(Agenda *agend, int tel)
 {
     Agenda temp;
     int i, achou = 1;
-    if()
+    if(agend->inicio == NULL)
     {
-        
+    	    temp = agend->inicio;
+    	    
     }
     else
         printf("NAO TEM O QUE EXCLUIR !!1!onze!");    
 }
+*/

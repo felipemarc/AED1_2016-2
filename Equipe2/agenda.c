@@ -10,34 +10,46 @@ int main(int argc, const char *argv[])
     while(opc != 9)
     {
         printf("Menu\n");
-        printf("");
+        //printf("");
         printf("1 - Inserir\n");
         printf("2 - Exibir\n");
         printf("3 - Excluir\n");
         printf("4 - Atualizar\n");
         printf("9 - Sair\n");
         printf("Que opcao deseja escolher?: "); 
-        scanf("%d", &escolha);
+        scanf("%d", &opc);
 
         switch(opc)
         {
-            
+        	Agenda *aux;
             case 1: // inserir
-                nova_agenda(inicio, fim);
-                Agenda *aux;
+                nova_agenda(aux);
                 aux = (Agenda*)malloc(sizeof(Agenda));
+
+                scanf("%[^\n]", aux->nome);
+                __fpurge(stdin);
+
                 printf("Insira o nome: ");
-                scanf("%s", &aux->nome);
-                printf("\nInsira o endereco: ");
-                scanf("%s", &aux->endereco);
-                printf("\nInsira o telefone: ");
+                scanf("%[^\n]", aux->nome);
+                __fpurge(stdin);
+                
+                printf("Insira o endereco: ");
+                scanf("%[^\n]", aux->endereco);
+                __fpurge(stdin);
+                
+                printf("Insira o telefone: ");
                 scanf("%d", &aux->tel);
-                printf("\nInsira o email: ");
-                scanf("%s", &aux->email);
-                printf("\nInserido com sucesso !\n");
+                __fpurge(stdin);
+                
+                printf("Insira o email: ");
+                scanf("%[^\n]", aux->email);
+                __fpurge(stdin);
+                
+                printf("Inserido com sucesso !\n");
                                          
                 break;
             case 2: //Exibir
+                imprime(aux);
                 break;
             case 3: //Excluir
                 break;
