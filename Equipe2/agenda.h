@@ -91,32 +91,35 @@ int mostrar(agenda *agend, int tel)
 
 int delete(agenda *agend, int tel)
 {
-    agenda *aux, *anterior, *proximo;
-	for (aux = agend; aux != NULL; aux = aux->next)
+    agenda *aux, *ant, *prox;
+	for (aux = inicio; aux != NULL; aux = aux->next)
 	{
-		if(aux->prev !=NULL)
+		if(aux->tel == tel)
 		{
-			proximo = aux->next;
-			anterior = aux->prev;
-			if(aux->tel == tel)
+			if(aux->prev == NULL)
 			{
-				aux->next = NULL;
-				aux->prev = NULL;
-				proximo->prev = anterior->next;
-				anterior->next = proximo->prev;
-				free(aux);
-				return 1;
+				inicio->next->prev = NULL;
+				inicio->next = NULL;				
+				inicio = aux->next;
+				return 0;		
 			}
-		}
-		else
-			proximo = aux->next;
-			if(aux->tel == tel)
+			if(aux->next == NULL)
 			{
-				aux->next = NULL;
-				proximo->prev = anterior->next;
+				fim->prev->next = NULL;
+				fim->prev = NULL;				
+				fim = aux->prev;
+				return 0;		
+			}		
+			if(aux->next != NULL && aux->prev!=NULL)
+			{
+				ant = aux->prev;
+				prox = aux->next;
+				ant->next = prox;
+				prox->prev = ant;
 				free(aux);
-				return 1;
-			}
+				return 0;
+			}		
+		}			
 	}
 	printf("Item não encontrado ou lista vazia !\n");
 }

@@ -74,6 +74,7 @@ int main(int argc, const char *argv[])
                 scanf("%d", &temp);  
             	atualizar(aux, temp);
             	limpa_tela();
+				imprime(aux);
             	break;
             case 9: //Sair
                 opc = 9;
