@@ -1,0 +1,305 @@
+Ordem: nome 
+	endereço
+	telefone
+	email
+
+
+1
+Lucas Botinelly
+Manaus
+12345678
+lucas.com
+
+1
+Hermann Hernani
+Manaus
+23456789
+hermann.com
+
+1
+Steph
+Manaus
+098765
+steph.com
+
+1
+Lucas Barreto
+Manaus
+0964846
+barretoL.com
+
+1
+Sergio
+Manaus
+7291487
+sergio.com
+
+1
+Lidiane
+Manaus
+20271214
+lidi.com
+
+1
+Delrick
+Manaus
+2141247892
+delrick.com
+
+1
+Wilson N
+Manaus
+90870679
+wilson.com
+
+1
+Wilson C
+Manaus
+90870679182
+wilsonC.com
+
+1
+Luquinhas
+Manaus
+908709452
+lucasV.com
+
+1
+Lucas Botinelly
+Manaus
+12345678
+lucas.com
+
+1
+Hermann Hernani
+Manaus
+23456789
+hermann.com
+
+1
+Steph
+Manaus
+098765
+steph.com
+
+1
+Lucas Barreto
+Manaus
+0964846
+barretoL.com
+
+1
+Sergio
+Manaus
+7291487
+sergio.com
+
+1
+Lidiane
+Manaus
+20271214
+lidi.com
+
+1
+Delrick
+Manaus
+2141247892
+delrick.com
+
+1
+Wilson N
+Manaus
+90870679
+wilson.com
+
+1
+Wilson C
+Manaus
+90870679182
+wilsonC.com
+
+1
+Luquinhas
+Manaus
+908709452
+lucasV.com
+
+1
+Lucas Botinelly
+Manaus
+12345678
+lucas.com
+
+1
+Hermann Hernani
+Manaus
+23456789
+hermann.com
+
+1
+Steph
+Manaus
+098765
+steph.com
+
+1
+Lucas Barreto
+Manaus
+0964846
+barretoL.com
+
+1
+Sergio
+Manaus
+7291487
+sergio.com
+
+1
+Lidiane
+Manaus
+20271214
+lidi.com
+
+1
+Delrick
+Manaus
+2141247892
+delrick.com
+
+1
+Wilson N
+Manaus
+90870679
+wilson.com
+
+1
+Wilson C
+Manaus
+90870679182
+wilsonC.com
+
+1
+Luquinhas
+Manaus
+908709452
+lucasV.com
+
+1
+Lucas Botinelly
+Manaus
+12345678
+lucas.com
+
+1
+Hermann Hernani
+Manaus
+23456789
+hermann.com
+
+1
+Steph
+Manaus
+098765
+steph.com
+
+1
+Lucas Barreto
+Manaus
+0964846
+barretoL.com
+
+1
+Sergio
+Manaus
+7291487
+sergio.com
+
+1
+Lidiane
+Manaus
+20271214
+lidi.com
+
+1
+Delrick
+Manaus
+2141247892
+delrick.com
+
+1
+Wilson N
+Manaus
+90870679
+wilson.com
+
+1
+Wilson C
+Manaus
+90870679182
+wilsonC.com
+
+1
+Luquinhas
+Manaus
+908709452
+lucasV.com
+
+1
+Lucas Botinelly
+Manaus
+12345678
+lucas.com
+
+1
+Hermann Hernani
+Manaus
+23456789
+hermann.com
+
+1
+Steph
+Manaus
+098765
+steph.com
+
+1
+Lucas Barreto
+Manaus
+0964846
+barretoL.com
+
+1
+Sergio
+Manaus
+7291487
+sergio.com
+
+1
+Lidiane
+Manaus
+20271214
+lidi.com
+
+1
+Delrick
+Manaus
+2141247892
+delrick.com
+
+1
+Wilson N
+Manaus
+90870679
+wilson.com
+
+1
+Wilson C
+Manaus
+90870679182
+wilsonC.com
+
+1
+Luquinhas
+Manaus
+908709452
+lucasV.com
