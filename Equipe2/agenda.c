@@ -58,19 +58,22 @@ int main(int argc, const char *argv[])
                 imprime(aux);
                 break;
             case 3: //Procurar
+				imprime(aux);
                 printf("Insira o telefone de quem quer procurar: ");
                 scanf("%d", &temp);
                 limpa_tela();
                 mostrar(aux, temp);
                 break;
             case 4: //Excluir
-                printf("Insira o telefone de quem quer excluir: ");
+				imprime(aux);                
+				printf("Insira o telefone de quem quer excluir: ");
                 scanf("%d", &temp);
                 delete(aux, temp);
                 limpa_tela();
                 break;
             case 5:
-           		printf("Insira o telefone de quem quer editar: ");
+				imprime(aux);           		
+				printf("Insira o telefone de quem quer editar: ");
                 scanf("%d", &temp);  
             	atualizar(aux, temp);
             	limpa_tela();
