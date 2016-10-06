@@ -1,4 +1,9 @@
-// Estrutura da lista encadeada
+/* Equipe 4
+Alerrandro Barreto
+Fabiola Maciel
+Matheus Botinelli */
+
+Estrutura da lista encadeada
 typedef struct ListaDinEncDupla
 {
   char nome[40];
