@@ -141,6 +141,52 @@ int vazia (Lista *l)
     }
 }*/
 
+void atualiza_contato (No * aux)
+{
+    int opcao;
+    char name[40];
+    char email[100];
+    char ede[40];
+    int tele;    //No *aux = busca(&l,tel);
+    Item tem = aux->dados;
+    printf("Qual Campo deseja atualizar:\n");
+    printf("---(1) Nome ----------------\n");
+    printf("---(2) Telefone ------------\n");
+    printf("---(3) Edereço -------------\n");
+    printf("---(4) Email ---------------\n");
+    scanf("%d",&opcao);
+    __fpurge(stdin);
+    switch(opcao)
+    {
+        case 1:
+            printf("Digite novo nome:\n");
+            scanf("%s[^\n]",name);
+            strcpy(tem.nome,name);
+            __fpurge(stdin);
+            break;
+        case 2:
+            printf("Digite novo numero>\n");
+            scanf("%d[^\n]",&tele);
+            strcpy(aux->dados.tel,tele);
+            __fpurge(stdin);
+            break;
+        case 3:
+            printf("Digite novo endereço:\n");
+            scanf("%s[^\n]",ede);
+            strcpy(aux->dados.endere,ede);
+            __fpurge(stdin);
+            break;
+        case 4:
+            printf("Digite novo endereço de email:\n");
+            scanf("%s[^\n]",email);
+            strcpy(aux->dados.em,email);
+            __fpurge(stdin);
+            break;
+        default:
+            printf("opcao Invalida\n");
+    }
+
+}
 void print_lista (Lista *l)
 {
 	No *temp;
