@@ -71,19 +71,48 @@ No * insert_lista(No *lista,char *name, int telefo, char *endere,char *em ) //in
 	return novo;
 }
 
-No * busca(No *lista, int tel_buscar)
+No * busca_no(No *lista, int tel_buscar)
 {
 	No *aux;
-
-	for (aux = lista; aux != NULL; aux = aux->prox)
+	if ((lista->prox) != NULL)
 	{
-		if (aux->tele == tel_buscar)
+		for (aux = lista; aux!=NULL; aux = aux->prox)
 		{
-			return aux;
+			if (aux->tele == tel_buscar)
+			{
+				return aux;
+			}
 		}
 	}
-	
-} 
+}
+
+void busca_imprime(No *lista, int tel_buscar)
+{
+	No *aux;
+	int encontrado = 0;
+
+	if (aux->prox == NULL)
+	{
+		printf("Lista vazia\n");
+	}
+	else
+	{
+		for (aux = lista; aux != NULL; aux = aux->prox)
+		{
+			if (aux->tele == tel_buscar)
+			{
+				printf("Encontrado!!\n\n");
+				printf("\tNome\t\tTelefone\n");
+				printf("\t%s\t\t%d\n", aux->nome, aux->tele);
+				encontrado = 1;
+			}
+		}
+	}
+	if (encontrado == 0)
+	{
+		printf("Não encontrado\n");
+	}
+}
 
 No* pred(No *lista,No* r) 
 {
