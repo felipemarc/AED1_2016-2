@@ -151,7 +151,7 @@ void queue_delete(int num)
 			{
                 if(temp->prox == NULL)  // verifica se o elemento ecnontrado e o ultimo
                 {
-                    printf("ultimo\n");
+                    //printf("ultimo\n");
                     temp->ant->prox = NULL;
                     ultimo = temp->ant;
                     temp = NULL;
@@ -160,7 +160,7 @@ void queue_delete(int num)
                 }
                 else if(temp->ant == NULL)   // verifica se o elemento encontrado e o primeiro
                 {
-                    printf("primeiro\n");
+                    //printf("primeiro\n");
                     temp->prox->ant = NULL;
                     primeiro = temp->prox;
                     temp = NULL;
@@ -203,7 +203,7 @@ void queue_update(int num, char new_name[], char new_end[])
         {
             if(temp->info == num)
             {
-                printf(" entrou \n\n");
+                printf(" Contato atualizado \n\n");
                 strcpy(temp->nome, new_name);
                 strcpy(temp->endereco, new_end);
                 coisa = 1;

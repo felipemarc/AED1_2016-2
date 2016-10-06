@@ -20,12 +20,11 @@ int main()
 {
     int i, tel;
     char nome1[30], end1[30], email1[30], new_name[30], new_end[30];
-    FILE *arquivo = fopen("agenda.txt", "r");
 
     primeiro = queue_create();
     ultimo = queue_create();
 
-   for (i=0;i<50;i++)
+   for (i=0;i<49;i++)
     {
         scanf("%s", &nome1);
         scanf("%s", &end1);
