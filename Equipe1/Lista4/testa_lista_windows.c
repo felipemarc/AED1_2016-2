@@ -29,18 +29,13 @@ int main()
 
     for(i=0;i<50;i++)
     {
-        //printf("\nInfome o nome:\n");
         fscanf(arquivo," %[^\n]s",nome);
-        //printf("Informe telefone:\n");
         fscanf(arquivo,"%d",&telefone);
-        //printf("infome o email:\n");
         fscanf(arquivo," %[^\n]s",email);
-        //printf("infome o endereço:\n");
         fscanf(arquivo," %[^\n]s",endereco);
         lista = inserir(lista,telefone,nome,email,endereco);
     }
 
-    //lista = inserir(lista,telefone,nome,email,endereco);
     print(lista);
     printf("---------");
     atualizar(lista,990000001);
