@@ -75,6 +75,9 @@ int main(int argc, const char * argv[])
             case 3 :
                 break;
             case 4 :
+                printf("Insira o valor para buscar: ");
+                scanf("%d", &num);
+                busca(li,num);
                 break;
             case 5 :
                 break;

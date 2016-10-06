@@ -15,8 +15,8 @@
  				Jefferson
  *         	                Tiago Cauassa
  *         		        Rebeca Assunção
- *         	         	Miguel Angelo, 
- *   Organization: AED1 
+ *         	         	Miguel Angelo,
+ *   Organization: AED1
  *
  * =====================================================================================
  */
@@ -77,12 +77,26 @@ void print_lista (No *lista) //imprime a lista
 	printf("\tNome\t\tTel\t\tEndec\t\tEmail\n");
 	for (temp = lista; temp != NULL; temp = temp->prox)
 	{
-	
+
 		printf("\t%s",temp->nome);
 		printf("\t\t%d",temp->tele);
 		printf("\t\t%s",temp->ende);
 		printf("\t\t%s\n",temp->email);
 	}
-		
-	
+}
+
+void busca(No *lista, int tel_buscar)
+{
+	No *aux;
+
+	for (aux = lista; aux != NULL; aux = aux->prox)
+	{
+		if (aux->tele == tel_buscar)
+		{
+			printf("Número foi encontrado\n");
+			printf("\tNome\tTelefone\n");
+			printf("\t\t%s\t\t%d\n", aux->nome, aux->tele);
+		}
+	}
+	free(aux);
 }
