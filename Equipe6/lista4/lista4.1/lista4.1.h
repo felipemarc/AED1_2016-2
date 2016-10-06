@@ -99,9 +99,11 @@ No * busca(No *lista, int tel_buscar)
 	
 } 
 
-No* pred(No *lista,No* r) {
+No* pred(No *lista,No* r) 
+{
     No* p = lista;
-    while (p->prox != r) {
+    while (p->prox != r)
+    {
         p = p->prox;
     }
     return p;
