@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef WIN32
+  #define CLEARSCR system ( "cls" )
+#else
+  #define CLEARSCR system ( "clear" )
+#endif
 
 typedef struct agenda Agenda;
 
@@ -34,14 +39,15 @@ void insere(Agenda *agend)
     
     if (agend->inicio == NULL)
     {
-        agend->inicio = novo;
-        agend->fim = novo;
+        agend->inicio = novo->prev;
+        agend->fim = novo->next;
         agend->next = NULL;
         agend->prev = NULL;
     }
     else
     {
         agend->next = novo->prev;
+        novo->prev = agend->next;
         agend->fim = novo;
         novo->next = NULL;
     }
@@ -54,23 +60,101 @@ void imprime(Agenda *agend)
   printf("Nome Telefone  Endereco  Email\n\n");
   for (aux = agend; aux != NULL; aux = aux->next)
   {
-    printf("\t%s", aux->nome);
-    printf("\t\t%d", aux->tel);
-    printf("\t\t%s", aux->endereco);
-    printf("\t\t%s\n", aux->email);
+    	printf("%s\t", aux->nome);
+    	printf("%d\t", aux->tel);
+    	printf("%s\t", aux->endereco);
+    	printf("%s\n", aux->email);
   }
 }
-/*
-void delete(Agenda *agend, int tel)
+
+int mostrar(Agenda *agend, int tel)
 {
-    Agenda temp;
-    int i, achou = 1;
-    if(agend->inicio == NULL)
-    {
-    	    temp = agend->inicio;
-    	    
+	Agenda *aux;
+	for (aux = agend; aux != NULL; aux = aux->next)
+	{
+		if(tel == aux->tel)
+			printf("\t%s", aux->nome);
+    		printf("\t%d", aux->tel);
+	    	printf("\t%s", aux->endereco);
+    		printf("%s\n", aux->email);	
+    		return 0;
     }
-    else
-        printf("NAO TEM O QUE EXCLUIR !!1!onze!");    
+	printf("Numero nao encontrado na agenda !\n");
 }
-*/
+
+
+int delete(Agenda *agend, int tel)
+{
+    Agenda *aux, *anterior, *proximo;
+	for (aux = agend; aux != NULL; aux = aux->next)
+	{
+		if(aux->prev !=NULL)
+		{
+			proximo = aux->next;
+			anterior = aux->prev;
+			if(aux->tel == tel)
+			{
+				aux->next = NULL;
+				aux->prev = NULL;
+				proximo->prev = anterior->next;
+				anterior->next = proximo->prev;
+				free(aux);
+				return 1;
+			}
+		}
+		else
+			proximo = aux->next;
+			if(aux->tel == tel)
+			{
+				aux->next = NULL;
+				proximo->prev = anterior->next;
+				free(aux);
+				return 1;
+			}
+	}
+	printf("Item não encontrado ou lista vazia !");
+}
+
+void atualizar(Agenda *agend, int tel)
+{
+	Agenda *aux;
+	int valor;
+	for (aux = agend; aux != NULL; aux = aux->next)
+	{
+		if(tel == aux->tel)
+			printf("1 - Nome\n");
+        	printf("2 - Endereco\n");
+	        printf("3 - Telefone\n");
+    	    printf("4 - Email\n");
+    		printf("Qual campo vc deseja editar? :");
+	    	__fpurge(stdin);
+	    	switch(valor)
+	    	{
+	    		case 1:
+	    			
+	    			printf("Digite o novo nome: ");
+	    			scanf("%[^\n]", agend->nome);
+                	__fpurge(stdin);
+	    			break;
+	    		case 2:
+	    			printf("Digite o novo endereco: ");
+	    			scanf("%[^\n]", agend->endereco);
+                	__fpurge(stdin);
+	    			break;
+	    		case 3:
+	    			printf("Digite o novo telefone: ");
+	    			scanf("%d", agend->tel);
+	    			break;
+	    		case 4:
+	    			printf("Digite o novo email: ");
+	    			scanf("%[^\n]", agend->email);
+                	__fpurge(stdin);
+	    			break;		
+	    	}
+    }
+}
+
+void limpa_tela()
+{
+    CLEARSCR;
+}
