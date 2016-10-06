@@ -19,13 +19,13 @@
 int main()
 {
     int i, tel;
-    char nome1[30], end1[30], email1[30];
+    char nome1[30], end1[30], email1[30], new_name[30], new_end[30];
     FILE *arquivo = fopen("agenda.txt", "r");
 
     primeiro = queue_create();
     ultimo = queue_create();
 
-   for (i=0;i<2;i++)
+   for (i=0;i<50;i++)
     {
         scanf("%s", &nome1);
         scanf("%s", &end1);
@@ -36,13 +36,23 @@ int main()
     }
 
     queue_print();
-	queue_search(999999);
+    // mostrar
+	queue_search(12345);
+	queue_search(3672);
 
-    queue_delete(88106011);
-    queue_print();
+	// atualizar
+	queue_update(12345, "jucimar" , "uea");
+	queue_search(12345);
+	queue_update(3672, "maria" , "ufam");
+	queue_search(3672);
 
-    queue_update(999999);
-    queue_print();
+	queue_print();
+
+	// deletar
+	queue_delete(12345);
+	queue_delete(3672);
+
+	queue_print();
 
     fclose(arquivo);
     return 0;
