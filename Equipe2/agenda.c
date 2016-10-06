@@ -11,9 +11,6 @@
 int main(int argc, const char *argv[])
 {
     int opc=0;
-	agenda *aux;
-	nova_agenda(aux);
-	aux = (agenda*)malloc(sizeof(agenda));
     //printf("%s" )
     while(opc != 9)
     {
@@ -30,8 +27,17 @@ int main(int argc, const char *argv[])
 		limpa_tela();
         switch(opc)
         {
+        	Agenda *aux;
         	int temp;
+<<<<<<< HEAD
+            case 1: // inserir
+                nova_agenda(aux);
+                aux = (Agenda*)malloc(sizeof(Agenda));
+
+                
+=======
             case 1: // inserir                
+>>>>>>> a88253d446d4b7a0a172be082dccf7f061a18ccd
                 __fpurge(stdin);
 
                 printf("Insira o nome: ");

@@ -15,8 +15,15 @@ struct agenda
 	char endereco[100];
 	int tel;
 	char email[50];
+<<<<<<< HEAD
+    Agenda *next;
+    Agenda *prev;
+    Agenda *inicio;
+    Agenda *fim;
+=======
     agenda *next;
     agenda *prev;
+>>>>>>> a88253d446d4b7a0a172be082dccf7f061a18ccd
 };
 
 agenda *inicio;
@@ -25,8 +32,13 @@ agenda *fim;
 
 void nova_agenda()
 {
+<<<<<<< HEAD
+    agend->inicio = NULL;
+	agend->fim = NULL;
+=======
     inicio = NULL;
 	fim = NULL;
+>>>>>>> a88253d446d4b7a0a172be082dccf7f061a18ccd
 }
 
 void insere(agenda *agend)
@@ -89,7 +101,11 @@ int mostrar(agenda *agend, int tel)
 }
 
 
+<<<<<<< HEAD
+int delete (Agenda *agend, int tel)
+=======
 int delete(agenda *agend, int tel)
+>>>>>>> a88253d446d4b7a0a172be082dccf7f061a18ccd
 {
     agenda *aux, *anterior, *proximo;
 	for (aux = agend; aux != NULL; aux = aux->next)
