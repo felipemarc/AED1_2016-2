@@ -161,25 +161,25 @@ void atualiza_contato (No * aux)
         case 1:
             printf("Digite novo nome:\n");
             scanf("%s[^\n]",name);
-            strcpy(tem.nome,name);
+           // strcpy(tem.nome,name);
             __fpurge(stdin);
             break;
         case 2:
             printf("Digite novo numero>\n");
             scanf("%d[^\n]",&tele);
-            strcpy(aux->dados.tel,tele);
+           // strcpy(aux->dados.tel,tele);
             __fpurge(stdin);
             break;
         case 3:
             printf("Digite novo endereço:\n");
             scanf("%s[^\n]",ede);
-            strcpy(aux->dados.endere,ede);
+            //strcpy(aux->dados.endere,ede);
             __fpurge(stdin);
             break;
         case 4:
             printf("Digite novo endereço de email:\n");
             scanf("%s[^\n]",email);
-            strcpy(aux->dados.em,email);
+           // strcpy(aux->dados.em,email);
             __fpurge(stdin);
             break;
         default:
