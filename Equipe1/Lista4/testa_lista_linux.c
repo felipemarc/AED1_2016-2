@@ -39,21 +39,22 @@ int main()
     print(lista);
     print(lista);
 
-    printf("\nInfome o nome:\n");
-    scanf(" %[^\n]s",nome);
-    printf("Informe telefone:\n");
-    scanf("%d",&telefone);
-    printf("infome o email:\n");
-    scanf(" %[^\n]s",email);
-    printf("infome o endereço:\n");
-    scanf(" %[^\n]s",endereco);
+    for(i=0;i<50;i++)
+    {
+        scanf(" %[^\n]s",nome);
+        scanf("%d",&telefone);
+        scanf(" %[^\n]s",email);
+        scanf(" %[^\n]s",endereco);
+        lista = inserir(lista,telefone,nome,email,endereco);
+    }
 
-
-    lista = inserir(lista,telefone,nome,email,endereco);
     print(lista);
-    atualizar(lista,telefone);
-    mostrar(lista,telefone);
-    lista = remover(lista,telefone);
+    printf("----------");
+    atualizar(lista,990000050);
+    printf("----------");
+    mostrar(lista,990000050);
+    printf("----------");
+    lista = remover(lista,990000050);
     print(lista);
 
     return 0;

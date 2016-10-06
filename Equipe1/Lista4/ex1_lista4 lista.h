@@ -31,7 +31,7 @@ struct no
 	int telefone;
 	char nome[21];
 	char email[21];
-    char endereco[31];
+        char endereco[31];
 	No *next_anterior;
 	No *next_posterior;
 };
