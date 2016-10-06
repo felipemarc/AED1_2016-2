@@ -1,20 +1,41 @@
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lista4.1.h"
 
-int main(int argc, const char * argv[]) 
+#define NC 2 // Numero de contatos no arquivo ".txt"
+
+int main(int argc, const char * argv[])
 {
    // Lista lista;
    No *li;
    li = create();
    	char nome[40];
-   	int num;
+   	int num, i;
    	char ende[100];
    	char email[40];
     int escolha;
+
+    FILE *arq;
+    arq = fopen("teste.txt", "r");
+
+    if (arq == NULL)
+    {
+        printf("ERRO\n\n");
+        return 1;
+    }
+    else
+    {
+        for (i = 0; i < NC; i++)
+        {
+            fscanf(arq, "%s", &nome);
+            fscanf(arq, "%d", &num);
+            fscanf(arq, "%s", &ende);
+            fscanf(arq, "%s", &email);
+            li = insert_lista(li, nome, num, ende, email);
+        }
+    }
+
    do
    {
         printf("--------Agenda AED1---------\n");
@@ -25,7 +46,7 @@ int main(int argc, const char * argv[])
         printf("    5 - Sair               -\n");
         printf("----------------------------\n");
         scanf("%d",&escolha);
-    
+
         switch(escolha)
         {
              case 1 :
@@ -63,8 +84,8 @@ int main(int argc, const char * argv[])
 	}while(escolha != 5);
     //Item it1 = {90};
     //insert(&lista,it1);
-    
+
    // print_lista(&lista);
-    
+
   return 0;
-} 
+}
