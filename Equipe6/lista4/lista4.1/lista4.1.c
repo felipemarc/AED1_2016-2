@@ -7,8 +7,13 @@
 
 int main(int argc, const char * argv[]) 
 {
-    Lista lista;
-    create(&lista);
+   // Lista lista;
+   No *li;
+   li = create();
+   	char nome[40];
+   	int num;
+   	char ende[100];
+   	char email[40];
     int escolha;
    do
    {
@@ -24,24 +29,27 @@ int main(int argc, const char * argv[])
         switch(escolha)
         {
              case 1 :
-                    __fpurge(stdin);
+                    fflush(stdin);
                     printf("Insira seu nome:\n");
-                    scanf("%c",nome);
-                    __fpurge(stdin);
+                    scanf("%s[^\n]",&nome);
+                    fflush(stdin);
                     printf("Insira número de telefone:\n");
                     scanf("%d",&num);
-                    __fpurge(stdin);
+                    fflush(stdin);
                     printf("Insira seu endereço:\n");
-                    scanf("%c",ende);
-                    __fpurge(stdin);
+                    scanf("%s[^\n]",ende);
+                    fflush(stdin);
                     printf("Insira seu email:\n");
-                    scanf("%c",email);
-                    __fpurge(stdin);
-                    Item aux = insert_item(nome,num,ende,email);
-                    insert_lista(&lista,aux);
+                    scanf("%s[^\n]",email);
+                    fflush(stdin);
+                   // Item aux = insert_item(nome,num,ende,email);
+                    li = insert_lista(li,nome,num,ende,email);
                     break;
             case 2 :
-                print_lista(&lista);
+            	if(!vazia(li))
+            	{
+					print_lista(li);
+				}
                 break;
             case 3 :
                 break;
@@ -52,7 +60,7 @@ int main(int argc, const char * argv[])
             default:
                 printf("opção Inválida\n");
         }
-}while(escolha != 5);
+	}while(escolha != 5);
     //Item it1 = {90};
     //insert(&lista,it1);
     
