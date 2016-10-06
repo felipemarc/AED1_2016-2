@@ -1,5 +1,5 @@
 Ordem: nome 
-	endereço
+	endereÃ§o
 	telefone
 	email
 
@@ -67,239 +67,239 @@ lucasV.com
 1
 Lucas Botinelly
 Manaus
-12345678
+48940433
 lucas.com
 
 1
 Hermann Hernani
 Manaus
-23456789
+23456329
 hermann.com
 
 1
 Steph
 Manaus
-098765
+09876523
 steph.com
 
 1
 Lucas Barreto
 Manaus
-0964846
+09648436
 barretoL.com
 
 1
 Sergio
 Manaus
-7291487
+72914287
 sergio.com
 
 1
 Lidiane
 Manaus
-20271214
+20271114
 lidi.com
 
 1
 Delrick
 Manaus
-2141247892
+21447892
 delrick.com
 
 1
 Wilson N
 Manaus
-90870679
+90870279
 wilson.com
 
 1
 Wilson C
 Manaus
-90870679182
+908779182
 wilsonC.com
 
 1
 Luquinhas
 Manaus
-908709452
+90879452
 lucasV.com
 
 1
 Lucas Botinelly
 Manaus
-12345678
+12745678
 lucas.com
 
 1
 Hermann Hernani
 Manaus
-23456789
+23956789
 hermann.com
 
 1
 Steph
 Manaus
-098765
+09876589
 steph.com
 
 1
 Lucas Barreto
 Manaus
-0964846
+09648468
 barretoL.com
 
 1
 Sergio
 Manaus
-7291487
+72914877
 sergio.com
 
 1
 Lidiane
 Manaus
-20271214
+20271219
 lidi.com
 
 1
 Delrick
 Manaus
-2141247892
+21417892
 delrick.com
 
 1
 Wilson N
 Manaus
-90870679
+90870211
 wilson.com
 
 1
 Wilson C
 Manaus
-90870679182
+908679182
 wilsonC.com
 
 1
 Luquinhas
 Manaus
-908709452
+908709412
 lucasV.com
 
 1
 Lucas Botinelly
 Manaus
-12345678
+12345238
 lucas.com
 
 1
 Hermann Hernani
 Manaus
-23456789
+23422789
 hermann.com
 
 1
 Steph
 Manaus
-098765
+09872265
 steph.com
 
 1
 Lucas Barreto
 Manaus
-0964846
+09648114
 barretoL.com
 
 1
 Sergio
 Manaus
-7291487
+72914871
 sergio.com
 
 1
 Lidiane
 Manaus
-20271214
+20270014
 lidi.com
 
 1
 Delrick
 Manaus
-2141247892
+21412478
 delrick.com
 
 1
 Wilson N
 Manaus
-90870679
+12870679
 wilson.com
 
 1
 Wilson C
 Manaus
-90870679182
+970679182
 wilsonC.com
 
 1
 Luquinhas
 Manaus
-908709452
+92709452
 lucasV.com
 
 1
 Lucas Botinelly
 Manaus
-12345678
+15445678
 lucas.com
 
 1
 Hermann Hernani
 Manaus
-23456789
+23956789
 hermann.com
 
 1
 Steph
 Manaus
-098765
+09876598
 steph.com
 
 1
 Lucas Barreto
 Manaus
-0964846
+96484687
 barretoL.com
 
 1
 Sergio
 Manaus
-7291487
+72914878
 sergio.com
 
 1
 Lidiane
 Manaus
-20271214
+20271299
 lidi.com
 
 1
 Delrick
 Manaus
-2141247892
+214124786
 delrick.com
 
 1
 Wilson N
 Manaus
-90870679
+90870654
 wilson.com
 
 1
 Wilson C
 Manaus
-90870679182
+90879182
 wilsonC.com
 
 1
 Luquinhas
 Manaus
-908709452
+70945296
 lucasV.com

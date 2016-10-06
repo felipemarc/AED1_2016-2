@@ -1,3 +1,9 @@
+/*
+/* Equipe 4
+Alerrandro Barreto
+Fabiola Maciel
+Matheus Obando */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
