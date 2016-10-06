@@ -69,17 +69,27 @@ Item insert_item (char *name, int tele, char *ende,char *email )
 
 void insert_lista (Lista *l, Item i)
 {
+    void insert_lista (Lista *l, Item i)
+{
     //l->atual->prox = l->ult
-	l->ult->prox = (No*)malloc(sizeof(No));
-	while(l->atual->prox != NULL)
+	//l->ult->prox = (No*)malloc(sizeof(No));
+	No *no = l->prim, *novo;
+	while(no->prox != NULL)
 	{
-       	l->atual = l->atual->prox;
-    }
-	l->atual->prox = l->ult;
-	l->ult->ant = l->atual;
+       		no = no->prox;
+    	}
+   	l->ult->prox = (No*)malloc(sizeof(No));
+	//l->atual->prox = l->ult;
+
+	//l->ult->dados = i;
+	no->prox = l->ult->prox;
+	l->ult->ant = no;
 	l->ult = l->ult->prox;
-	l->ult->prox = NULL;
+	l->ult->prox= NULL;
 	l->ult->dados = i;
+	//l->ult = novo;
+	//l->ult->dados = i;
+}
 }
 
 No void busca(Lista *l,int k)
