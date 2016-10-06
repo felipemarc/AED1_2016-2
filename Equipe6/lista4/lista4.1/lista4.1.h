@@ -115,3 +115,28 @@ void busca(No *lista, int tel_buscar)
 
 	free(aux);
 }
+
+No* pred(No *lista,No* r) {
+    No* p = lista;
+    while (p->prox != r) {
+        p = p->prox;
+    }
+    return p;
+}
+
+void remove_item (No *lista, No *r)
+ {
+    if (vazia(lista) || r == NULL )
+       printf( "impossÃ­vel remover\n");
+    else
+    {
+        
+        No *p = pred(lista,r);
+        r->ant = NULL;
+	p->prox = r->prox;
+        //if (p->prox == NULL) p->prox = NULL;
+        free(r);
+    	
+    }
+
+}
