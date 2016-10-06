@@ -3,10 +3,10 @@
 #include <string.h>
 #include "atual.h"
 
-int main(int argc, const char * argv[]) 
+int main(int argc, const char * argv[])
 {
    // Lista lista;
-   	
+
     No *li;
    li = create();
    	char nome[40];
@@ -24,7 +24,7 @@ int main(int argc, const char * argv[])
         printf("    5 - Sair               -\n");
         printf("----------------------------\n");
         scanf("%d",&escolha);
-    
+
         switch(escolha)
         {
              case 1 :
@@ -62,8 +62,8 @@ int main(int argc, const char * argv[])
 	}while(escolha != 5);
     //Item it1 = {90};
     //insert(&lista,it1);
-    
+
    // print_lista(&lista);
-    
+
   return 0;
-} 
+}

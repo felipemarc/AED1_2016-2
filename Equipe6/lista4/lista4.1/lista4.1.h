@@ -56,8 +56,8 @@ No * insert_lista(No *lista,char *name, int telefo, char *endere,char *em ) //in
 	novo->tele = telefo;
 	strcpy(novo->ende,endere);
 	strcpy(novo->email,em);
-	novo->prox = NULL;
-	novo->ant = NULL;
+	//novo->prox = NULL;
+	//novo->ant = NULL;
 	if(lista == NULL)
 	{
 		novo->ant = NULL;
@@ -88,15 +88,30 @@ void print_lista (No *lista) //imprime a lista
 void busca(No *lista, int tel_buscar)
 {
 	No *aux;
+	int encontrado = 0;
 
-	for (aux = lista; aux != NULL; aux = aux->prox)
+	if (aux->prox == NULL)
 	{
-		if (aux->tele == tel_buscar)
+		printf("Vazio\n");
+	}
+
+	else
+	{
+		for (aux = lista; aux != NULL; aux = aux->prox)
 		{
-			printf("Número foi encontrado\n");
-			printf("\tNome\tTelefone\n");
-			printf("\t\t%s\t\t%d\n", aux->nome, aux->tele);
+			if (aux->tele == tel_buscar)
+			{
+				encontrado = 1;
+				printf("Número foi encontrado\n");
+				printf("\tNome\tTelefone\n");
+				printf("\t\t%s\t\t%d\n", aux->nome, aux->tele);
+			}
 		}
 	}
+	if (encontrado == 0)
+	{
+		printf("Contato não encontrado\n");
+	}
+
 	free(aux);
 }

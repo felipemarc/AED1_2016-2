@@ -72,10 +72,13 @@ int main(int argc, const char * argv[])
 					print_lista(li);
 				}
                 break;
-            case 3 :
+            case 3 :/*
+                printf("Insira o telefone para remover: ");
+                scanf("%d", &num);
+                li = remove_lista(li, num);*/
                 break;
             case 4 :
-                printf("Insira o valor para buscar: ");
+                printf("Insira o telefone para buscar: ");
                 scanf("%d", &num);
                 busca(li,num);
                 break;
