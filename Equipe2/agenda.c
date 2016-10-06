@@ -56,6 +56,7 @@ int main(int argc, const char *argv[])
             case 4: //Atualizar
                 break;
             case 9: //Sair
+                opc = 9;
                 break;
         }
     }
