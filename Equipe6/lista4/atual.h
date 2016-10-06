@@ -2,30 +2,39 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct item Item;
+/*typedef struct item Item;
 struct item{
 	char nome[40];
 	int tele;
 	char ende[100];
 	char email[40];
-};
+};*/
 
 typedef struct no No;
 struct no{
-	Item dados;
+	//Item dados;
+	char nome[40];
+	int tele;
+	char ende[100];
+	char email[40];
 	No *prox;
 	No *ant;
 };
 
-No *prim = NULL;
-No *ult = NULL;
+No *lista ;
+//No *ult = NULL;
 
 No *create()
 {
 	return NULL;
 }
 
-Item insert_item (char *name, int telefo, char *endere,char *em ) //insere as informacoes passadas pelo usuário no struct Item
+int vazia(No *lista)
+{
+  return (lista == NULL);
+}
+
+/*Item insert_item (char *name, int telefo, char *endere,char *em ) //insere as informacoes passadas pelo usuário no struct Item
 {
     Item tempo;
     strcpy(tempo.nome,name);
@@ -33,38 +42,35 @@ Item insert_item (char *name, int telefo, char *endere,char *em ) //insere as in
     strcpy(tempo.ende,endere);
     strcpy(tempo.email,em);
     return tempo;
-}
+}*/
 
-void lista_insert(Item it) //insere o item na lista
+No * insert_lista(No *lista,char *name, int telefo, char *endere,char *em ) //insere o item na lista
 {
 	No *novo;
 	novo = (No*)malloc(sizeof(No));
-	novo->dados = it;
+	strcpy(novo->nome,name);
+	novo->tele = telefo;
+	strcpy(novo->ende,endere);
+	strcpy(novo->email,em);
 	novo->prox = NULL;
 	novo->ant = NULL;
-	if(prim == NULL)
+	if(lista == NULL)
 	{
-		prim = novo;
-		ult = novo;
-	}
-	else if(prim->prox == NULL)
-	{
-		ult = novo;
-		prim->prox = novo;
-		ult->ant = prim;
+		novo->ant = NULL;
+		novo->prox = NULL;
 	}
 	else
 	{
-		ult->prox = novo;
-		novo->ant = ult;
-		ult = novo;
+		novo->prox = lista;
+		novo->ant = NULL;
 	}
+	return novo;
 }
 
-void print_lista (No *inicio) //imprime a lista
+void print_lista (No *lista) //imprime a lista
 {
 	No *temp;
-	temp = inicio;
+	temp = lista;
 	if(temp == NULL)
 	{
 		printf("Lista vazia\n");
@@ -74,10 +80,10 @@ void print_lista (No *inicio) //imprime a lista
 		while(temp != NULL)
 		{
 			printf("\tNome\t\tTel\t\tEndec\t\tEmail\n");
-			printf("\t%s",temp->dados.nome);
-			printf("\t\t%d",temp->dados.tele);
-			printf("\t\t%s",temp->dados.ende);
-			printf("\t\t%s\n",temp->dados.email);
+			printf("\t%s",temp->nome);
+			printf("\t\t%d",temp->tele);
+			printf("\t\t%s",temp->ende);
+			printf("\t\t%s\n",temp->email);
 			temp = temp->prox;
 		}
 	}
