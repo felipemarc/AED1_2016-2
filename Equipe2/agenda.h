@@ -76,13 +76,16 @@ int mostrar(agenda *agend, int tel)
 	for (aux = inicio; aux != NULL; aux = aux->next)
 	{
 		if(tel == aux->tel)
-			printf("\t%s", aux->nome);
-    		printf("\t%d", aux->tel);
-	    	printf("\t%s", aux->endereco);
+		{
+			printf("Nome Telefone  Endereco  Email\n");
+			printf("%s\t", aux->nome);
+    		printf("%d\t", aux->tel);
+	    	printf("%s\t", aux->endereco);
     		printf("%s\n", aux->email);	
     		return 0;
+		}
     }
-	printf("Numero nao encontrado na agenda !\n");
+	printf("Telefone não encontrado na agenda ou agenda vazia !\n");
 }
 
 
@@ -115,46 +118,54 @@ int delete(agenda *agend, int tel)
 				return 1;
 			}
 	}
-	printf("Item não encontrado ou lista vazia !");
+	printf("Telefone não encontrado na agenda ou agenda vazia !\n");
 }
 
-void atualizar(agenda *agend, int tel)
+int atualizar(agenda *agend, int tel)
 {
 	agenda *aux;
 	int valor;
-	for (aux = agend; aux != NULL; aux = aux->next)
+	for (aux = inicio; aux != NULL; aux = aux->next)
 	{
 		if(tel == aux->tel)
+		{
 			printf("1 - Nome\n");
         	printf("2 - Endereco\n");
 	        printf("3 - Telefone\n");
     	    printf("4 - Email\n");
-    		printf("Qual campo vc deseja editar? :");
-	    	__fpurge(stdin);
+			printf("Qual campo vc deseja editar? :");
+			scanf("%d", &valor);
 	    	switch(valor)
 	    	{
-	    		case 1:
-	    			
+        		case 1:
+					__fpurge(stdin);	    			
 	    			printf("Digite o novo nome: ");
-	    			scanf("%[^\n]", agend->nome);
+	    			scanf("%[^\n]", aux->nome);
                 	__fpurge(stdin);
+					strcpy(agend->nome, aux->nome);
 	    			break;
 	    		case 2:
 	    			printf("Digite o novo endereco: ");
-	    			scanf("%[^\n]", agend->endereco);
+	    			scanf("%[^\n]", aux->endereco);
                 	__fpurge(stdin);
+				    strcpy(agend->endereco, aux->endereco);
 	    			break;
 	    		case 3:
 	    			printf("Digite o novo telefone: ");
-	    			scanf("%d", agend->tel);
+	    			scanf("%d", &aux->tel);
+					agend->tel = aux->tel;
 	    			break;
 	    		case 4:
 	    			printf("Digite o novo email: ");
-	    			scanf("%[^\n]", agend->email);
+	    			scanf("%[^\n]", aux->email);
                 	__fpurge(stdin);
+					strcpy(agend->email, aux->email);
 	    			break;		
 	    	}
-    }
+			return 0;		
+		}    
+	}
+	printf("Telefone não encontrado na agenda ou agenda vazia !\n");
 }
 
 void limpa_tela()
