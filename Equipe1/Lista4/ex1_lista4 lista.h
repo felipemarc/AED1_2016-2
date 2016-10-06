@@ -1,30 +1,40 @@
-//agenda forma de lista duplamente encadeada
+/* 	
+	equipe 01:
+	Diogo Abreu
+	Fernando Calderaro
+	Leticia Mota
+	Rodrigo Oliveira
+	Thailana Neves		
+	
+	exercicio 01
 
-/*
-   1) Crie uma agenda em forma de lista duplamente encadeada
-   - CRUD completo: inserir, deletar, atualizar, mostrar e listar
-   - dados nome, endereço, telefone e email
-   - a chave de busca será o número de telefone ( apenas números )
+	Crie uma agenda em forma de lista duplamente encadeada
+        - CRUD completo: inserir, deletar, atualizar, mostrar e listar
+   	- dados nome, endereço, telefone e email
+   	- a chave de busca será o número de telefone ( apenas números )
+
+	}
+		
 */
+
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 //criando tipo No.
 typedef struct no No;
 
-
-//cria no com com dois ponteiros
+//cria nó com com dois ponteiros
 struct no
 {
 	int telefone;
-	char *nome;
-	char *email;
-        char *endereco;
+	char nome[21];
+	char email[21];
+    char endereco[31];
 	No *next_anterior;
 	No *next_posterior;
 };
-
 
 //cria lista
 No *criar()
@@ -32,18 +42,17 @@ No *criar()
 	return NULL;
 }
 
-
 //insere elementos na lista
-No *push(No *lista,int tel,char name[],char mail[],char ende[])
+No *inserir(No *lista,int tel,char nom[],char mail[],char ende[])
 {
 	if(lista==NULL)
 	{
 		No *temp;
 		temp = (No*)malloc(sizeof(No));
 		temp->telefone = tel;
-		temp->nome = name;
-		temp->email = mail;
-		temp->endereco = ende;
+		strcpy(temp->nome,nom);
+		strcpy(temp->email,mail);
+		strcpy(temp->endereco,ende);
 		temp->next_anterior = lista;
 		temp->next_posterior = lista;
 		return temp;
@@ -53,9 +62,9 @@ No *push(No *lista,int tel,char name[],char mail[],char ende[])
 		No *temp;
 		temp = (No*)malloc(sizeof(No));
 		temp->telefone = tel;
-		temp->nome = name;
-		temp->email = mail;
-		temp->endereco = ende;
+		strcpy(temp->nome,nom);
+		strcpy(temp->email,mail);
+		strcpy(temp->endereco,ende);
 		temp->next_anterior = lista;
 		temp->next_posterior = NULL;
 		lista->next_posterior = temp;
@@ -63,7 +72,7 @@ No *push(No *lista,int tel,char name[],char mail[],char ende[])
 	}
 }
 
-//imprime lista
+//imprime a lista
 void print(No *lista)
 {
 	No *temp;
@@ -87,8 +96,8 @@ void print(No *lista)
 	}
 }
 
-//remove elementos da lista
-No * pop(No *lista, int tel)
+//remove da lista o elemento que possui o numero informado
+No *remover(No *lista, int tel)
 {
 	No *temp;
 	temp = lista;
@@ -134,7 +143,50 @@ No * pop(No *lista, int tel)
 
 }
 
-//mostrar contato que possui o telefone inserido
+//modifica dados do elemento da lista que possui o nuero informado
+int atualizar(No *lista,int tel)
+{
+	No *temp;
+	temp = lista;
+	if(temp==NULL)
+	{
+		printf("- Lista Vazia -");
+		return 0;
+	}
+	else
+	{
+		while(temp!=NULL)
+		{
+			if(temp->telefone==tel)
+			{
+				int tele;
+				char name[21];
+			 	char mail[21];
+				char ende[31];
+                	 	printf("\nInforme novo nome:\n");
+                	 	scanf(" %[^\n]s",name);
+               			strcpy(temp->nome,name);
+                		printf("Informe novo telefone:\n");
+                		scanf("%d",&tele);
+                		temp->telefone = tele;
+               			printf("Informe novo email:\n");
+               	 		scanf(" %[^\n]s",mail);
+                		strcpy(temp->email,mail);
+               			printf("Informe novo endereço:\n");
+                		scanf(" %[^\n]s",ende);
+                		strcpy(temp->endereco,ende);
+               			return 0;
+			}
+
+			temp=temp->next_anterior;
+		}
+		printf("\n- Lista não possui elemento com o numero informado! -\n");
+		return 0;
+	}
+
+}
+
+//mostra elemento da lista que possui o numero informado
 int mostrar(No *lista,int tel)
 {
 	No *temp;
@@ -150,16 +202,17 @@ int mostrar(No *lista,int tel)
 		{
 			if(temp->telefone==tel)
 			{
-                printf("\n%s\n",temp->nome);
-                printf("%d\n",temp->telefone);
-                printf("%s\n",temp->email);
-                printf("%s\n",temp->endereco);
-                return 0;
+                		printf("\n%s\n",temp->nome);
+                		printf("%d\n",temp->telefone);
+                		printf("%s\n",temp->email);
+                		printf("%s\n",temp->endereco);
+                		return 0;
 			}
 			temp=temp->next_anterior;
-		}
+		}	
 		printf("\n- Lista não possui elemento com o numero informado! -\n");
 		return 0;
 	}
 
 }
+

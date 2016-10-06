@@ -15,58 +15,46 @@
 */
 
 
-
 /*
  programa principal
 
 */
 
-#include "lista.h"
+
+#include "inserir.h"
 
 int main()
 {
     No *lista;
     int i;
 
-    lista = criar();
+    int telefone;
+    char nome[21];
+    char email[21];
+    char endereco[31];
+
+   lista = criar();
 
     print(lista);
-
-
-    lista = push(lista,993330822,"diogo","diogo.abreu1992@gmail.com","Rua A4,Conjuto Flamboyant, Bairro Flores,casa 1");
+    print(lista);
     print(lista);
 
-    printf("---------");
+    printf("\nInfome o nome:\n");
+    scanf(" %[^\n]s",nome);
+    printf("Informe telefone:\n");
+    scanf("%d",&telefone);
+    printf("infome o email:\n");
+    scanf(" %[^\n]s",email);
+    printf("infome o endereço:\n");
+    scanf(" %[^\n]s",endereco);
 
-    lista = push(lista,996010793,"Lucgol","lucivaldo1@petrobras.com","Rua A4,Conjuto Flamboyant, Bairro Flores,casa 1");
+
+    lista = inserir(lista,telefone,nome,email,endereco);
     print(lista);
-
-    printf("---------");
-
-    lista = push(lista,992872435,"Dandan","danilo1990@hotmail.com","Rua A4,Conjuto Flamboyant, Bairro Flores,casa 1");
+    atualizar(lista,telefone);
+    mostrar(lista,telefone);
+    lista = remover(lista,telefone);
     print(lista);
-
-    printf("---------");
-
-    lista = pop(lista,996010793);
-    print(lista);
-
-    printf("---------");
-
-    lista = pop(lista,993330822);
-    print(lista);
-
-    printf("---------");
-
-    lista = pop(lista,992872435);
-    print(lista);
-
-    printf("---------");
-
-    lista = push(lista,996010793,"Lucgol","lucivaldo1@petrobras.com","Rua A4,Conjuto Flamboyant, Bairro Flores,casa 1");
-    mostrar(lista,996010793);
-
-
 
     return 0;
 }
