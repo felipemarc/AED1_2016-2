@@ -14,7 +14,7 @@ int main(int argc, const char * argv[])
    	int num, i;
    	char ende[100];
    	char email[40];
-    int escolha;
+    int escolha, op;
 
     FILE *arq;
     arq = fopen("teste.txt", "r");
@@ -28,10 +28,10 @@ int main(int argc, const char * argv[])
     {
         for (i = 0; i < NC; i++)
         {
-            fscanf(arq, "%s", &nome);
-            fscanf(arq, "%d", &num);
-            fscanf(arq, "%s", &ende);
-            fscanf(arq, "%s", &email);
+            fscanf(arq, "%s[^\n]", &nome);
+            fscanf(arq, "%d[^\n]", &num);
+            fscanf(arq, "%s[^\n]", &ende);
+            fscanf(arq, "%s[^\n]", &email);
             li = insert_lista(li, nome, num, ende, email);
         }
     }
@@ -67,20 +67,36 @@ int main(int argc, const char * argv[])
                     li = insert_lista(li,nome,num,ende,email);
                     break;
             case 2 :
-            	if(!vazia(li))
-            	{
-					print_lista(li);
-				}
+                printf("Opções\n");
+                printf("[1] Todos\n");
+                printf("[2] Somente um\n");
+                scanf("%d", &op);
+                switch(op)
+                {
+                    case 1:
+                        if(!vazia(li))
+                        {
+                            print_lista(li);
+                        }
+                        break;
+                    case 2:
+                        printf("Insira o telefone procurado: \n");
+                        scanf("%d", &num);
+                        busca_imprime(li, num);
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case 3 :/*
                 printf("Insira o telefone para remover: ");
                 scanf("%d", &num);
                 li = remove_lista(li, num);*/
                 break;
-            case 4 :
+            case 4 :/*
                 printf("Insira o telefone para buscar: ");
                 scanf("%d", &num);
-                busca(li,num);
+                busca(li,num);*/
                 break;
             case 5 :
                 break;
