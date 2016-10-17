@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,7 +13,6 @@ voi i_o (int i)
 			printf("%c", &var);
 	}
 	
-=======
 
 /* Utilizando um ponteiro auxiliar
 * remove os espaços no vetor e
@@ -34,5 +32,25 @@ void remove_espacos (char *string, char *aux)
       count++;
     }
   }
->>>>>>> dd015056631fff3635d92f0cbe5944e8e07d6c70
+}
+
+//Converte de String para ASCII e soma os valores
+int string_para_ascii(const char *str)
+{
+	int *aux;
+	aux = (int*)malloc(sizeof(int));
+    int i=0, num;
+    while(str[i])
+    {
+    	printf("Eh tetra");
+    	aux[i] = str[i];
+    	i++;
+    }	
+    i = 0;
+	while(str[i])
+	{
+		printf("Eh tetra");
+		num+=aux[i++];
+	}
+	return num;
 }
