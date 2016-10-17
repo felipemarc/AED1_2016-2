@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 //Função para tratar as saidas do programa
-void out(char opcao)
+void out(int opcao, int x, char z)
 {
 	int x;
 	char z;
