@@ -1,6 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Função para tratar as saidas do programa
+void out(char opcao)
+{
+
+	switch (opcao)
+	{
+		case 1: //imprime inteiros 
+			printf("%d", x);
+			break;	
+		case 2: //imprime char
+			printf("%c", x);
+			break;
+		case 3: //pula uma linha
+			printf("\n");
+			break;
+}
+
 /* Utilizando um ponteiro auxiliar
 * remove os espaços no vetor e
 * adiciona no vetor auxiliar */
@@ -25,21 +42,23 @@ void remove_espacos (char *string, char *aux)
 int string_para_ascii(const char *str)
 {
 	int *aux;
+	int i=0, num;
 	aux = (int*)malloc(sizeof(int));
-    int i=0, num;
+    
     while(str[i])
     {
-    	printf("Eh tetra");
     	aux[i] = str[i];
     	i++;
     }	
+    
     i = 0;
+	
 	while(str[i])
 	{
-		printf("Eh tetra");
 		num+=aux[i++];
 	}
 	return num;
 }
+
 
 
