@@ -1,19 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-voi i_o (int i)
-{
-	char var;
-	switch()
-	{
-		case 1:
-			scanf("%c", &var);
-		case 2:
-			printf("%c", &var);
-	}
-	
-
 /* Utilizando um ponteiro auxiliar
 * remove os espaços no vetor e
 * adiciona no vetor auxiliar */
@@ -54,3 +41,5 @@ int string_para_ascii(const char *str)
 	}
 	return num;
 }
+
+
