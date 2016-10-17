@@ -4,24 +4,22 @@
 //Função para tratar as saidas do programa
 void out(char opcao)
 {
-
+	int x;
+	char z;
+	
 	switch (opcao)
 	{
 		case 1: //imprime inteiros 
 			printf("%d", x);
 			break;	
 		case 2: //imprime char
-			printf("%c", x);
+			printf("%c", z);
 			break;
 		case 3: //pula uma linha
-			printf("\n");
+			printf("teste nessa budega");
 			break;
 }
 
-void in()
-{
-	scanf();
-}
 
 /* Utilizando um ponteiro auxiliar
 * remove os espaços no vetor e
