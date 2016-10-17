@@ -18,6 +18,11 @@ void out(char opcao)
 			break;
 }
 
+void in()
+{
+	scanf();
+}
+
 /* Utilizando um ponteiro auxiliar
 * remove os espaços no vetor e
 * adiciona no vetor auxiliar */
