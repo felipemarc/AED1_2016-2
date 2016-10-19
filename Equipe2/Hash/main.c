@@ -7,13 +7,13 @@ int main(int argc, const char *argv[])
      int num;
      filme = (char*)malloc(sizeof(char));
      
-     printf("Qual filme vc deseja procurar ?");
+     //printf("Qual filme vc deseja procurar ?");
      __fpurge(stdin);
      fgets(filme, 100, stdin);
 
      remove_espacos(filme,aux);
      num = string_para_ascii(aux);
-     printf("%s\n", aux);
-     printf("%d\n", num);
+     //printf("%s\n", aux);
+     //printf("%d\n", num);
      return 0;
 }
