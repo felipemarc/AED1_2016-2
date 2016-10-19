@@ -12,7 +12,7 @@ int main(int argc, const char *argv[])
      fgets(filme, 100, stdin);
 
      remove_espacos(filme,aux);
-     num = string_para_ascii(filme);
+     num = string_para_ascii(aux);
      printf("%s\n", aux);
      printf("%d\n", num);
      return 0;
