@@ -55,5 +55,12 @@ int string_para_ascii(char *str)
      return num;
 }
 
+int calcula_mod(int num_mod, int valor)
+{
+     int num;
+     num = valor%num_mod;
+     return num;
+}
+
 
 
