@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include<string.h>
 
-//Função para tratar as saidas do programa
+//Função para tratar as saidas do programa (nao est� pronta ainda)
 void out(int opcao, int x, char z)
 {
 		
