@@ -1,0 +1,12 @@
+Grupos de até 5 pessoas
+Entrega: 26/out/2016
+
+Obs: usar as regras de programação em C e modularização vistas em sala de aula. Serão descontados 0.5 para cada quebra de regra.
+
+Obs: Usar o arquivo de filmes movies_titles.txt
+
+Obs: os programa devem permitir a impressão da tabela para verificar seu conteúdo e colisões
+
+1) Criar um programa que use uma tabela hash para armazenar e buscar os filmes usando seu código. 
+
+2) Criar um programa que use uma tabela hash para armazenar e buscar os filmes usando seu título.
