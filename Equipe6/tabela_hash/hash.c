@@ -25,7 +25,8 @@ int main(int argc, const char *argv[])
       char *filme, aux[100];
       int num, mod;
       filme = (char*)malloc(sizeof(char));
-      //printf("Qual filme vc deseja procurar ?");
+      
+      
       __fpurge(stdin);
       
 
