@@ -12,7 +12,7 @@ struct filme{
     Filme *prox;
 };
 
-typedef struct Filme *Hash[N];
+typedef  Filme *Hash[N];
 
 void inicia_tabela (Hash tab)
 {
@@ -70,5 +70,37 @@ Filme *insere_hash (Hash tab,int num,char *nome,int year)
     return a;
 
 }
+
+void imprime_hash (Hash tab)
+{
+    int i;
+	Filme *atual;
+
+	for ( i = 0; i < N; i++ )
+	{
+		if ( tab[i] == NULL )
+			printf( "%d -> .\n", i );
+		else
+		{
+
+			atual = tab[i];
+
+			printf( "%d ->", i );
+
+			while( atual != NULL )
+			{
+				printf( "\t%d", atual->codigo );
+				printf("\t%s",atual->nome);
+				printf("\t%d",atual->ano);
+				atual = atual->prox;
+			}
+
+			printf("\n");
+		}
+    }
+
+}
+
+
 
 
