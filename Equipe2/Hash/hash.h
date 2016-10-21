@@ -1,24 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
+#include <math.h>
+#define MAX 8550
 
-//Função para tratar as saidas do programa
-void out(int opcao, int x, char z)
-{
-		
-	switch (opcao)
-	{
-		case 1: //imprime inteiros 
-			printf("%d", x);
-			break;	
-		case 2: //imprime char
-			printf("%c", z);
-			break;
-		case 3: //pula uma linha
-			printf("teste nessa budega");
-			break;
-     }
-}
+typedef struct filme Filme;
+struct filme {
+	char nome[50];
+	int ano, indice;
+	No *prox;
+};
+
+Filme *hash[MAX];
+
 /* Utilizando um ponteiro auxiliar
 * remove os espaços no vetor e
 * adiciona no vetor auxiliar */
@@ -39,7 +33,7 @@ void remove_espacos(char *string, char *aux)
      }
 }
 
-//Converte de String para ASCII e soma os valores
+/*Converte de String para ASCII e soma os valores
 int string_para_ascii(char *str)
 {
      int *aux;
@@ -54,13 +48,105 @@ int string_para_ascii(char *str)
           num+=aux[i];
      return num;
 }
+*/
 
-int calcula_mod(int num_mod, int valor)
+int calcula_hash(int chave)
 {
      int num;
-     num = valor%num_mod;
-     return num;
+     if(chave >= 8550)
+     	num = chave - MAX;
+     else
+     	num = -MAX - chave;
+     return (int)(fabs(num));
 }
 
+int inserir_na_hash(Filme filme, int chave, Filme hash[])
+{
+	Filme *novo;
+	novo = (Filme*)malloc( sizeof(Filme));
+	
+	strcpy(novo->nome, filme->nome);
+	novo->indice = filme->indice;
+	novo->ano = filme->ano;
+	
+	hash[chave] = novo;
+	
+	return 1;	
+}
+
+void inserir( char chave[] )
+{
+	int indice;
+	
+	indice = calcular_hash( info );
+
+	tabela[indice] = inserir_lista_adjacente( tabela[indice], chave);
+}
+
+
+
+void imprimir( No *tabela[] )
+{
+	int i;
+	No *atual;
+
+	for ( i = 0; i < TAMANHO; i++ )
+	{
+		if ( tabela[i] == NULL )
+			printf( "%d -> .\n", i );
+		else
+		{
+
+			atual = tabela[i];
+			
+			printf( "%d ->", i );
+	
+			while( atual != NULL )
+			{
+				printf( " %s ", atual->chave );
+				atual = atual->prox;
+			}
+	
+			printf("\n");
+		}
+	}
+}
+
+
+int buscar_lista_adjacencia( No *lista, char chave[] )
+{
+	No *c;
+	int achou = -1;
+	int i = 0;
+
+	c = lista;
+
+	while( c != NULL && achou == -1 )
+	{
+		if ( !strcmp(c->info,chave ) )
+		{
+			achou = i;
+		}
+		else
+		{
+			i++;
+			c = c->prox;
+		}
+	}
+
+	return achou;
+}
+
+int buscar_tabela_hash( char chave[] )
+{
+	int achou;
+	int indice;
+
+	indice = calcular_hash( chave );
+
+	achou = buscar_lista_adjacencia( tabela[indice],chave );
+
+	return achou;
+}
 
 
