@@ -26,7 +26,6 @@ int main()
     
      
      printf("Buscar:\n");
-	__fpurge(stdin);
 	scanf("%d",&buscar);
     //Filme *achou = busca(tabela,buscar);
     //imprime_um(achou);
