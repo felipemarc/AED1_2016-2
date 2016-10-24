@@ -12,13 +12,19 @@ struct filme{
     Filme *prox;
 };
 
-typedef  Filme *Hash[N];
+typedef  struct hash Hash;
+struct hash
+{
+  Filme *tab_hash[N];
+};
 
-void inicia_tabela (Hash tab)
+Hash* inicia_tabela (void)
 {
     int i;
+    Hash *tab = (Hash *) malloc(sizeof(Hash));
     for (i=0; i<N; i++)
-        tab[i] = NULL;
+      tab->tab_hash[i] = NULL;
+    return tab;
 }
 
 int funcao_hash (int chave)
@@ -30,20 +36,36 @@ int funcao_hash (int chave)
 }
 
 
-Filme *busca (Hash tab,int num)
+Filme *busca (Hash *tab, int codigo)
 {
-    int h = funcao_hash(num);
-    Filme *a = tab[h];
+    int h = funcao_hash(codigo);
+    Filme *a = tab->tab_hash[h];
     while (a != NULL)
     {
-        if(a->codigo == num)
+        if(a->codigo == codigo)
             return a;
         a = a->prox;
     }
     return NULL;
 }
 
-Filme *insere_hash (Hash tab,int num,char *nome,int year)
+void imprime_um (Filme *filme)
+{
+
+  if(filme == NULL)
+  {
+    printf("Filme não cadastrado\n");
+  }
+  else{
+
+      printf("%d ",filme->codigo);
+      printf("%s\t",filme->nome);
+      printf("%d\n",filme->ano);
+  }
+}
+
+/*
+Filme *insere_hash (Hash *tab,int num,char *nome,int year)
 {
     int h = funcao_hash(num);
     Filme *p = NULL;
@@ -70,20 +92,37 @@ Filme *insere_hash (Hash tab,int num,char *nome,int year)
     return a;
 
 }
+*/
 
-void imprime_hash (Hash tab)
+void insere_hash(Hash *tab, int codigo, char *nome, int ano)
 {
-    int i;
+
+  int h = funcao_hash(codigo);
+  Filme *aux = (Filme *) malloc(sizeof(Filme));
+  aux->prox = tab->tab_hash[h];
+  aux->codigo = codigo;
+  strcpy(aux->nome, nome);
+  aux->ano = ano;
+  tab->tab_hash[h] = aux;
+
+  //return aux;
+
+}
+
+
+void imprime_hash (Hash *tab)
+{
+  int i;
 	Filme *atual;
 
 	for ( i = 0; i < N; i++ )
 	{
-		if ( tab[i] == NULL )
+		if ( tab->tab_hash[i] == NULL )
 			printf( "%d -> .\n", i );
 		else
 		{
 
-			atual = tab[i];
+			atual = tab->tab_hash[i];
 
 			printf( "%d ->", i );
 
@@ -95,12 +134,7 @@ void imprime_hash (Hash tab)
 				atual = atual->prox;
 			}
 
-			printf("\n");
+			printf("\n\n");
 		}
-    }
-
+  }
 }
-
-
-
-
