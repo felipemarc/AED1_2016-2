@@ -60,10 +60,10 @@ int calcula_hash(int chave)
      return (int)(fabs(num));
 }
 
-int inserir_na_hash(Filme filme, int chave, Filme hash[])
+int inserir_na_hash(Filme filme, int chave)
 {
 	Filme *novo;
-	novo = (Filme*)malloc( sizeof(Filme));
+	novo = (Filme*)malloc(sizeof(Filme));
 	
 	strcpy(novo->nome, filme->nome);
 	novo->indice = filme->indice;
@@ -74,13 +74,13 @@ int inserir_na_hash(Filme filme, int chave, Filme hash[])
 	return 1;	
 }
 
-void inserir( char chave[] )
+void inserir(int chave)
 {
-	int indice;
+	int ind;
 	
-	indice = calcular_hash( info );
+	ind = calcular_hash(chave);
 
-	tabela[indice] = inserir_lista_adjacente( tabela[indice], chave);
+	tabela[ind] = inserir_na_hash(filme, chave);
 }
 
 
