@@ -1,29 +1,23 @@
-/*
-Equipe2
-Lucas Botinelly
-Stephanny Barreto
-Hermann Hernani
-Paulo Marinho
-Jefferson Avilar
-*/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
 #define MAX 8550
+#define MOD 7
 
 typedef struct filme Filme;
 struct filme {
 	char nome[50];
 	int ano, indice;
-	No *prox;
+	Filme *prox;
 };
 
 Filme *hash[MAX];
 
 /* Utilizando um ponteiro auxiliar
 * remove os espaços no vetor e
-* adiciona no vetor auxiliar */
+* adiciona no vetor auxiliar 
+*/
 void remove_espacos(char *string, char *aux)
 {
      int tam;
@@ -41,7 +35,7 @@ void remove_espacos(char *string, char *aux)
      }
 }
 
-/*Converte de String para ASCII e soma os valores
+//Converte de String para ASCII e soma os valores
 int string_para_ascii(char *str)
 {
      int *aux;
@@ -56,19 +50,16 @@ int string_para_ascii(char *str)
           num+=aux[i];
      return num;
 }
-*/
+
 
 int calcula_hash(int chave)
 {
-     int num;
-     if(chave >= 8550)
-     	num = chave - MAX;
-     else
-     	num = -MAX - chave;
-     return (int)(fabs(num));
+     int pos;
+     pos = chave % MOD;
+     return pos;
 }
 
-int inserir_na_hash(Filme filme, int chave)
+Filme *inserir_na_hash(Filme *filme, int chave)
 {
 	Filme *novo;
 	novo = (Filme*)malloc(sizeof(Filme));
@@ -77,41 +68,43 @@ int inserir_na_hash(Filme filme, int chave)
 	novo->indice = filme->indice;
 	novo->ano = filme->ano;
 	
-	hash[chave] = novo;
+	//hash[chave] = novo;
 	
-	return 1;	
+	return novo;
 }
 
-void inserir(int chave)
+void inserir(int chave, Filme *filme)
 {
 	int ind;
 	
-	ind = calcular_hash(chave);
+	ind = calcula_hash(chave);
 
-	tabela[ind] = inserir_na_hash(filme, chave);
+	hash[ind] = inserir_na_hash(filme, chave);
 }
 
 
 
-void imprimir( No *tabela[] )
+void imprimir()
 {
 	int i;
-	No *atual;
+	Filme *atual;
 
-	for ( i = 0; i < TAMANHO; i++ )
+	for ( i = 0; i < MAX; i++ )
 	{
-		if ( tabela[i] == NULL )
+		if ( hash[i] == NULL )
 			printf( "%d -> .\n", i );
 		else
 		{
 
-			atual = tabela[i];
+			atual = hash[i];
 			
-			printf( "%d ->", i );
+			printf("%d ->", i );
 	
 			while( atual != NULL )
 			{
-				printf( " %s ", atual->chave );
+				printf(" %d ", atual->indice);
+				printf(" %d ", atual->ano);
+				printf(" %s ", atual->nome);
 				atual = atual->prox;
 			}
 	
@@ -120,7 +113,7 @@ void imprimir( No *tabela[] )
 	}
 }
 
-
+/*
 int buscar_lista_adjacencia( No *lista, char chave[] )
 {
 	No *c;
@@ -156,5 +149,14 @@ int buscar_tabela_hash( char chave[] )
 
 	return achou;
 }
+int calcula_hash(int chave)
+{
+     int num;
+     if(chave >= MAX)
+     	num = chave - MAX;
+     else
+     	num = -MAX - chave;
+     return (int)(fabs(num));
+}
 
-
+*/
