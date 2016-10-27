@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define N 10
+#define N 17770
 
 typedef struct filme Filme;
 struct filme{
@@ -65,11 +65,11 @@ void imprime_um (Filme *filme)
 }
 
 /*
-Filme *insere_hash (Hash *tab,int num,char *nome,int year)
+Filme *inserir_hash (Hash *tab,int num,char *nome,int year)
 {
     int h = funcao_hash(num);
     Filme *p = NULL;
-    Filme *a = tab[h];
+    Filme *a = tab->tab_hash[h];
     while(a != NULL)
     {
         if(a->codigo == num)
@@ -83,7 +83,7 @@ Filme *insere_hash (Hash *tab,int num,char *nome,int year)
         a->codigo = num;
         a->prox = NULL;
         if(p == NULL)
-            tab[h] = a;
+           tab->tab_hash[h] = a;
         else
             p->prox = a;
     }
@@ -94,7 +94,7 @@ Filme *insere_hash (Hash *tab,int num,char *nome,int year)
 }
 */
 
-void insere_hash(Hash *tab, int codigo, char *nome, int ano)
+void inserir_hash(Hash *tab, int codigo, char *nome, int ano)
 {
 
   int h = funcao_hash(codigo);
@@ -108,7 +108,6 @@ void insere_hash(Hash *tab, int codigo, char *nome, int ano)
   //return aux;
 
 }
-
 
 void imprime_hash (Hash *tab)
 {
@@ -138,3 +137,4 @@ void imprime_hash (Hash *tab)
 		}
   }
 }
+

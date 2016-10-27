@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tabela_atual.h"
-#define tam 10
+#define tam 17770
 
 /* Principal */
 
@@ -9,7 +9,7 @@ int main()
 {
     char fil[100];
     int num,cod,i;
-    int buscar;
+    int buscar1 = 111, buscar2 = 123, buscar3 = 2348, buscar4 = 123456765;
     Hash *tabela;
 
     tabela = inicia_tabela();
@@ -17,18 +17,24 @@ int main()
     for(i=0;i<tam;i++)
     {
         scanf("%d",&num);
-        scanf("%s",fil);
         scanf("%d",&cod);
-        insere_hash(tabela,num,fil,cod);
+        scanf("%s", &fil);
+        inserir_hash(tabela,num,fil,cod);
     }
 
     imprime_hash(tabela);
-    
-     
-     printf("Buscar:\n");
-	scanf("%d",&buscar);
-    //Filme *achou = busca(tabela,buscar);
-    //imprime_um(achou);
+
+    printf("Buscar:\n");
+   // scanf("%d",&buscar);
+    Filme *achou1 = busca(tabela,buscar1);
+    Filme *achou2 = busca(tabela, buscar2);
+    Filme *achou3 = busca(tabela, buscar3);
+    Filme *achou4= busca(tabela, buscar4);
+
+    imprime_um(achou1);
+    imprime_um(achou2);
+    imprime_um(achou3);
+    imprime_um(achou4);
 
     return 0;
 }
