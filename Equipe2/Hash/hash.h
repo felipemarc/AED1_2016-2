@@ -1,3 +1,11 @@
+/*
+Equipe2
+Lucas Botinelly
+Stephanny Barreto
+Hermann Hernani
+Paulo Marinho
+Jefferson Avilar
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
