@@ -7,19 +7,21 @@
 
 typedef struct no No;
 struct no {
-	char chave[15];
+	char nome[15];
+	char ano[4];
+	char codigo[5];
 	No *prox;
 };
 
 No *tabela[TAMANHO];
 
 
-No *inserir_na_lista_adjacente( No *lista, char chave[] )
+No inserir_na_lista_adjacente( No *lista, char chave[] )
 {
 	No *novo;
 	novo = (No *)malloc( sizeof( No ) );
 
-	strcpy( novo->chave, chave );
+	strcpy( novo->nome, chave );
 
 	novo->prox = lista;
 
@@ -115,17 +117,21 @@ int buscar_tabela_hash( char chave[] )
 
 int main()
 {
-    inserir("Dinosaur Planet");
+    /*inserir("Dinosaur Planet");
     inserir("Isle of Man TT 2004 Review");
     inserir("Lord of the Rings: The Return of the King: Extended Edition: Bonus Material");
     inserir("The Weather Underground");
     inserir("Stevie Ray Vaughan and Double Trouble: Live at Montreux 1982 & 1985");
     inserir("Deepak Chopra: The Way of the Wizard & Alchemy");
-    imprimir(tabela);
+    imprimir(tabela);*/
+
+    char *aux;
+
+    while (!strcmp(aux,"==")) inserir(aux);
 
     puts("---------------------");
-    int busca = buscar_tabela_hash("A Little Princess");
-    printf("%d", busca);
+    //int busca = buscar_tabela_hash("A Little Princess");
+    //printf("%d", busca);
+    imprimir()
     return 0;
 }
-
