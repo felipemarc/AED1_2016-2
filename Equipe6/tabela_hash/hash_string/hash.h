@@ -1,4 +1,3 @@
- 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -78,7 +77,7 @@ void imprime_hash (Hash *tab)
 		}
 	}
 }
-
+/*
 Filme* buscar (Hash* tab, char *Nome)
 {
 	int h = funcao_hash_str(Nome);
@@ -94,3 +93,18 @@ Filme* buscar (Hash* tab, char *Nome)
 	return NULL;
 	
 }
+
+void imprimir_um (Hash *tab, char *Nome)
+{
+	Filme *aux = buscar(tab, Nome);
+	if (aux == NULL)
+	{
+		printf("Filme não encontrado\n");
+	}
+	else
+	{
+		printf("%d ",aux->codigo);
+		printf("%d\t",aux->ano);
+		printf("%d\n",aux->nome);
+	}
+}*/

@@ -23,19 +23,18 @@ int main()
 	}
 
   imprime_hash(tabela);
-	/* 
+	/*
 	printf("Buscar:\n");
-	Filme *achou1 = busca_nome(tabela,buscar1);
-	Filme *achou2 = busca_nome(tabela, buscar2);
-	Filme *achou3 = busca_nome(tabela, buscar3);
-	Filme *achou4 = busca_nome(tabela, buscar4);
+	Filme *achou1 = buscar(tabela,buscar1);
+	Filme *achou2 = buscar(tabela, buscar2);
+	Filme *achou3 = buscar(tabela, buscar3);
+	Filme *achou4 = buscar(tabela, buscar4);
 
-	imprime_um(achou1);
-	imprime_um(achou2);
-	imprime_um(achou3);
-	imprime_um(achou4);
-
-	*/
+	imprimir_um(tabela, achou1);
+	imprimir_um(tabela, achou2);
+	imprimir_um(tabela, achou3);
+	imprimir_um(tabela, achou4);
+*/
 	return 0;
 }
  
