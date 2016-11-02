@@ -13,6 +13,17 @@ int main(void)
 		return 0;
 	}
 	
+	char vet[1000]; 
+	
+	while(fgets(vet, 1000, file) != NULL)
+	{
+		printf("%s", vet);
+	}
+	
+	
+	fclose(file);
+	
+	
 	system("pause");
 	return 0;
 }
