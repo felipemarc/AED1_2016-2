@@ -79,3 +79,18 @@ void imprime_hash (Hash *tab)
 	}
 }
 
+Filme* buscar (Hash* tab, char *Nome)
+{
+	int h = funcao_hash_str(Nome);
+	Filme* aux = tab->tab_hash[h];
+	while(aux != NULL)
+	{
+		if (strcmp(aux->nome, Nome) == 0)
+		{
+			return aux;
+		}
+		aux = aux->prox;
+	}
+	return NULL;
+	
+}
