@@ -107,7 +107,7 @@ void imprimir(Hash *tab)
 			{
 				//printf(" %d ", atual->indice);
 				//printf(" %d ", atual->ano);
-				printf("| %s |", atual->nome);
+				printf("|%s |", atual->nome);
 				atual = atual->prox;
 			}
 	
@@ -154,13 +154,13 @@ int busca_vertical(int chave, Filme *filme)
 	return achou;
 }
 
-int procurar_e_imprimir(Hash *tab, int chave)
+int procurar_indice(Hash *tab, int chave)
 {
 	int i;
 	Filme *atual;
 
 
-	for ( i = 0; i < MAX - 1; i++ )
+	for ( i = 0; i < MAX ; i++ )
 	{
 
 		atual = tab->hash[i];
@@ -169,11 +169,36 @@ int procurar_e_imprimir(Hash *tab, int chave)
 		{
 			if(atual->indice == chave)
 			{	
-				printf("%d - | %s |\n", chave, atual->nome);
+				printf("%d - |%s |\n", chave, atual->nome);
 				return 0;
 			}
 			atual = atual->prox;
 		}
 	}
+	printf("Filme n encontrado !\n");
+}
+
+int procurar_nome(Hash *tab, char chave[100])
+{
+	int i;
+	Filme *atual;
+
+
+	for (i = 0; i < MAX ; i++)
+	{
+
+		atual = tab->hash[i];
+		
+		while( atual != NULL )
+		{
+			if(strcmp( chave,atual->nome ) == 0)
+			{	
+				printf("%d - |%s |\n", tab->hash[i]->indice, atual->nome);
+				return 0;
+			}
+			atual = atual->prox;
+		}	
+	}
+	printf("Filme n encontrado !\n");
 }
 

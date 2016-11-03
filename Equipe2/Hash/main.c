@@ -4,11 +4,11 @@
 
 int main(int argc, const char *argv[])
 {
-	int indice, num, i=0, ano, chave = 17569;
+	int num, i=0, chave = 17770;
 	Filme *aux;
-	char nome[100];
 	aux = (Filme*)malloc(sizeof(Filme));
 	Hash *tab;
+	char chave_nome[100] = " The Face: Jesus in Art";
 	
 	//printf("%d\n", i);
 	tab = inicia_tabela();
@@ -23,7 +23,8 @@ int main(int argc, const char *argv[])
 		
 		//printf("%d\n", i);
 	}
-	procurar_e_imprimir(tab ,chave);
-//	imprimir(tab);
+	//imprimir(tab);
+	procurar_indice(tab ,chave);
+	procurar_nome(tab, chave_nome);
     return 0;
 }
