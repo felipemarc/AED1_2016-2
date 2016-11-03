@@ -10,9 +10,9 @@ int main()
 	char fil[100];
 	int num,cod,i;
 	char *busca1 = (char *) malloc(sizeof(char));
-	//char *busca2 = (char *) malloc(sizeof(char));
-	busca1 = "Fighter";
-	//busca2 = "13th Child: Legend of the Jersey Devil";
+	char *busca2 = (char *) malloc(sizeof(char));
+	char *busca3 = (char *) malloc(sizeof(char));
+	busca1 = " Epoch";
 	/*
 	     *busca2 = "Red Dwarf: Series 3: Bonus Material", 
 		   *busca3 = "Immortal Beloved", 
@@ -28,11 +28,10 @@ int main()
 		scanf("%d",&cod);
 		scanf("%[^\n]s", &fil);
 		setbuf(stdin, NULL);
-		//__fpurge(stdin);
 		inserir_hash(tabela,num,fil,cod);
 	}
 	
-  imprime_hash(tabela);
+  //imprime_hash(tabela);
 	printf("Buscar:\n");
 	
 	printf("%d\n", funcao_hash_str(busca1));
@@ -44,8 +43,10 @@ int main()
 	*/
 	Filme *achou1 = (Filme *) malloc(sizeof(Filme)); 
 	//Filme *achou2 = (Filme *) malloc(sizeof(Filme));
+	//Filme *achou3 =(Filme *) malloc(sizeof(Filme));
 	achou1 = busca(tabela,busca1);
 	//achou2 = busca(tabela,busca2);
+	//achou3 = busca(tabela,busca3);
 	//Filme *achou2 = busca(tabela, busca1);
 	//Filme *achou3 = busca(tabela, busca3);
 	//Filme *achou4 = busca(tabela, busca4);

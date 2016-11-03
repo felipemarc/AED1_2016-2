@@ -9,7 +9,7 @@ int main()
 {
     char fil[100];
     int num,cod,i;
-    int buscar1 = 111, buscar2 = 123, buscar3 = 2348, buscar4 = 123456765;
+		int buscar1 = 17762, buscar2 = 28, buscar3 = 123, buscar4 = 666666666;
     Hash *tabela;
 
     tabela = inicia_tabela();
