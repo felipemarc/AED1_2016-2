@@ -1,3 +1,13 @@
+/*
+ 	Aline Lima
+ 	Amanda Leticia
+ 	Eduardo Azevedo
+ 	Lucas Almeida
+
+2) Criar um programa que use uma tabela hash para armazenar e buscar os filmes usando seu título.
+
+ */
+ 
     #include <stdio.h>
     #include <stdlib.h>
     #include "hash.h"
@@ -8,14 +18,13 @@
     	Hash* h = hash_criar();
     	char title[255];
     	int teste= 17770,i,aux;
-    	char str_busca[255]= "Neil Diamond: Greatest Hits Live";
+    	char str_busca[255]= "";
     	int indice_busca = 3;
     	
     	for(i=0;i<teste;i++){
     		scanf ("%[^\n]%*c", title);
     		long long int  codigo = hash_name(hash_gettitulo(title));
-    		//Descomentar linha de baixo para realizar busca por índice
-    		//codigo = hash_getindice(title);  
+    		codigo = hash_getindice(title); 
     		hash_inserir(h, codigo, filme_criar(hash_getindice(title), hash_gettitulo(title), hash_getano(title)));	
 		}
 		
