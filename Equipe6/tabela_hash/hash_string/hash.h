@@ -108,3 +108,33 @@ void imprimir_um (Hash *tab, char *Nome)
 		printf("%d\n",aux->nome);
 	}
 }*/
+
+//Função busca filme através do nome do filme e retorna o filme encontrado
+Filme *busca (Hash* tab, char* nome)
+{
+	Filme *p;
+	int h = funcao_hash_str (nome);
+	for(p=tab->tab_hash[h];p!=NULL;p=p->prox)
+	{
+		if(strcmp(p->nome,nome) == 0)
+		{
+			return p;
+		}
+	}
+}
+
+//Função que imprime somente um filme da tabela hash
+void imprimir_um (Filme *filme)
+{
+	if(filme == NULL)
+  	{
+    		printf("Filme não cadastrado\n");
+  	}
+  	else
+	{
+
+      		printf("%d ",filme->codigo);
+      		printf("%s\t",filme->nome);
+      		printf("%d\n",filme->ano);
+  	}
+}
