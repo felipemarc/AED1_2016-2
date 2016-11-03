@@ -27,8 +27,8 @@ int hashing(string x){
 		if(b){
 			//tem que ser maior que zero para esse calculo maluco
 			cont*= b * (tam_s - i);	
-			continue;
-		}
+			
+		}else continue;
 		cont+= ((int) x[i])*(tam_s - i);		
 	}
 	return cont%tam;
