@@ -31,9 +31,7 @@ int funcao_hash_str (char *Nome)
 {
 	unsigned int hash = 0;
 	for (int i = 0; Nome[i] != '\0'; i++)
-	{
 		hash = 31*hash + Nome[i];
-	}
 	return hash % N;
 }
 
@@ -50,8 +48,6 @@ int funcao_hash_str (char *Nome)
 /* Insere a hash no tabela (pelo nome do filme)*/
 void inserir_hash(Hash *tab, int codigo, char *Nome, int ano)
 {
-	//int key = ascii(Nome);
-	//int h = funcao_hash_str(key);
 	int h = funcao_hash_str(Nome);
 	Filme *aux = (Filme *) malloc(sizeof(Filme));
 	aux->prox = tab->tab_hash[h];
@@ -83,7 +79,7 @@ void imprime_hash (Hash *tab)
 			{
 				printf( "\t%d", atual->codigo );
 				printf("\t%s",atual->nome);
-				printf("\t%d",atual->ano);
+				printf("\t%d,",atual->ano);
 				atual = atual->prox;
 			}
 						printf("\n\n");
@@ -91,38 +87,45 @@ void imprime_hash (Hash *tab)
 	}
 }
 
-Filme *busca (Hash* tab, char* nome)
+/*
+Filme *busca (Hash* tab, char* Nome)
 {
 	
+	int h = funcao_hash_str(Nome);
 	Filme *p;
-	int h = funcao_hash_str (nome);
-	for(p=tab->tab_hash[h];p!=NULL;p=p->prox)
+	for(p = tab->tab_hash[h];p!=NULL;p=p->prox)
 	{
-		if(strcmp(p->nome,nome) == 0)
-		{
+		if(strcmp(p->nome,Nome)) 
 			return p;
-		}
-		else
-		{
-			return NULL;
-		}
+		else return NULL;
 	}
 }
+*/
+Filme *busca (Hash* tab, char *Nome)
+{
+	int h = funcao_hash_str(Nome);
+	Filme *aux = tab->tab_hash[h];
+	while (aux != NULL)
+	{	
+		if (strcmp(aux->nome, Nome) == 0)
+			return aux;
+		aux = aux->prox;
+	}
+	return NULL;
+}
+
 
 void imprimir_um (Filme *filme)
 {
 	if(filme == NULL)
-  	{
-		
-    		printf("Filme não cadastrado\n");
-  	}
-  	else
 	{
-
-      		printf("%d ",filme->codigo);
-      		printf("%d\t",filme->ano);
+		printf("Filme não cadastrado\n");
+	}
+	else
+	{
+		printf("%d ",filme->codigo);
+		printf("%d\t",filme->ano);
 		printf("%s\n",filme->nome);
-    		//printf("Filme não cadastrado\n");
-  	}
+	}
 }
 
