@@ -7,7 +7,7 @@ int main(int argc, const char *argv[])
 	int chave, num, i;
 	Filme *filme;
 	scanf("%d", &chave);
-	for(i = 0; i<17750;i++)
+	for(i = 0; i<100;i++)
 	{
 		printf("Indice: \n");
 		scanf("%d", &filme->indice);
@@ -18,6 +18,6 @@ int main(int argc, const char *argv[])
 	}
 	num = calcula_hash(chave);
 	inserir(num, filme);
-	imprimir();	
+	imprimir();
     return 0;
 }

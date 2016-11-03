@@ -44,7 +44,7 @@ int string_para_ascii(char *str)
      aux = (int*)malloc(sizeof(int));
      //Joga o vetor de strings num vetor de inteiros   
      for(i = 0; i<tam-1;i++)
-               aux[i] = str[i];
+          aux[i] = str[i];
      //Faz o somatório dos números da tabela ASCII
      for(i = 0; i<tam-1;i++)     
           num+=aux[i];
@@ -113,42 +113,65 @@ void imprimir()
 	}
 }
 
-/*
-int buscar_lista_adjacencia( No *lista, char chave[] )
+
+int busca_horizontal(Filme filme, int chave )
 {
-	No *c;
+	Filme *aux;
 	int achou = -1;
 	int i = 0;
 
-	c = lista;
+	aux = filme;
 
-	while( c != NULL && achou == -1 )
+	while(aux != NULL && achou == -1)
 	{
-		if ( !strcmp(c->info,chave ) )
+		if (!strcmp(aux->indice,indice))
 		{
 			achou = i;
 		}
 		else
 		{
 			i++;
-			c = c->prox;
+			aux = aux->prox;
 		}
 	}
 
 	return achou;
 }
 
-int buscar_tabela_hash( char chave[] )
+int busca_vertical(int chave, Filme filme)
 {
 	int achou;
 	int indice;
 
-	indice = calcular_hash( chave );
+	indice = calcula_hash(chave);
 
-	achou = buscar_lista_adjacencia( tabela[indice],chave );
+	achou = busca_horizontal(filme, chave);
 
 	return achou;
 }
+int adiciona_na_hash()
+{
+	FILE *file;
+	file = fopen("entrada.txt", "r");
+	
+	if(file == NULL)
+	{
+		printf("O Arquivo nao pode ser aberto");
+		system("pause");
+		return 0;
+	}
+	
+	char vet[17769]; 
+	
+	while(fgets(vet, 1000, file) != NULL)
+	{
+		printf("%s", vet);
+	}
+	
+	
+	fclose(file);
+}
+/*
 int calcula_hash(int chave)
 {
      int num;
