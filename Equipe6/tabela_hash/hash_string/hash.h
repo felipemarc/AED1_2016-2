@@ -91,3 +91,38 @@ void imprime_hash (Hash *tab)
 	}
 }
 
+Filme *busca (Hash* tab, char* nome)
+{
+	
+	Filme *p;
+	int h = funcao_hash_str (nome);
+	for(p=tab->tab_hash[h];p!=NULL;p=p->prox)
+	{
+		if(strcmp(p->nome,nome) == 0)
+		{
+			return p;
+		}
+		else
+		{
+			return NULL;
+		}
+	}
+}
+
+void imprimir_um (Filme *filme)
+{
+	if(filme == NULL)
+  	{
+		
+    		printf("Filme não cadastrado\n");
+  	}
+  	else
+	{
+
+      		printf("%d ",filme->codigo);
+      		printf("%d\t",filme->ano);
+		printf("%s\n",filme->nome);
+    		//printf("Filme não cadastrado\n");
+  	}
+}
+
