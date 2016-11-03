@@ -28,7 +28,7 @@ int hashing(string x){
 			//tem que ser maior que zero para esse calculo maluco
 			cont*= b * (tam_s - i);	
 			
-		}else continue;
+		}
 		cont+= ((int) x[i])*(tam_s - i);		
 	}
 	return cont%tam;
@@ -84,9 +84,10 @@ void inserir_livro(){
 					//nome = str.substr(0,indice);
 				
 					
-					//posicao = hashing(nome);
+					//escolher qual valor vai definir a posicao
+					posicao = hashing(codigo);
+					
 					//insere no hash livro
-				
 					inserir(posicao,codigo,ano,nome);
 				}
 		}
@@ -108,8 +109,47 @@ void mostrar_hash(){
 	}
 }
 
+void mostrar_codigo(string info){
+	
+	hash *aux;
+	
+	int pos = hashing(info);
+	
+		aux = livro[pos];
+		
+		while(aux!=NULL){
+			if(aux->codigo == info){
+				cout<< endl  << aux->codigo << "," << aux->ano<< "," << aux->nome;
+				return 0;
+			}
+			
+			aux=aux->prox;
+		}
+}
+
+void mostrar_nome(string info){
+	
+	hash *aux;
+	
+	int pos = hashing(info);
+	
+		aux = livro[pos];
+		
+		while(aux!=NULL){
+			if(aux->nome == info){
+				cout<< endl  << aux->codigo << "," << aux->ano<< "," << aux->nome;
+				return 0;
+			}
+			
+			aux=aux->prox;
+		}
+}
+
+
+
 int main(){
 	int i;
+	string info="";
 	
 	for(i=0;i<tam;i++){
 		livro[i] = NULL;
@@ -118,6 +158,8 @@ int main(){
 	//begin
 	inserir_livro();
 	mostrar_hash();
+	
+	mostrar_codigo(info);
 	
 	//faz limpeza na memoria
 	for(i=0;i<tam;i++){
