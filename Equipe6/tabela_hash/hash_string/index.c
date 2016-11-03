@@ -18,7 +18,7 @@ int main()
 	{
 		scanf("%d",&num);
 		scanf("%d",&cod);
-		scanf("%s", &fil);
+		scanf("%[^\n]s", &fil);
 		inserir_hash(tabela,num,fil,cod);
 	}
 
