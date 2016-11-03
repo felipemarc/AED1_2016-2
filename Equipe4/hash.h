@@ -10,7 +10,6 @@
 #include<string.h>
 #include<math.h>
 #define TAM 17770
-#define MOD 7
 
 typedef struct movie Movie;
 struct movie {
@@ -31,7 +30,7 @@ int ascii(char *str)
      aux = (int*)malloc(sizeof(int));
      for(i = 0; i<tamanho-1;i++)
                aux[i] = str[i];
-     for(i = 0; i<tamanho-1;i++)     
+     for(i = 0; i<tamanho-1;i++)
           numero+=aux[i];
      return numero;
 }
@@ -47,21 +46,24 @@ Movie *inserir(Movie *movie, int key)
 {
 	Movie *novo;
 	novo = (Movie*)malloc(sizeof(Movie));
-	
+
 	strcpy(novo->nome, movie->nome);
 	novo->indice = movie->indice;
 	novo->ano = movie->ano;
-	
+
 	return novo;
 }
 
-void calcular(int key, Movie *movie)
+int calcular(int key, Movie *movie)
 {
 	int cal;
-	
+
 	cal = funcao_hash(key);
 
 	hash[cal] = inserir(movie, key);
+
+	return movie;
+
 }
 
 void imprimir()
@@ -91,5 +93,38 @@ void imprimir()
 
 
 
+int busca_horizontal(Movie *movie, int key )
+{
+	Movie *aux;
+	int achou = -1;
+	int i = 0;
 
+	aux = movie;
 
+	while(aux != NULL && achou == -1)
+	{
+		if (!aux->indice == i)
+		{
+			achou = i;
+		}
+		else
+		{
+			i++;
+			aux = aux->prox;
+		}
+	}
+
+	return achou;
+}
+
+int busca_vertical(int key, Movie *movie)
+{
+	int achou;
+	int indice;
+
+	indice = calcular(movie,key);
+
+	achou = busca_horizontal(movie, key);
+
+	return achou;
+}
