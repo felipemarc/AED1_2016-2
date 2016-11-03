@@ -1,10 +1,11 @@
 /* 	
 	equipe 01:
 	Diogo Abreu
+	Elisandra Oliveira
 	Fernando Calderaro
 	Leticia Mota
-	Rodrigo Oliveira
-	Thailana Neves		
+	Luana Andrade
+	Rodrigo Oliveira		
 	
 	exercicio 01
 

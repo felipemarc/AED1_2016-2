@@ -5,7 +5,6 @@
 	Leticia Mota
 	Luana Andrade
 	Rodrigo Oliveira
-	Thailana Neves
 
 	Exercicio 01
 	Crie uma agenda em forma de lista duplamente encadeada.
