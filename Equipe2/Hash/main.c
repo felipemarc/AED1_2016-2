@@ -5,19 +5,19 @@
 int main(int argc, const char *argv[])
 {
 	int chave, num, i;
-	Filme *filme;
-	scanf("%d", &chave);
-	for(i = 0; i<100;i++)
+	Filme *filme, *aux;
+	
+	for(i = 0; i<17769;i++)
 	{
-		printf("Indice: \n");
-		scanf("%d", &filme->indice);
-		printf("Ano: \n");
-		scanf("%d", &filme->ano);
-		printf("Nome: \n");
-		scanf("%s", filme->nome);
+		scanf("%d", &aux->indice);
+		scanf("%d", &aux->ano);
+		scanf("%[^\n]s", aux->nome);
+		printf("%d", i);
+		//setbuf(stdin, NULL);
+		chave = calcula_hash(aux->indice);
+		inserir(chave, aux);
+		printf("%d", i);
 	}
-	num = calcula_hash(chave);
-	inserir(num, filme);
 	imprimir();
     return 0;
 }

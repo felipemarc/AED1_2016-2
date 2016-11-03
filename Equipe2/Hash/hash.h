@@ -114,7 +114,7 @@ void imprimir()
 }
 
 
-int busca_horizontal(Filme filme, int chave )
+int busca_horizontal(Filme *filme, int chave )
 {
 	Filme *aux;
 	int achou = -1;
@@ -124,7 +124,7 @@ int busca_horizontal(Filme filme, int chave )
 
 	while(aux != NULL && achou == -1)
 	{
-		if (!strcmp(aux->indice,indice))
+		if (!aux->indice == i)
 		{
 			achou = i;
 		}
@@ -138,7 +138,7 @@ int busca_horizontal(Filme filme, int chave )
 	return achou;
 }
 
-int busca_vertical(int chave, Filme filme)
+int busca_vertical(int chave, Filme *filme)
 {
 	int achou;
 	int indice;
@@ -161,7 +161,7 @@ int adiciona_na_hash()
 		return 0;
 	}
 	
-	char vet[17769]; 
+	char vet[1000]; 
 	
 	while(fgets(vet, 1000, file) != NULL)
 	{
