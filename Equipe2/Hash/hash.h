@@ -2,17 +2,30 @@
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
-#define MAX 8550
-#define MOD 7
+#define MOD 4225
+#define MAX 4226
 
 typedef struct filme Filme;
 struct filme {
-	char nome[50];
+	char nome[100];
 	int ano, indice;
 	Filme *prox;
 };
 
-Filme *hash[MAX];
+typedef  struct hash Hash;
+struct hash
+{
+	Filme *hash[MAX];
+};
+
+Hash* inicia_tabela()
+{
+	int i;
+	Hash *tab = (Hash *) malloc(sizeof(Hash));
+	for (i=0; i<MAX; i++)
+		tab->hash[i] = NULL;
+	return tab;
+}
 
 /* Utilizando um ponteiro auxiliar
 * remove os espaços no vetor e
@@ -54,57 +67,47 @@ int string_para_ascii(char *str)
 
 int calcula_hash(int chave)
 {
-     int pos;
-     pos = chave % MOD;
-     return pos;
+	int pos;
+	pos = chave % MOD;
+	return pos;
 }
 
-Filme *inserir_na_hash(Filme *filme, int chave)
+
+void inserir(Hash *tab, int indice, char *Nome, int ano)
 {
-	Filme *novo;
-	novo = (Filme*)malloc(sizeof(Filme));
+	int chave = calcula_hash(indice);
+	Filme *aux = (Filme *) malloc(sizeof(Filme));
 	
-	strcpy(novo->nome, filme->nome);
-	novo->indice = filme->indice;
-	novo->ano = filme->ano;
+	aux->prox = tab->hash[chave];
+	aux->indice = indice;
+	strcpy(aux->nome, Nome);
+	aux->ano = ano;
 	
-	//hash[chave] = novo;
-	
-	return novo;
+	tab->hash[chave] = aux;
 }
 
-void inserir(int chave, Filme *filme)
-{
-	int ind;
-	
-	ind = calcula_hash(chave);
-
-	hash[ind] = inserir_na_hash(filme, chave);
-}
-
-
-
-void imprimir()
+void imprimir(Hash *tab)
 {
 	int i;
 	Filme *atual;
 
+
 	for ( i = 0; i < MAX; i++ )
 	{
-		if ( hash[i] == NULL )
+		if ( tab->hash[i] == NULL )
 			printf( "%d -> .\n", i );
 		else
 		{
 
-			atual = hash[i];
+			atual = tab->hash[i];
 			
 			printf("%d ->", i );
 	
 			while( atual != NULL )
 			{
-				printf(" %d ", atual->indice);
-				printf(" %d ", atual->ano);
-				printf(" %s ", atual->nome);
+				//printf(" %d ", atual->indice);
+				//printf(" %d ", atual->ano);
+				printf("| %s |", atual->nome);
 				atual = atual->prox;
 			}
 	
@@ -149,37 +152,7 @@ int busca_vertical(int chave, Filme *filme)
 
 	return achou;
 }
-int adiciona_na_hash()
-{
-	FILE *file;
-	file = fopen("entrada.txt", "r");
-	
-	if(file == NULL)
-	{
-		printf("O Arquivo nao pode ser aberto");
-		system("pause");
-		return 0;
-	}
-	
-	char vet[1000]; 
-	
-	while(fgets(vet, 1000, file) != NULL)
-	{
-		printf("%s", vet);
-	}
-	
-	
-	fclose(file);
-}
-/*
-int calcula_hash(int chave)
-{
-     int num;
-     if(chave >= MAX)
-     	num = chave - MAX;
-     else
-     	num = -MAX - chave;
-     return (int)(fabs(num));
-}
 
-*/
+
+
+
