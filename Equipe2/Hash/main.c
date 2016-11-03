@@ -4,7 +4,7 @@
 
 int main(int argc, const char *argv[])
 {
-	int indice, num, i=0, ano;
+	int indice, num, i=0, ano, chave = 17569;
 	Filme *aux;
 	char nome[100];
 	aux = (Filme*)malloc(sizeof(Filme));
@@ -14,17 +14,16 @@ int main(int argc, const char *argv[])
 	tab = inicia_tabela();
 	for(i = 0; i<17769;i++)
 	{
-		scanf("%d", &indice);
-		scanf("%d", &ano);
-		scanf("%[^\n]s", nome);
+		scanf("%d", &aux->indice);
+		scanf("%d", &aux->ano);
+		scanf("%[^\n]s", aux->nome);
 		setbuf(stdin, NULL);
 		
-		inserir(tab, indice, nome, ano);
+		inserir(tab, aux);
 		
 		//printf("%d\n", i);
 	}
-	
-	imprimir(tab);
-    
+	procurar_e_imprimir(tab ,chave);
+//	imprimir(tab);
     return 0;
 }

@@ -2,8 +2,8 @@
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
-#define MOD 4225
-#define MAX 4226
+#define MOD 4228
+#define MAX 4228
 
 typedef struct filme Filme;
 struct filme {
@@ -73,15 +73,15 @@ int calcula_hash(int chave)
 }
 
 
-void inserir(Hash *tab, int indice, char *Nome, int ano)
+void inserir(Hash *tab, Filme *filme)
 {
-	int chave = calcula_hash(indice);
+	int chave = calcula_hash(filme->indice);
 	Filme *aux = (Filme *) malloc(sizeof(Filme));
 	
 	aux->prox = tab->hash[chave];
-	aux->indice = indice;
-	strcpy(aux->nome, Nome);
-	aux->ano = ano;
+	aux->indice = filme->indice;
+	strcpy(aux->nome, filme->nome);
+	aux->ano = filme->ano;
 	
 	tab->hash[chave] = aux;
 }
@@ -92,7 +92,7 @@ void imprimir(Hash *tab)
 	Filme *atual;
 
 
-	for ( i = 0; i < MAX; i++ )
+	for ( i = 0; i < MAX - 1; i++ )
 	{
 		if ( tab->hash[i] == NULL )
 			printf( "%d -> .\n", i );
@@ -149,10 +149,31 @@ int busca_vertical(int chave, Filme *filme)
 	indice = calcula_hash(chave);
 
 	achou = busca_horizontal(filme, chave);
-
+	
+	
 	return achou;
 }
 
+int procurar_e_imprimir(Hash *tab, int chave)
+{
+	int i;
+	Filme *atual;
 
 
+	for ( i = 0; i < MAX - 1; i++ )
+	{
+
+		atual = tab->hash[i];
+		
+		while( atual != NULL )
+		{
+			if(atual->indice == chave)
+			{	
+				printf("%d - | %s |\n", chave, atual->nome);
+				return 0;
+			}
+			atual = atual->prox;
+		}
+	}
+}
 
