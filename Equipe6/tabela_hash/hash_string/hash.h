@@ -27,19 +27,43 @@ Hash* inicia_tabela (void)
 	return tab;
 }
 
+/*soma das palavras da string conforme a tabela ASCII*/
+int ascii(char *str)
+{
+     int *aux;
+     int i=0, numero,tamanho;
+     tamanho = strlen(str);
+     aux = (int*)malloc(sizeof(int));
+     for(i = 0; i<tamanho-1;i++)
+               aux[i] = str[i];
+     for(i = 0; i<tamanho-1;i++)     
+          numero+=aux[i];
+     return numero;
+}
+
+/* Calcular o hash de uma cadeia de caracteres */
+int funcao_hash_str(int key)
+{
+	int res;
+	res = key%N;
+	return res;
+	
+}
  /* Calcular o hash de uma cadeia de caracteres */ 
-int funcao_hash_str (char *Nome)
+/*int funcao_hash_str (char *Nome)
 {
 	int i, len=strlen(Nome), hash=0;
 	for (i=1;i<len;i++)
 		hash+=Nome[i];
   return hash%N;
-}
+}*/
 
 /* Insere a hash no tabela (pelo nome do filme)*/
 void inserir_hash(Hash *tab, int codigo, char *Nome, int ano)
 {
-	int h = funcao_hash_str(Nome);
+	int key = ascii(Nome);
+	int h = funcao_hash_str(key);
+	//int h = funcao_hash_str(Nome);
 	Filme *aux = (Filme *) malloc(sizeof(Filme));
 	aux->prox = tab->tab_hash[h];
 	aux->codigo = codigo;
@@ -113,7 +137,9 @@ void imprimir_um (Hash *tab, char *Nome)
 Filme *busca (Hash* tab, char* nome)
 {
 	Filme *p;
-	int h = funcao_hash_str (nome);
+	int key = ascii(nome);
+	int h = funcao_hash_str(key);
+	//int h = funcao_hash_str (nome);
 	for(p=tab->tab_hash[h];p!=NULL;p=p->prox)
 	{
 		if(strcmp(p->nome,nome) == 0)
