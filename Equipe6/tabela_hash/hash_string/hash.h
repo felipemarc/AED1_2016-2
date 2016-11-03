@@ -120,6 +120,10 @@ Filme *busca (Hash* tab, char* nome)
 		{
 			return p;
 		}
+		else
+		{
+			return NULL;
+		}
 	}
 }
 
