@@ -4,37 +4,40 @@
 #define tam 17770
 
 /* Principal */
- 
+
 int main()
 {
 	char fil[100];
 	int num,cod,i;
-	//char *buscar1 = "Immortal Beloved", buscar2 = "Fighter", buscar3 = "Animation Legend: Winsor McCay", buscar4 = "BLABLABLA";
+	//int buscar1 = 111, buscar2 = 123, buscar3 = 2348, buscar4 = 123456765;
 	Hash *tabela;
-
+	
 	tabela = inicia_tabela();
-	 
+	
 	for(i=0;i<tam;i++)
 	{
 		scanf("%d",&num);
 		scanf("%d",&cod);
 		scanf("%[^\n]s", &fil);
+		setbuf(stdin, NULL);
+		//__fpurge(stdin);
 		inserir_hash(tabela,num,fil,cod);
+		
 	}
-
+	
   imprime_hash(tabela);
 	/*
 	printf("Buscar:\n");
-	Filme *achou1 = buscar(tabela,buscar1);
-	Filme *achou2 = buscar(tabela, buscar2);
-	Filme *achou3 = buscar(tabela, buscar3);
-	Filme *achou4 = buscar(tabela, buscar4);
-
-	imprimir_um(tabela, achou1);
-	imprimir_um(tabela, achou2);
-	imprimir_um(tabela, achou3);
-	imprimir_um(tabela, achou4);
-*/
+	// scanf("%d",&buscar);
+	Filme *achou1 = busca(tabela,buscar1);
+	Filme *achou2 = busca(tabela, buscar2);
+	Filme *achou3 = busca(tabela, buscar3);
+	Filme *achou4= busca(tabela, buscar4);
+	
+	imprime_um(achou1);
+	imprime_um(achou2);
+	imprime_um(achou3);
+	imprime_um(achou4);
+	*/
 	return 0;
 }
- 
