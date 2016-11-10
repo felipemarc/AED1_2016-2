@@ -1,3 +1,10 @@
+/*
+Equipe2
+
+Hermann Hernani
+Lucas Botinelly
+Stephanny Barreto
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include"hash.h"
