@@ -26,10 +26,10 @@
 
 int main()
 {
-	/* Flags */
+	
     int i;
 	
-	/* Declaracao de variaveis */
+	
     int codigo,ano;
     char titulo[100];
 	
