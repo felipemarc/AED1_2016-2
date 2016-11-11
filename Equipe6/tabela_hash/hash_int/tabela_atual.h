@@ -2,139 +2,114 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define N 17770
+
+#define TAM 179
 
 typedef struct filme Filme;
 struct filme{
-    int codigo;
-    char nome[100];
-    int ano;
-    Filme *prox;
+	int codigo;
+	int ano;
+	char nome[100];
+	Filme *prox;
 };
 
-typedef  struct hash Hash;
-struct hash
-{
-  Filme *tab_hash[N];
-};
+Filme *tab_hash[TAM];
 
-Hash* inicia_tabela (void)
+Filme *inserir_lista(Filme *lista, int codigo, int year , char title[])
 {
-    int i;
-    Hash *tab = (Hash *) malloc(sizeof(Hash));
-    for (i=0; i<N; i++)
-      tab->tab_hash[i] = NULL;
-    return tab;
+	Filme *aux;
+	aux = (Filme*)malloc(sizeof(Filme));
+
+	aux->codigo = codigo;
+	aux->ano = year;
+	strcpy(aux->nome,title);
+	aux->prox = lista;
+
+	return aux;
 }
 
-int funcao_hash (int chave)
+int funcao_hash(int codigo)
 {
-    double A = 0.6180339887; // constante: 0 < A < 1
-    double val = chave * A;
-    val = val - (int) val;
-    return (int) (N * val);
+	return (codigo%TAM);
 }
 
-
-Filme *busca (Hash *tab, int codigo)
+void inserir (int codigo,int year,char title[])
 {
-    int h = funcao_hash(codigo);
-    Filme *a = tab->tab_hash[h];
-    while (a != NULL)
-    {
-        if(a->codigo == codigo)
-            return a;
-        a = a->prox;
-    }
-    return NULL;
+	int indice;
+
+	indice = funcao_hash(codigo);
+
+	tab_hash[indice] = inserir_lista(tab_hash[indice],codigo,year,title);
 }
 
-void imprime_um (Filme *filme)
+void imprimir( Filme *tab[] )
 {
-
-  if(filme == NULL)
-  {
-    printf("Filme não cadastrado\n");
-  }
-  else{
-
-      printf("%d ",filme->codigo);
-      printf("%s\t",filme->nome);
-      printf("%d\n",filme->ano);
-  }
-}
-
-/*
-Filme *inserir_hash (Hash *tab,int num,char *nome,int year)
-{
-    int h = funcao_hash(num);
-    Filme *p = NULL;
-    Filme *a = tab->tab_hash[h];
-    while(a != NULL)
-    {
-        if(a->codigo == num)
-            break;
-        p = a;
-        a = a->prox;
-    }
-    if (a == NULL)
-    {
-        a = (Filme*)malloc(sizeof(Filme));
-        a->codigo = num;
-        a->prox = NULL;
-        if(p == NULL)
-           tab->tab_hash[h] = a;
-        else
-            p->prox = a;
-    }
-    strcpy(a->nome,nome);
-    a->ano = year;
-    return a;
-
-}
-*/
-
-void inserir_hash(Hash *tab, int codigo, char *nome, int ano)
-{
-
-  int h = funcao_hash(codigo);
-  Filme *aux = (Filme *) malloc(sizeof(Filme));
-  aux->prox = tab->tab_hash[h];
-  aux->codigo = codigo;
-  strcpy(aux->nome, nome);
-  aux->ano = ano;
-  tab->tab_hash[h] = aux;
-
-  //return aux;
-
-}
-
-void imprime_hash (Hash *tab)
-{
-  int i;
+	int i;
 	Filme *atual;
 
-	for ( i = 0; i < N; i++ )
+	for ( i = 0; i < TAM; i++ )
 	{
-		if ( tab->tab_hash[i] == NULL )
+		if ( tab[i] == NULL )
 			printf( "%d -> .\n", i );
 		else
 		{
 
-			atual = tab->tab_hash[i];
-
-			printf( "%d ->", i );
-
+			atual = tab[i];
+			
+			printf( "%d ->\n", i );
+	
 			while( atual != NULL )
 			{
-				printf( "\t%d", atual->codigo );
-				printf("\t%s",atual->nome);
-				printf("\t%d",atual->ano);
+				printf( " %d ", atual->codigo );
+				printf( " %d ", atual->ano );
+				printf( " %s\n", atual->nome );
 				atual = atual->prox;
 			}
-
-			printf("\n\n");
+	
+			printf("\n");
 		}
-  }
+	}
 }
+
+int buscar_lista( Filme *lista, int codigo )
+{
+	Filme *c;
+	int achou = -1;
+	int i = 0;
+
+	c = lista;
+
+	while( c != NULL && achou == -1 )
+	{
+		if ( c->codigo==codigo )
+		{
+			printf( " %d ", c->codigo );
+			printf( " %d ", c->ano );
+			printf( " %s\n", c->nome );
+			achou = i;
+			
+		}
+		else
+		{
+			i++;
+			c = c->prox;
+		}
+	}
+	return achou;
+}
+
+void buscar_tabela( int codigo )
+{
+	int achou;
+	int indice;
+
+	indice = funcao_hash( codigo );
+
+	achou = buscar_lista( tab_hash[indice], codigo );
+	
+	if(achou == -1)
+		printf(" Filme  %d não encontrado.", codigo);
+}
+
+
 
