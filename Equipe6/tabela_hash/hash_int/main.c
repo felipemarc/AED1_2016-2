@@ -31,16 +31,16 @@ int main()
 	
 	
     int codigo,ano;
-    char titulo[100];
+    char nome[100];
 	
 	/* Preencher tabela hash */
     for(i=0;i<17770;i++)
     {
         scanf("%d",&codigo);
         scanf("%d",&ano);
-        scanf(" %[^\n]s",titulo);
+        scanf(" %[^\n]s",nome);
 		
-        inserir(codigo,ano,titulo);  
+        inserir(codigo,ano,nome);  
     }
    
 	/* Imprimir tabela hash */
