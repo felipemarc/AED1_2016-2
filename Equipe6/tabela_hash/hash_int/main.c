@@ -20,7 +20,7 @@
  * =====================================================================================
  */
 
-#include "hash_int.h"
+#include "tabela_atual.h"
 #include<stdio.h>
 #include<stdlib.h>
 
