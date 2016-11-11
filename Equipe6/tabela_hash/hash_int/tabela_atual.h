@@ -1,4 +1,24 @@
-
+/*
+ * =====================================================================================
+ *
+ *       Filename:  Tabela Hash
+ *
+ *    Description:  Tabela Hash
+ *
+ *        Version:  1.0
+ *        Created:  11-11-2016 10:43:12
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  		Hélio Paulo
+ *         			Jailson Pereira
+ 				Jefferson Ávilar
+ *         			Tiago Cauassa
+ *         			Rebeca Assunção
+ *   Organization:  AED 1
+ *
+ * =====================================================================================
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
