@@ -1,40 +1,56 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "tabela_atual.h"
-#define tam 17770
+/*
+ * =====================================================================================
+ *
+ *       Filename:  Tabela Hash
+ *
+ *    Description:  Tabela Hash
+ *
+ *        Version:  1.0
+ *        Created:  11-11-2016 10:43:12
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  		Hélio Paulo
+ *         			Jailson Pereira
+ 				Jefferson Ávilar
+ *         			Tiago Cauassa
+ *         			Rebeca Assunção
+ *   Organization:  AED 1
+ *
+ * =====================================================================================
+ */
 
-/* Principal */
+#include "hash_int.h"
+#include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
-    char fil[100];
-    int num,cod,i;
-		int buscar1 = 17762, buscar2 = 28, buscar3 = 123, buscar4 = 666666666;
-    Hash *tabela;
-
-    tabela = inicia_tabela();
-    
-    for(i=0;i<tam;i++)
+	/* Flags */
+    int i;
+	
+	/* Declaracao de variaveis */
+    int codigo,ano;
+    char titulo[100];
+	
+	/* Preencher tabela hash */
+    for(i=0;i<17770;i++)
     {
-        scanf("%d",&num);
-        scanf("%d",&cod);
-        scanf("%s", &fil);
-        inserir_hash(tabela,num,fil,cod);
+        scanf("%d",&codigo);
+        scanf("%d",&ano);
+        scanf(" %[^\n]s",titulo);
+		
+        inserir(codigo,ano,titulo);  
     }
+   
+	/* Imprimir tabela hash */
+//    imprimir(tab_hash);
+	
+	/* Buscar tabela hash */
+	buscar_tabela(21);
+	buscar_tabela(560);
+	buscar_tabela(19000);
+	
+	return 0;
 
-    imprime_hash(tabela);
-
-    printf("Buscar:\n");
-   // scanf("%d",&buscar);
-    Filme *achou1 = busca(tabela,buscar1);
-    Filme *achou2 = busca(tabela, buscar2);
-    Filme *achou3 = busca(tabela, buscar3);
-    Filme *achou4= busca(tabela, buscar4);
-
-    imprime_um(achou1);
-    imprime_um(achou2);
-    imprime_um(achou3);
-    imprime_um(achou4);
-
-    return 0;
 }
