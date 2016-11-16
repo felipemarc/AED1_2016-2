@@ -15,6 +15,7 @@
  *                      Jefferson Ávilar
  *                      Tiago Cauassa
  *                      Rebeca Assunção
+			Miguel Angelo
  *   Organization:  AED 1
  *
  * =====================================================================================
@@ -42,10 +43,10 @@ int main()
         inserir(codigo,ano,nome);  
     }
    
-//imprimir(tab_hash);
+	imprimir(tab_hash);
 	
 	buscar_tabela("My Favorite Brunette");
-	buscar_tabela("The Passion of the Christ");
+	buscar_tabela("Horror Hospital");
 	buscar_tabela("Fleeing by Night");
 	buscar_tabela("BLABLABLA");
 	
